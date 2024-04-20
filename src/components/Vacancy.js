@@ -32,7 +32,7 @@ const Vacancy = ({ vacancy }) => {
     if(vacancy.id === -1) {
         console.log("vacancy.id === -1");
         //TODO: show -1 not deleted
-        setVisibleTask0NotDeleteDlg(true);
+        setVisibleVacancy0NotDeleteDlg(true);
         return
     }
     console.log("before handleDeleteConfirmDlg visibleDeleteConfirmDlg:" );

@@ -9,7 +9,7 @@ const AddNewVacancy = () => {
   const dispatch = useDispatch();
 
   const handleVacancyTitleChange = (e) => {
-    setTaskTitle(e.target.value);
+    setVacancyTitle(e.target.value);
   }
 
   const handleVacancySubmit = () => {
@@ -19,7 +19,7 @@ const AddNewVacancy = () => {
 //    }));
 
 // Variant 2. WORKED!
-    let addVacancyAction = actions.createAddVacancyAction({ title: VacancyTitle});
+    let addVacancyAction = actions.createAddVacancyAction({ title: vacancyTitle});
 // actionAddTask:
 //   type: actions.TASK_ADD,
 //   payload: taskTitle

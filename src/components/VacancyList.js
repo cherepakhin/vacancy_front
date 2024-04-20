@@ -1,34 +1,27 @@
 import React from 'react';
 import { ListGroup } from "react-bootstrap";
-import Task from './Task';
+import Vacancy from './Vacancy';
 
-const TaskList = ({ tasks }) => {
+const VacancyList = ({ vacancies }) => {
 
-  if (tasks.length)
+  if (vacancies.length)
     return (
       <ListGroup>
         {
-          tasks.map(task => <Task key={task.id} task={task} />)
-// with console.log:
-//          tasks.map(task => {
-//            console.log("task:");
-//            console.log(task);
-//            return <Task key={task.id} task={task} />
-//          })
+          vacancies.map(vacancy => <Vacancy key={vacancy.id} vacancy={vacancy} />)
         }
       </ListGroup>
     )
   else return null;
 }
 
-VacancyList.propTypes = {
-    tasks: React.PropTypes.arrayOf(React.PropTypes.object)
-    tasks.length: React.PropTypes.integer
-}
+//TODO: Add PropTypes for vacancies array
+//VacancyList.propTypes = {
+//    vacancies: React.PropTypes.arrayOf(React.PropTypes.object)
+//}
 
 VacancyList.defaultProps = {
-    tasks: []
-    tasks.length: 0
+    vacancies: [],
 }
 
-export default TaskList;
+export default VacancyList;

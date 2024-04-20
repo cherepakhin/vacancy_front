@@ -28,7 +28,7 @@ export default function reducerVacancy(state = state0, action) {
     case actions.VACANCY_ADD:
       console.log(action);
       //TODO: add rest request
-      //TODO: and refresh all tasks
+      //TODO: and refresh all vacancies
 
       // Пример простого добавление задачи в state из action.payload
       // ТУТ делается изменение state
@@ -40,10 +40,10 @@ export default function reducerVacancy(state = state0, action) {
 
     case actions.VACANCY_TOGGLE:
       console.log(action);
-      return state.map(task => {
-        if (task.id === action.payload.id)
-          return { ...task, completed: !task.completed }
-        return task;
+      return state.map(vacancy => {
+        if (vacancy.id === action.payload.id)
+          return { ...vacancy, completed: !vacancy.completed }
+        return vacancy;
       });
 
     case actions.VACANCY_REMOVE:

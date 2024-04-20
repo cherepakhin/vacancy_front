@@ -3,39 +3,39 @@ import { Button, FormControl, InputGroup } from "react-bootstrap";
 import * as actions from "../store/actions";
 import { useDispatch } from "react-redux";
 
-const AddNewTask = () => {
+const AddNewVacancy = () => {
 // Вызовите useState на верхнем уровне вашего компонента, чтобы объявить переменную состояния.
-  const [taskTitle, setTaskTitle] = useState('-'); // '-' - значение по умолчанию
+  const [vacancyTitle, setVacancyTitle] = useState('-'); // '-' - значение по умолчанию
   const dispatch = useDispatch();
 
-  const handleTaskTitleChange = (e) => {
+  const handleVacancyTitleChange = (e) => {
     setTaskTitle(e.target.value);
   }
 
-  const handleTaskSubmit = () => {
+  const handleVacancySubmit = () => {
 // Variant 1. WORKED!
 //    dispatch(actions.addTask({
 //      title: taskTitle
 //    }));
 
 // Variant 2. WORKED!
-    var addTaskAction = actions.createAddTaskAction({ title: taskTitle});
+    let addVacancyAction = actions.createAddVacancyAction({ title: VacancyTitle});
 // actionAddTask:
 //   type: actions.TASK_ADD,
 //   payload: taskTitle
 
-    dispatch(addTaskAction);
-    setTaskTitle('');
+    dispatch(addVacancyAction);
+    setVacancyTitle('');
   }
 
   return (
     <InputGroup className="mb-3">
-      <FormControl placeholder="Название новой задачи" value={taskTitle} onChange={e => handleTaskTitleChange(e)} />
+      <FormControl placeholder="Название новой вакансии" value={vacancyTitle} onChange={e => handleVacancyTitleChange(e)} />
       <InputGroup.Append>
-        <Button onClick={handleTaskSubmit}>Сохранить</Button>
+        <Button onClick={handleVacancySubmit}>Сохранить</Button>
       </InputGroup.Append>
     </InputGroup>
   )
 }
 
-export default AddNewTask;
+export default AddNewVacancy;

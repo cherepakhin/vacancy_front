@@ -4,14 +4,14 @@ import { Modal, Button } from "react-bootstrap";
 
 // Этот диалог никак не связан с Redux.
 // Присвоение параметров, управление видимостью и реакция на нажатие кнопок сделано снаружи в компоненте Task.js
-const DeleteConfirmDlg = ({id, title, visible, fnTaskDeleteConfirm, fnTaskDeleteCancel}) => {
+const DeleteConfirmDlg = ({id, title, visible, fnVacancyDeleteConfirm, fnVacancyDeleteCancel}) => {
 
   const handleCancel = () => {
-    fnTaskDeleteCancel(id);
+    fnVacancyDeleteCancel(id);
   }
 
   const handleConfirm = () => {
-    fnTaskDeleteConfirm(id);
+    fnVacancyDeleteConfirm(id);
   }
 
   return (
@@ -33,8 +33,8 @@ DeleteConfirmDlg.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   visible: PropTypes.bool.isRequired,
-  fnTaskDeleteConfirm: PropTypes.func.isRequired,
-  fnTaskDeleteCancel: PropTypes.func.isRequired
+  fnVacancyDeleteConfirm: PropTypes.func.isRequired,
+  fnVacancyDeleteCancel: PropTypes.func.isRequired
 }
 
 export default DeleteConfirmDlg;

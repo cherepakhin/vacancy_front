@@ -1,29 +1,29 @@
 import * as actionTypes from './actionTypes';
-import {createAddTaskAction, createToggleTaskAction, createRemoveTaskAction} from "./actions";
+import {createAddVacancyAction, createToggleVacancyAction, createRemoveVacancyAction} from "./actions";
 
-describe("actions tests", () => {
-  it("createAddTaskAction.", () => {
-      const action = createAddTaskAction("Example task");
+describe("Vacancy actions tests", () => {
+  it("createAddVacancyAction.", () => {
+      const action = createAddVacancyAction("Example vacancy");
       expect(action).toEqual({
-                               type: actionTypes.TASK_ADD,
-                               payload: "Example task"
+                               type: actionTypes.VACANCY_ADD,
+                               payload: "Example vacancy"
                              });
     });
 
-  it("createToggleTaskAction.", () => {
+  it("createToggleVacancyAction.", () => {
       const ID = 100;
-      const action = createToggleTaskAction(ID);
+      const action = createToggleVacancyAction(ID);
       expect(action).toEqual({
-                               type: actionTypes.TASK_TOGGLE,
+                               type: actionTypes.VACANCY_TOGGLE,
                                payload: {id: 100}
                              });
     });
 
-  it("createRemoveTaskAction.", () => {
+  it("createRemoveVacancyAction.", () => {
       const ID = 100;
-      const action = createRemoveTaskAction(ID);
+      const action = createRemoveVacancyAction(ID);
       expect(action).toEqual({
-                               type: actionTypes.TASK_REMOVE,
+                               type: actionTypes.VACANCY_REMOVE,
                                payload: {id: 100}
                              });
     });

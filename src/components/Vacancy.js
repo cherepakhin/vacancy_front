@@ -1,37 +1,36 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Form, ListGroup, Modal, Button } from "react-bootstrap";
-import { createToggleTaskAction, }  from "../store/actions";
+import { createToggleVacancyAction, }  from "../store/actions";
 
 import DeleteConfirmDlg from "./DeleteConfirmDlg";
-import Task0NotDeleteDlg from "./Task0NotDeleteDlg";
+import Vacancy0NotDeleteDlg from "./Vacancy0NotDeleteDlg";
 
 import PropTypes from "prop-types";
 import * as actions from "../store/actions";
 
-const Task = ({ task }) => {
+const Vacancy = ({ vacancy }) => {
 // for testing use props uncomment
 //  console.log("props=", task);
-  const { id, title, completed } = {...task};
+  const { id, title, completed } = {...vacancy};
   const dispatch = useDispatch();
 
   const [visibleMoreDlg, setVisibleMoreDlg] = useState(false);
   const [visibleDeleteConfirmDlg, setVisibleDeleteConfirmDlg] = useState(false);
-  const [visibleTask0NotDeleteDlg, setVisibleTask0NotDeleteDlg] = useState(false);
+  const [visibleVacancy0NotDeleteDlg, setVisibleVacancy0NotDeleteDlg] = useState(false);
 
 // show more dialog
   const openMoreDlg= (id) => {
     setVisibleMoreDlg(true);
-//    setVisibleTask0NotDeleteDlg(true);
   }
 
   const closeMoreDlg = () => {
     setVisibleMoreDlg(false);
   }
 
-  const openDeleteConfirmDlg = (task) => {
-    if(task === -1) {
-        console.log("task.id === -1");
+  const openDeleteConfirmDlg = (vacancy) => {
+    if(vacancy.id === -1) {
+        console.log("vacancy.id === -1");
         //TODO: show -1 not deleted
         setVisibleTask0NotDeleteDlg(true);
         return
@@ -39,7 +38,7 @@ const Task = ({ task }) => {
     console.log("before handleDeleteConfirmDlg visibleDeleteConfirmDlg:" );
     console.log(visibleDeleteConfirmDlg);
     console.log("before handleDeleteConfirmDlg task:");
-    console.log(task);
+    console.log(vacancy);
     // в state устанавливается состояние диалога - visible=true через переменную visibleDeleteConfirmDlg.
     // из usestate() через переменную visibleDeleteConfirmDlg  приходит новое состояние,
     // видимость компоненты DeleteConfirmDlg "привязана" к переменной visibleDeleteConfirmDlg
@@ -50,37 +49,39 @@ const Task = ({ task }) => {
     // и НЕ может существовать как совершенно независимый компонент (это не windows).
     setVisibleDeleteConfirmDlg(true);
 
-    // Само удаление задачи (TASK) делать в этой компоненте (Task.js), НЕ в диалоге.
-    // КАК принять ответ от диалога? Через ПЕРЕДАЧУ функции удаления (handleTaskDeleteConfirm) в диалог.
+    // Само удаление вакансии делать в этой компоненте (Vacancy.js), НЕ в диалоге.
+    // КАК принять ответ от диалога? Через ПЕРЕДАЧУ функции удаления (handleVacancyDeleteConfirm) в диалог.
     //      <DeleteConfirmDlg id={id} title={title} visible={visibleDeleteConfirmDlg}
-    //        fnTaskDeleteConfirm={handleTaskDeleteConfirm}
-    //        fnTaskDeleteCancel={handleTaskDeleteCancel}
+    //        fnVacancyDeleteConfirm={handleVacancyDeleteConfirm}
+    //        fnVacancyDeleteCancel={handleVacancyDeleteCancel}
     //      />
   }
 
   const cancelDeleteConfirmDlg = () => {
-    console.log("handleTaskDeleteCancel" );
+    //TODO: delete console.log
+    console.log("handleVacancyDeleteCancel" );
     setVisibleDeleteConfirmDlg(false);
   }
 
   const confirmDeleteConfirmDlg = (id) => {
+    //TODO: delete console.log
     console.log("confirmDeleteConfirmDlg id=" + id);
     setVisibleDeleteConfirmDlg(false);
     // dispatch to REST API!!!
-    dispatch(actions.createRemoveTaskAction(id));
+    dispatch(actions.createRemoveVacancyAction(id));
   }
 
-  const closeTask0NotDeleteDlg = () => {
-    setVisibleTask0NotDeleteDlg(false);
+  const closeVacancy0NotDeleteDlg = () => {
+    setVisibleVacancy0NotDeleteDlg(false);
   }
 
   // MoreDlg - пример диалога, встроенного в компоненту Task.js
   // DeleteConfirmDlg.js - пример диалога в отдельной компоненте
   return (
-    <ListGroup.Item className={completed && 'task-completed'}>
+    <ListGroup.Item className={completed && 'vacancy-completed'}>
       <Modal show={visibleMoreDlg} className="rounded-0">
         <Modal.Header closeButton>
-          <Modal.Title>Подробнее о задаче</Modal.Title>
+          <Modal.Title>Подробнее о вакансии</Modal.Title>
         </Modal.Header>
         <Modal.Body>{"JSON: {id: "+id+", title: '"+title+"'}"}</Modal.Body>
         <Modal.Footer>
@@ -89,12 +90,12 @@ const Task = ({ task }) => {
       </Modal>
 
       <DeleteConfirmDlg id={id} title={title} visible={visibleDeleteConfirmDlg}
-        fnTaskDeleteConfirm={(id) => confirmDeleteConfirmDlg(id)}
-        fnTaskDeleteCancel={cancelDeleteConfirmDlg}
+        fnVacancyDeleteConfirm={(id) => confirmDeleteConfirmDlg(id)}
+        fnVacancyDeleteCancel={cancelDeleteConfirmDlg}
       />
 
-      <Task0NotDeleteDlg visible={visibleTask0NotDeleteDlg}
-        fnTask0NotDeleteDlgClose={closeTask0NotDeleteDlg}
+      <Vacancy0NotDeleteDlg visible={visibleVacancy0NotDeleteDlg}
+        fnVacancy0NotDeleteDlgClose={closeVacancy0NotDeleteDlg}
       />
 
       <Form.Check
@@ -102,30 +103,25 @@ const Task = ({ task }) => {
         type="checkbox"
         label={id+". "+title}
         checked={completed}
-        onChange={ () => dispatch(createToggleTaskAction(id)) }
+        onChange={ () => dispatch(createToggleVacancyAction(id)) }
         title="title Form.Check"
       />
-      <div id="idMoreBtn" className="list-group-item-actions" title="Подробнее о задаче">
-        <span onClick={() => openMoreDlg(id)}>Подробнее</span>
+      <div id="idMoreBtn" className="list-group-item-actions" title="Подробнее о вакансии">
+        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
       </div>
-      <div id="idDeleteBtn" className="list-group-item-actions" title="Удалить задачу">
-        <span onClick={() => openDeleteConfirmDlg(id)}>Удалить</span>
+      <div id="idDeleteBtn" className="list-group-item-actions" title="Удалить вакансию">
+        <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={-1} role="button">Удалить</span>
       </div>
     </ListGroup.Item>
   )
 }
 
-Task.propTypes = {
-    task: PropTypes.shape({
+Vacancy.propTypes = {
+    vacancy: PropTypes.shape({
             id: PropTypes.number.isRequired,
             title: PropTypes.string.isRequired,
             completed: PropTypes.bool.isRequired
   }).isRequired
 }
-//const defaultProps = {
-//  id: 0,
-//  title: "- - -",
-//  completed: false
-//}
 
-export default Task;
+export default Vacancy;

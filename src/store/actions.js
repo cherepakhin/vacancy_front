@@ -1,20 +1,20 @@
 import * as actionTypes from './actionTypes';
 
 // actions это просто контейнер для переноса данных(payload) и команды для обработки этих данных(type)
-// вызывается из формы AddNewTask dispatch(actions.addTask({title: taskTitle}));
+// вызывается из формы AddNewVacancy dispatch(actions.addVacancy({title: taskTitle}));
 // сама обработка action происходит в reducer.js
-export const createAddTaskAction = title => ({
-  type: actionTypes.TASK_ADD,
+export const createAddVacancyAction = title => ({
+  type: actionTypes.VACANCY_ADD,
   payload: title
 });
 
-export const createToggleTaskAction = id => ({
-  type: actionTypes.TASK_TOGGLE,
+export const createToggleVacancyAction = id => ({
+  type: actionTypes.VACANCY_TOGGLE,
   payload: { id }
 });
 
-export const createRemoveTaskAction = id => ({
-  type: actionTypes.TASK_REMOVE,
+export const createRemoveVacancyAction = id => ({
+  type: actionTypes.VACANCY_REMOVE,
   payload: { id }
 })
 

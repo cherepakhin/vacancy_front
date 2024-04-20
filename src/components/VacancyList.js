@@ -21,4 +21,14 @@ const TaskList = ({ tasks }) => {
   else return null;
 }
 
+VacancyList.propTypes = {
+    tasks: React.PropTypes.arrayOf(React.PropTypes.object)
+    tasks.length: React.PropTypes.integer
+}
+
+VacancyList.defaultProps = {
+    tasks: []
+    tasks.length: 0
+}
+
 export default TaskList;

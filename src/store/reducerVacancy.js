@@ -20,12 +20,12 @@ let state0 = [{ id: -1, title: 'позже удалить из показа', co
 //  payload: title
 //});
 
-export default function reducerTask(state = state0, action) {
-  console.log("reduserTask.js: BEFORE state:");
+export default function reducerVacancy(state = state0, action) {
+  console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);
-  console.log("reduserTask.js action:");
+  console.log("reduserVacancy.js action:");
   switch (action.type) {
-    case actions.TASK_ADD:
+    case actions.VACANCY_ADD:
       console.log(action);
       //TODO: add rest request
       //TODO: and refresh all tasks
@@ -38,7 +38,7 @@ export default function reducerTask(state = state0, action) {
         completed: false,
       }];
 
-    case actions.TASK_TOGGLE:
+    case actions.VACANCY_TOGGLE:
       console.log(action);
       return state.map(task => {
         if (task.id === action.payload.id)
@@ -46,11 +46,11 @@ export default function reducerTask(state = state0, action) {
         return task;
       });
 
-    case actions.TASK_REMOVE:
+    case actions.VACANCY_REMOVE:
       console.log(action);
       //TODO: add rest request
       //TODO: and refresh all tasks
-      return state.filter(task => action.payload.id !== task.id);
+      return state.filter(vacancy => action.payload.id !== vacancy.id);
 
     default:
       return state;

@@ -1,106 +1,106 @@
 import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
-import Task from "./Task";
+import Vacancy from "./Vacancy";
 
 jest.mock('react-redux', () => ({
    useDispatch: jest.fn(),
    useSelector: jest.fn(),
 }));
 
-describe("<Task />", () => {
+describe("<Vacancy />", () => {
 
   it("filter map by selected keys", () => {
-    const myMap = new Map([["id", 100], ["title", "Task 1"], ["checked", false], ["type", "checkbox"]]);
+    const myMap = new Map([["id", 100], ["title", "Vacancy 1"], ["checked", false], ["type", "checkbox"]]);
     const selectedKeys = ["id", "title", "checked"]; // checkbox must be deleted
-    const task = Object.fromEntries(myMap);
-    expect(task).toEqual({id: 100, title: "Task 1", checked: false, type: "checkbox"});
+    const vacancy = Object.fromEntries(myMap);
+    expect(vacancy).toEqual({id: 100, title: "Vacancy 1", checked: false, type: "checkbox"});
 
     const filteredMap = new Map(
       [...myMap]
       .filter(([k, v]) => selectedKeys.includes(k)));
 
-    expect(filteredMap).toEqual(new Map([["id", 100], ["title", "Task 1"], ["checked", false]]));
+    expect(filteredMap).toEqual(new Map([["id", 100], ["title", "Vacancy 1"], ["checked", false]]));
   });
 
   it("Check structure view: Form.Check, moreBtn, deleteBtn", () => {
-    const task = {
+    const vacancy = {
       id: 100,
-      title: "Task 1",
+      title: "Vacancy 1",
       completed: false
     };
 
-    const wrapper = shallow(<Task task={task} />);
-    const taskView = toJson(wrapper);
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+    const vacancyView = toJson(wrapper);
 
-    expect(taskView.type).toEqual("ListGroupItem");
-    expect(taskView.children.length).toBe(6); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg task -1
+    expect(vacancyView.type).toEqual("ListGroupItem");
+    expect(vacancyView.children.length).toBe(6); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
   });
 
 //TODO: move to DeleteConfirmDlg.spec.js
-  it("showDeleteConfirmDlg hidden in Task", () => {
-    const task = {
+  it("showDeleteConfirmDlg hidden in Vacancy", () => {
+    const vacancy = {
       id: 100,
-      title: "Task 1",
+      title: "Vacancy 1",
       completed: false
     };
 
-    const wrapper = shallow(<Task task={task} />);
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     expect(wrapper.props().children[0].type.displayName).toEqual("Modal");
 
     expect(wrapper.props().children[1].props).toEqual(
         expect.objectContaining(
         {
             id: 100,
-            title: "Task 1",
+            title: "Vacancy 1",
             visible: false,
         })
     );
   });
 
-  it("check props formCheck in Task", () => {
-    const task = {
+  it("check props formCheck in Vacancy", () => {
+    const vacancy = {
       id: 100,
-      title: "Task 1",
+      title: "Vacancy 1",
       completed: false
     };
 
-    const wrapper = shallow(<Task task={task} />);
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     const formCheck = wrapper.props().children[3];
 
-    expect(formCheck.props.id).toBe(task.id);
+    expect(formCheck.props.id).toBe(vacancy.id);
     expect(formCheck.props.type).toBe("checkbox");
-    expect(formCheck.props.label).toBe("100. Task 1");
-    expect(formCheck.props.checked).toBe(task.completed);
+    expect(formCheck.props.label).toBe("100. Vacancy 1");
+    expect(formCheck.props.checked).toBe(vacancy.completed);
   });
 
-  it("check showMoreBtn props in Task", () => {
-    const task = {
+  it("check showMoreBtn props in Vacancy", () => {
+    const vacancy = {
       id: 100,
-      title: "Task 1",
+      title: "Vacancy 1",
       completed: false
     };
 
-    const wrapper = shallow(<Task task={task} />);
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     const showMoreBtn = wrapper.props().children[4];
 
     expect(showMoreBtn.props["className"]).toEqual("list-group-item-actions");
     expect(showMoreBtn.props["children"].props.children).toBe("Подробнее");
   });
 
-  it("check deleteBtn props in Task", () => {
-    const task = {
+  it("check deleteBtn props in Vacancy", () => {
+    const vacancy = {
       id: 100,
-      title: "Task 1",
+      title: "Vacancy 1",
       completed: false
     };
 
-    const wrapper = shallow(<Task task={task} />);
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     const deleteBtn = wrapper.props().children[5];
 
     expect(deleteBtn.props["className"]).toBe("list-group-item-actions");
     expect(deleteBtn.props["children"].props.children).toBe("Удалить");
-    expect(deleteBtn.props.title).toBe("Удалить задачу");
+    expect(deleteBtn.props.title).toBe("Удалить вакансию");
   });
 
 // Example tests:

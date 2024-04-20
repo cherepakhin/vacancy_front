@@ -14,7 +14,7 @@ const VacancyList = ({ vacancies }) => {
         }
       </ListGroup>
     )
-  else return null;
+  else return <ListGroup/>;
 }
 
 VacancyList.propTypes = {

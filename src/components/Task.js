@@ -108,7 +108,7 @@ const Task = ({ task }) => {
       <div id="idMoreBtn" className="list-group-item-actions" title="Подробнее о задаче">
         <span onClick={() => openMoreDlg(id)}>Подробнее</span>
       </div>
-      <div className="list-group-item-actions" title="Удалить задачу">
+      <div id="idDeleteBtn" className="list-group-item-actions" title="Удалить задачу">
         <span onClick={() => openDeleteConfirmDlg(id)}>Удалить</span>
       </div>
     </ListGroup.Item>

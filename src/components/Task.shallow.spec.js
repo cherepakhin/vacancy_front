@@ -58,21 +58,6 @@ describe("<Task />", () => {
     );
   });
 
-//TODO: move to MoreDlg.spec.js
-//  it("showVisibleMoreDlg hidden in Task", () => {
-//    const task = {
-//      id: 100,
-//      title: "Task 1",
-//      completed: false
-//    };
-//
-//    const wrapper = shallow(<Task task={task} />);
-//    const showVisibleMoreDlg = wrapper.props().children[1];
-//
-//    expect(showVisibleMoreDlg.props["className"]).toEqual("rounded-0"); // dlg have className="rounded-0"
-//    expect(showVisibleMoreDlg.props.show).toBe(false);
-//  });
-
   it("check props formCheck in Task", () => {
     const task = {
       id: 100,
@@ -89,21 +74,6 @@ describe("<Task />", () => {
     expect(formCheck.props.checked).toBe(task.completed);
   });
 
-//TODO: move to DeleteConfirmDlg.spec.js
-//  it("showDeleteConfirmDlg NOT visible in Task ", () => {
-//    const task = {
-//      id: 100,
-//      title: "Task 1",
-//      completed: false
-//    };
-//
-//    const wrapper = shallow(<Task task={task} />);
-//    const showDeleteConfirmDlg = wrapper.props().children[0];
-//
-//    expect(showDeleteConfirmDlg.props["className"]).toEqual("rounded-0");
-//    expect(showDeleteConfirmDlg.props.show).toBe(false);
-//  });
-
   it("check showMoreBtn props in Task", () => {
     const task = {
       id: 100,
@@ -115,7 +85,6 @@ describe("<Task />", () => {
     const showMoreBtn = wrapper.props().children[4];
 
     expect(showMoreBtn.props["className"]).toEqual("list-group-item-actions");
-    expect(showMoreBtn.props["align"]).toBe("left"); // align in cell
     expect(showMoreBtn.props["children"].props.children).toBe("Подробнее");
   });
 
@@ -127,12 +96,11 @@ describe("<Task />", () => {
     };
 
     const wrapper = shallow(<Task task={task} />);
-
     const deleteBtn = wrapper.props().children[5];
-//    console.log(wrapper.props());
+
     expect(deleteBtn.props["className"]).toBe("list-group-item-actions");
-    expect(deleteBtn.props["align"]).toBe("center"); // align in cell
     expect(deleteBtn.props["children"].props.children).toBe("Удалить");
+    expect(deleteBtn.props.title).toBe("Удалить задачу");
   });
 
 // Example tests:

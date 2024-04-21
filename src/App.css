@@ -54,6 +54,10 @@
   left: 11px;
 }
 
+.list-group-item-actions-right-last {
+  right: 0px;
+}
+
 .list-group-item-actions span {
   display: none;
   color: #c00;

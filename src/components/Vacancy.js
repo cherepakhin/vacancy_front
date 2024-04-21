@@ -106,16 +106,21 @@ const Vacancy = ({ vacancy }) => {
         className="col-10"
       />
       <div
-        id="idMoreBtn"
-        className="col-1 list-group-item-actions list-group-item-actions-right"
-        title="Подробнее о вакансии">
-        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
-      </div>
-      <div
-        id="idDeleteBtn"
-        className="col-1 list-group-item-actions list-group-item-actions-right list-group-item-actions-left"
-        title="Удалить вакансию">
-        <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={-1} role="button">Удалить</span>
+            className="col-3"
+      >
+          <span
+            id="idMoreBtn"
+            className="list-group-item-actions list-group-item-actions-right"
+            title="Подробнее о вакансии">
+            <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее  </span>
+          </span>
+          <span>&nbsp;&nbsp;&nbsp;</span>
+          <span
+            id="idDeleteBtn"
+            className="list-group-item-actions list-group-item-actions-left list-group-item-actions-right-last"
+            title="Удалить вакансию">
+            <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={-1} role="button">Удалить</span>
+          </span>
       </div>
     </ListGroup.Item>
   )

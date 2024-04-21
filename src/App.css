@@ -50,6 +50,10 @@
   right: 11px;
 }
 
+.list-group-item-actions-left {
+  left: 11px;
+}
+
 .list-group-item-actions span {
   display: none;
   color: #c00;

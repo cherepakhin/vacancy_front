@@ -55,4 +55,11 @@ File sizes after gzip:
 
 Этот проект сделан на основе простого проекта с React/Redux/Bootstrap [https://github.com/cherepakhin/redux-simple-app](https://github.com/cherepakhin/redux-simple-app). В нем же описание деталей работы с React/Redux и рабочие заметки (подглядывать в историю git).
 
-    
+
+### Заметки
+
+Изменяю в App.css крайний div элемент:
+
+.list-group-item-actions-last {
+    right: 10px;
+}

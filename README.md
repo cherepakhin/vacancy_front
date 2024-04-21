@@ -56,19 +56,19 @@ File sizes after gzip:
 Этот проект сделан на основе простого проекта с React/Redux/Bootstrap [https://github.com/cherepakhin/redux-simple-app](https://github.com/cherepakhin/redux-simple-app). В нем же описание деталей работы с React/Redux и рабочие заметки (подглядывать в историю git).
 
 
-### Заметки
+### Заметки о css
 
-Изменяю в App.css крайний div элемент:
+Изменение правого отступа div элемента c id=list-group-item-actions-right (App.css):
 
 ````shell
 .list-group-item-actions-last {
-    right: 10px;
+  right: 11px;
 }
 ````
 
 Tooltip:
 
-Солержание подсказки (tooltip) определяется  в поле _title_:
+Содержание подсказки (tooltip) определяется  в поле _title_:
 
 ````shell
 <div id="idDeleteBtn" className="col-1 list-group-item-actions list-group-item-actions-last" title="Удалить вакансию">

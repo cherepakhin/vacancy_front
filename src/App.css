@@ -46,9 +46,10 @@
   padding-left: 0px;
 }
 
-.list-group-item-actions-last {
+.list-group-item-actions-right {
   right: 11px;
 }
+
 .list-group-item-actions span {
   display: none;
   color: #c00;

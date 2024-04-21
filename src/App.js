@@ -10,7 +10,7 @@ function App() {
   const vacancies = useSelector(state => state);
 
   return (
-    <Container className="main-app-container ml-4"> {/*  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)*/}
+    <Container fluid className="main-app-container"> {/*  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)*/}
       <Row className="mt-4">    {/* "mt-4"  top margin (https://react-bootstrap.github.io/docs/layout/grid)*/}
         <Col xs={6}>           {/* xs={6} 10 cells (https://react-bootstrap.github.io/docs/layout/grid)*/}
           <h4>Новая вакансия</h4>
@@ -23,7 +23,7 @@ function App() {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col xs={12}>
           <VacancyList vacancies={ vacancies } />
         </Col>
       </Row>

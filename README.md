@@ -60,6 +60,17 @@ File sizes after gzip:
 
 Изменяю в App.css крайний div элемент:
 
+````shell
 .list-group-item-actions-last {
     right: 10px;
 }
+````
+
+Tooltip:
+
+Солержание подсказки (tooltip) определяется  в поле _title_:
+
+````shell
+<div id="idDeleteBtn" className="col-1 list-group-item-actions list-group-item-actions-last" title="Удалить вакансию">
+````
+

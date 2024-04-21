@@ -28,17 +28,15 @@ const Vacancy = ({ vacancy }) => {
     setVisibleMoreDlg(false);
   }
 
-  const openDeleteConfirmDlg = (vacancy) => {
-    if(vacancy.id === -1) {
-        console.log("vacancy.id === -1");
-        //TODO: show -1 not deleted
+  const openDeleteConfirmDlg = (vacancyId) => {
+    console.log("openDeleteConfirmDlg vacancyId=", vacancyId);
+    if(vacancyId === -1) {
+        console.log("try delete vacancy.id === -1");
         setVisibleVacancy0NotDeleteDlg(true);
         return
     }
-    console.log("before handleDeleteConfirmDlg visibleDeleteConfirmDlg:" );
     console.log(visibleDeleteConfirmDlg);
     console.log("before handleDeleteConfirmDlg task:");
-    console.log(vacancy);
     // в state устанавливается состояние диалога - visible=true через переменную visibleDeleteConfirmDlg.
     // из usestate() через переменную visibleDeleteConfirmDlg  приходит новое состояние,
     // видимость компоненты DeleteConfirmDlg "привязана" к переменной visibleDeleteConfirmDlg
@@ -105,11 +103,12 @@ const Vacancy = ({ vacancy }) => {
         checked={completed}
         onChange={ () => dispatch(createToggleVacancyAction(id)) }
         title="title Form.Check"
+        className="col-10"
       />
-      <div id="idMoreBtn" className="list-group-item-actions" title="Подробнее о вакансии">
+      <div id="idMoreBtn" className="col-1 list-group-item-actions" title="Подробнее о вакансии">
         <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
       </div>
-      <div id="idDeleteBtn" className="list-group-item-actions" title="Удалить вакансию">
+      <div id="idDeleteBtn" className="col-1 list-group-item-actions" title="Удалить вакансию">
         <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={-1} role="button">Удалить</span>
       </div>
     </ListGroup.Item>

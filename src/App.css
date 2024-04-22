@@ -40,14 +40,19 @@
 }
 
 .list-group-item-actions {
-  width: 15%;
   text-align: center;
-  padding-right: 0px;
+  padding-right: 1ch;
   padding-left: 0px;
+
+  clear: both;
+  height: 1px;
+  float:left;
+
+   min-width: 12ch;
 }
 
 .list-group-item-actions-last {
-  right: 11px;
+  right: 2ch;
 }
 .list-group-item-actions span {
   display: none;

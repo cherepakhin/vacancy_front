@@ -103,9 +103,9 @@ const Vacancy = ({ vacancy }) => {
         checked={completed}
         onChange={ () => dispatch(createToggleVacancyAction(id)) }
         title="title Form.Check"
-        className="col-9"
+        className="col-10"
       />
-      <div id="idMoreBtn" className="col-2 list-group-item-actions list-group-item-actions-last" title="Подробнее о вакансии">
+      <div id="idMoreBtn" className="col-1 list-group-item-actions" title="Подробнее о вакансии">
         <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
       </div>
       <div id="idDeleteBtn" className="col-1 list-group-item-actions list-group-item-actions-last" title="Удалить вакансию">

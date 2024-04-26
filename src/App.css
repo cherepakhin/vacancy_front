@@ -33,6 +33,8 @@
 
 .main-app-container .list-group-item {
   display: flex;
+  padding-left: 0px;
+  padding-right: 12px;
 }
 
 .list-group-item .form-check {
@@ -52,10 +54,30 @@
   max-width: 12ch !important;
 }
 
+.list-group-item-action-event {
+  text-align: center;
+  padding-right: 1ch;
+  padding-left: 1ch;
+
+  clear: both;
+  height: 1px;
+  float:left;
+
+  min-width: 12ch;
+  max-width: 12ch !important;
+}
+
 .list-group-item-action-last {
   right: 1ch;
   min-width: 7ch;
   max-width: 7ch !important;
+}
+
+.list-group-item-date {
+  left: -1ch;
+  right: 1ch;
+  min-width: 11ch;
+  max-width: 11ch !important;
 }
 
 .list-group-item-action span {

@@ -96,6 +96,9 @@ const Vacancy = ({ vacancy }) => {
         fnVacancy0NotDeleteDlgClose={closeVacancy0NotDeleteDlg}
       />
 
+      <div id="idLastEvent" className="col-1 list-group-item-date" title="Последнее событие">
+        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">26.04.2023</span>
+      </div>
       <Form.Check
         id={id}
         type="checkbox"

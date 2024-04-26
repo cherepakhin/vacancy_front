@@ -84,7 +84,7 @@ describe("<Vacancy />", () => {
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     const showMoreBtn = wrapper.props().children[4];
 
-    expect(showMoreBtn.props["className"]).toEqual("col-1 list-group-item-actions");
+    expect(showMoreBtn.props["className"]).toEqual("col-1 list-group-item-action");
     expect(showMoreBtn.props["children"].props.children).toBe("Подробнее");
   });
 
@@ -98,7 +98,7 @@ describe("<Vacancy />", () => {
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     const deleteBtn = wrapper.props().children[5];
 
-    expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-actions list-group-item-actions-last");
+    expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-actions-last");
     expect(deleteBtn.props["children"].props.children).toBe("Удалить");
     expect(deleteBtn.props.title).toBe("Удалить вакансию");
   });

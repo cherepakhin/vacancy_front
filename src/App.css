@@ -39,10 +39,10 @@
   width: 100%;
 }
 
-.list-group-item-actions {
+.list-group-item-action {
   text-align: center;
   padding-right: 1ch;
-  padding-left: 0px;
+  padding-left: 1ch;
 
   clear: both;
   height: 1px;
@@ -51,20 +51,23 @@
    min-width: 12ch;
 }
 
-.list-group-item-actions-last {
-  right: 2ch;
+.list-group-item-action-last {
+  right: 1ch;
+  min-width: 7ch;
+  max-width: 7ch !important;
 }
-.list-group-item-actions span {
+
+.list-group-item-action span {
   display: none;
   color: #c00;
 }
 
-.main-app-container .list-group-item:hover .list-group-item-actions span {
+.main-app-container .list-group-item:hover .list-group-item-action span {
   display: inline;
   cursor: pointer;
 }
 
-.list-group-item-actions span:hover {
+.list-group-item-action span:hover {
   text-decoration: underline;
 }
 

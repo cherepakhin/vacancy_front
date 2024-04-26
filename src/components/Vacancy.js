@@ -102,7 +102,7 @@ const Vacancy = ({ vacancy }) => {
         label={id+". "+title}
         checked={completed}
         onChange={ () => dispatch(createToggleVacancyAction(id)) }
-        title="title Form.Check"
+        title={"title Form.Check id="+id + " " + ((completed ? "Отработана":"Не отработана"))}
       />
       <div id="idMoreBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
         <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>

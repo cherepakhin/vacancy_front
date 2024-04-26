@@ -49,7 +49,7 @@ export default function reducerVacancy(state = state0, action) {
     case actions.VACANCY_REMOVE:
       console.log(action);
       //TODO: add rest request
-      //TODO: and refresh all tasks
+      console.log("soFetch delete and get new list vacancies");
       return state.filter(vacancy => action.payload.id !== vacancy.id);
 
     default:

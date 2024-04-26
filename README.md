@@ -39,7 +39,7 @@ Creating an optimized production build...
 Compiled successfully.
 
 File sizes after gzip:
-
+/sorry/index.html
   55.71 KB         build/static/js/2.924064c7.chunk.js
   22.69 KB         build/static/css/2.7f1403ef.chunk.css
   1.57 KB (-21 B)  build/static/js/main.ba052924.chunk.js
@@ -74,3 +74,24 @@ Tooltip:
 <div id="idDeleteBtn" className="col-1 list-group-item-actions list-group-item-actions-last" title="Удалить вакансию">
 ````
 
+Ошибка "digital envelope routines::unsupported"
+
+Ответ:
+
+[https://paolochang.github.io/posts/bugfix-digital_envelope_routines_unsupported/](https://paolochang.github.io/posts/bugfix-digital_envelope_routines_unsupported/)
+
+If you encounter the “digital envelope routines::unsupported” error, you may be tempting to use the following easiest solutions:
+
+Downgrade Node.js to pre v17 
+OR
+Use the legacy SSL provider:
+
+````json
+{
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start"
+  }
+}
+````
+
+Использован 2 вариант.

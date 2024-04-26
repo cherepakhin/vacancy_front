@@ -95,3 +95,38 @@ Use the legacy SSL provider:
 ````
 
 Использован 2 вариант.
+
+#### Последняя колонка
+
+Последняя колонка либо валазит за пределы таблицы, либо после нее остается много пустого места. Для решения этого, в дополнении к атрибуту обычной колонки __list-group-item-action__, в сделано свойство __list-group-item-action-last__  и добавлен аттрибут __!important;__.
+
+````
+    <div id="idMoreBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
+      <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
+    </div>
+    <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-last" title="Удалить вакансию">
+      <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={-1} role="button">Удалить</span>
+    </div>
+````
+
+css:
+````    
+.list-group-item-action {
+  text-align: center;
+  padding-right: 1ch;
+  padding-left: 1ch;
+
+  clear: both;
+  height: 1px;
+  float:left;
+
+   min-width: 12ch;
+}
+
+.list-group-item-action-last {
+  right: 1ch;
+  min-width: 7ch;
+  max-width: 7ch !important;
+}
+    
+````

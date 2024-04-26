@@ -48,7 +48,8 @@
   height: 1px;
   float:left;
 
-   min-width: 12ch;
+  min-width: 12ch;
+  max-width: 12ch !important;
 }
 
 .list-group-item-action-last {

@@ -98,7 +98,7 @@ Use the legacy SSL provider:
 
 #### Последняя колонка
 
-Последняя колонка либо валазит за пределы таблицы, либо после нее остается много пустого места. Для решения этого, в дополнении к атрибуту обычной колонки __list-group-item-action__, сделано свойство __list-group-item-action-last__  и добавлен аттрибут __!important;__.
+Последняя колонка либо вылазит за пределы таблицы, либо после нее остается много пустого места. Для решения этого, в дополнении к атрибуту обычной колонки __list-group-item-action__, сделано свойство __list-group-item-action-last__  и добавлен аттрибут __!important;__.
 
 ````
     <div id="idMoreBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
@@ -120,7 +120,7 @@ css:
   height: 1px;
   float:left;
 
-   min-width: 12ch;
+  min-width: 12ch;
 }
 
 .list-group-item-action-last {

@@ -34,7 +34,7 @@ describe("<Vacancy />", () => {
     const vacancyView = toJson(wrapper);
 
     expect(vacancyView.type).toEqual("ListGroupItem");
-    expect(vacancyView.children.length).toBe(6); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
+    expect(vacancyView.children.length).toBe(7); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
   });
 
 //TODO: move to DeleteConfirmDlg.spec.js
@@ -66,7 +66,7 @@ describe("<Vacancy />", () => {
     };
 
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
-    const formCheck = wrapper.props().children[3];
+    const formCheck = wrapper.props().children[4];
 
     expect(formCheck.props.id).toBe(vacancy.id);
     expect(formCheck.props.type).toBe("checkbox");
@@ -82,7 +82,7 @@ describe("<Vacancy />", () => {
     };
 
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
-    const showMoreBtn = wrapper.props().children[4];
+    const showMoreBtn = wrapper.props().children[5];
 
     expect(showMoreBtn.props["className"]).toEqual("col-1 list-group-item-action");
     expect(showMoreBtn.props["children"].props.children).toBe("Подробнее");
@@ -96,9 +96,9 @@ describe("<Vacancy />", () => {
     };
 
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
-    const deleteBtn = wrapper.props().children[5];
+    const deleteBtn = wrapper.props().children[6];
 
-    expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-actions-last");
+    expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-action-last");
     expect(deleteBtn.props["children"].props.children).toBe("Удалить");
     expect(deleteBtn.props.title).toBe("Удалить вакансию");
   });

@@ -1,7 +1,9 @@
 import * as actions from './actionTypes';
 
 let lastId = 0;
-let state0 = [{ id: -1, title: 'не показывать', completed: false}];
+let state0 = [{ id: -1, title: 'не показывать -1', completed: false},
+    { id: -2, title: 'не показывать -2', completed: false},
+    { id: -3, title: 'не показывать -3', completed: false}];
 // Здесь разместить REST API
 
 // reducer возвращает новый state c учетом action

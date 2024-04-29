@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Container fluid className="md-0 pt-0 main-app-container bg-light"> {/*  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)*/}
-      <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered"> {/* TDOD: bg-dark delete or change to bg-light*/}
+      <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
         <Col xs={12} className="mt-2 mb-2">
             <Button className="ml-0 col-2">Новая</Button>
             <Button className="ml-1 col-2">Все</Button>

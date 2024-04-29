@@ -22,6 +22,8 @@ let state0 = [{ id: -1, title: 'не показывать -1', completed: false}
 //  payload: title
 //});
 
+// store.js собирает и хранит измененные state из reducer
+
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);

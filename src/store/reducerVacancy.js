@@ -1,4 +1,4 @@
-import * as actions from './actionTypes';
+import * as actionTypes from './actionTypes';
 
 let lastId = 0;
 let state0 = [{ id: -1, title: 'не показывать -1', completed: false},
@@ -27,7 +27,7 @@ export default function reducerVacancy(state = state0, action) {
   console.log(state);
   console.log("reduserVacancy.js action:");
   switch (action.type) {
-    case actions.VACANCY_ADD:
+    case actionTypes.VACANCY_ADD:
       console.log(action);
       //TODO: add rest request
       //TODO: and refresh all vacancies
@@ -40,7 +40,7 @@ export default function reducerVacancy(state = state0, action) {
         completed: false,
       }];
 
-    case actions.VACANCY_TOGGLE:
+    case actionTypes.VACANCY_TOGGLE:
       console.log(action);
       return state.map(vacancy => {
         if (vacancy.id === action.payload.id)
@@ -48,7 +48,7 @@ export default function reducerVacancy(state = state0, action) {
         return vacancy;
       });
 
-    case actions.VACANCY_REMOVE:
+    case actionTypes.VACANCY_REMOVE:
       console.log(action);
       //TODO: add rest request
       console.log("soFetch delete and get new list vacancies");

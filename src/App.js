@@ -13,9 +13,9 @@ function App() {
     <Container fluid className="md-0 pt-0 main-app-container bg-light"> {/*  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)*/}
       <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered"> {/* TDOD: bg-dark delete or change to bg-light*/}
         <Col xs={12} className="mt-2 mb-2">
-            <Button className="ml-0 w-15">Список</Button>
-            <Button className="ml-1 w-15">Новая</Button>
-            <Button className="ml-1 w-15">В работе</Button>
+            <Button className="ml-0" style={{width: "15%"}}>Новая</Button>
+            <Button className="ml-1" style={{width: "15%"}}>Все</Button>
+            <Button className="ml-1" style={{width: "15%"}}>В работе</Button>
         </Col>
       </Row>
       <Row className="mt-2 md-0 pt-5 pl-0 pd-0">    {/* "mt-4"  top margin (https://react-bootstrap.github.io/docs/layout/grid)*/}

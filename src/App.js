@@ -18,7 +18,7 @@ function App() {
             <Button className="ml-1 w-15">В работе</Button>
         </Col>
       </Row>
-      <Row className="mt-0 md-0 pt-5 pl-0 pd-0">    {/* "mt-4"  top margin (https://react-bootstrap.github.io/docs/layout/grid)*/}
+      <Row className="mt-1 md-0 pt-5 pl-0 pd-0">    {/* "mt-4"  top margin (https://react-bootstrap.github.io/docs/layout/grid)*/}
         <Col xs={6}>           {/* xs={6} 10 cells (https://react-bootstrap.github.io/docs/layout/grid)*/}
           <h4>Новая вакансия</h4>
           <AddNewVacancy />

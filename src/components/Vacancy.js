@@ -83,7 +83,7 @@ const Vacancy = ({ vacancy }) => {
         </Modal.Header>
         <Modal.Body>{"JSON: {id: "+id+", title: '"+title+"'}"}</Modal.Body>
         <Modal.Footer>
-            <Button className="col-2" variant="primary" onClick={closeMoreDlg}>Закрыть</Button>
+            <Button className="col-2 mr-2" variant="primary" onClick={closeMoreDlg}>Закрыть</Button>
         </Modal.Footer>
       </Modal>
 

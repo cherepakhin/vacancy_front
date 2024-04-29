@@ -24,7 +24,7 @@ let state0 = [{ id: -1, title: 'не показывать -1', completed: false}
 
 // store.js собирает и хранит измененные state из reducers
 //   (в данном случае только один reducer: reducerVacancy)
-
+// в нормальном приложении много reduserXXXXXX
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);

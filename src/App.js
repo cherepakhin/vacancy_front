@@ -11,10 +11,10 @@ function App() {
 
   return (
     <Container fluid className="md-0 pt-0 main-app-container bg-light"> {/*  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)*/}
-      <Row className="fixed-top mt-1 ml-1 bg-light">
+      <Row className="fixed-top mt-1 ml-0 bg-light">
         <Col xs={12} className="mt-2">
-            <Button className="w-15">Новая</Button>
             <Button className="ml-1 w-15">Список</Button>
+            <Button className="w-15">Новая</Button>
             <Button className="ml-1 w-15">В работе</Button>
         </Col>
       </Row>

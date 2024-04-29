@@ -29,7 +29,7 @@ const AddNewVacancy = () => {
   }
 
   return (
-    <InputGroup className="mb-3 ml-0">
+    <InputGroup className="mb-2 ml-0">
       <FormControl placeholder="Название новой вакансии" value={vacancyTitle} onChange={e => handleVacancyTitleChange(e)} />
       <InputGroup.Append>
         <Button onClick={handleVacancySubmit}>Сохранить</Button>

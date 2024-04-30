@@ -31,7 +31,7 @@ describe("<App />", () => {
     expect(props.children.length).toEqual(5);
   });
 
-  it("ClassName App->ToolBar", () => {
+  it("ClassName ToolBar of App", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
 //    console.log(wrapper.debug());
@@ -42,14 +42,14 @@ describe("<App />", () => {
     expect(wrapper.props().children[1].props.className).toEqual('fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered');
   });
 
-  it("Size of App->ToolBar", () => {
+  it("Size ToolBar of App", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
 
     expect(wrapper.props().children[1].props.children.props.xs).toEqual(12);
   });
 
-  it("margin top, bottom of App->ToolBar", () => {
+  it("margin top, bottom ToolBar of App", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
 

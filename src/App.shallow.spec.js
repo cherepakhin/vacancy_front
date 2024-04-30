@@ -20,6 +20,7 @@ describe("<App />", () => {
   it("className Container in App", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
+
     expect(props.className).toEqual("md-0 pt-0 main-app-container bg-light");
   });
 
@@ -36,20 +37,22 @@ describe("<App />", () => {
 //    console.log(wrapper.debug());
     console.log(wrapper.props().children);
     console.log(wrapper.props().children[1].props);
+
     // Row in ToolBar className
     expect(wrapper.props().children[1].props.className).toEqual('fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered');
-    // Margin Top and Margin Bottom in Row toolbar
   });
 
   it("Size of App->ToolBar", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
+
     expect(wrapper.props().children[1].props.children.props.xs).toEqual(12);
   });
 
   it("margin top, bottom of App->ToolBar", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
+
     // Margin Top and Margin Bottom in Row toolbar
     expect(wrapper.props().children[1].props.children.props.className).toEqual('mt-2 mb-2');
   });

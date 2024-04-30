@@ -11,6 +11,7 @@ function App() {
 
   return (
     <Container fluid className="md-0 pt-0 main-app-container bg-light"> {/*  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)*/}
+      {/* Toolbar */}
       {/* Row зафиксирован сверху экрана (fixed-top) */}
       <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
         {/* Одна колонка во всю ширину экрана (xs=12). Отступ элеиентов внутри колонки сверху и снизу (mt-2 mb-2) = 8px */}

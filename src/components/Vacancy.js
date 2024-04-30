@@ -97,7 +97,7 @@ const Vacancy = ({ vacancy }) => {
       />
 
       <div id="idLastEvent" className="col-1 list-group-item-date" title="Последнее событие">
-        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">26.04.2023</span>
+        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">26.04.2023 </span>
       </div>
       <Form.Check
         id={id}

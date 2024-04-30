@@ -134,6 +134,24 @@ css:
     
 ````
 
+#### Установка ширины элементов в "колонках"
+
+В Bootstrap сетка состоит из 12 "колонок". В примерах ниже элементам выделяется 1 колонка. В зависимости от размера окна ширина колонки меняется.   
+
+````
+<Button className="... col-1">...</Button>
+````
+
+Пример в App.js (col-1): 
+
+````    
+<Col xs={12} className="mt-2 mb-2">
+  <Button className="ml-0 pl-1 pr-1 col-1">Все</Button>
+  <Button className="ml-1 pl-1 pr-1 col-1">Текущие</Button>
+  <Button className="ml-1 pl-1 pr-1 col-1">Новая</Button>
+</Col>
+````    
+
 #### Ссылки
 
 - [Диаграмма состояний](https://app.diagrams.net/?src=about#G1i8cVXJXj7xbnOIqtzitvihxvn_yiwOuJ#%7B%22pageId%22%3A%226vxvHjby1d88luMmcxHr%22%7D)<br/>

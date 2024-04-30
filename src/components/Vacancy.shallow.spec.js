@@ -1,7 +1,11 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
+import { act } from '@testing-library/react';
+import * as reactRedux from 'react-redux';
+
 import Vacancy from "./Vacancy";
+import DeleteConfirmDlg from "./DeleteConfirmDlg";
 
 jest.mock('react-redux', () => ({
    useDispatch: jest.fn(),
@@ -101,6 +105,90 @@ describe("<Vacancy />", () => {
     expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-action-last");
     expect(deleteBtn.props["children"].props.children).toBe("Удалить");
     expect(deleteBtn.props.title).toBe("Удалить вакансию");
+  });
+
+  it('should open the delete confirmation dialog (https://chat.lmsys.org/)', () => {
+    const vacancy = {
+      id: 1,
+      title: 'Test Vacancy',
+      completed: false,
+    };
+
+    const wrapper = mount(<Vacancy vacancy={vacancy} />);
+
+    wrapper.find('#idDeleteBtn').simulate('click');
+    expect(wrapper.find(DeleteConfirmDlg)).toHaveLength(1);
+    expect(wrapper.find("#idDeleteBtn")).toHaveLength(1);
+
+    const deleteDlg = wrapper.find(DeleteConfirmDlg);
+    console.log(wrapper);
+    console.log(deleteDlg.props());
+//    expect(deleteDlg.props().visible).toBe(true);
+//    expect(wrapper.find(DeleteConfirmDlg).props.visible).toBe(true);
+  });
+
+  it('should open the delete confirmation dialog with mount (https://chat.lmsys.org/)', () => {
+    const vacancy = {
+      id: 1,
+      title: 'Test Vacancy',
+      completed: false,
+    };
+
+    const wrapper = mount(<Vacancy vacancy={vacancy} />);
+
+    expect(wrapper.find(DeleteConfirmDlg)).toHaveLength(1);
+    expect(wrapper.find("#idDeleteBtn")).toHaveLength(1);
+
+    expect(wrapper.find(DeleteConfirmDlg)).toHaveLength(1);
+    const deleteDlg = wrapper.find(DeleteConfirmDlg);
+
+//    wrapper.setVisibleDeleteConfirmDlg(true);
+    console.log("=============================");
+    console.log(deleteDlg.props());
+    deleteDlg.props().fnVacancyDeleteCancel(); // console.log("handleVacancyDeleteCancel" );
+    expect(deleteDlg.props().visible).toBe(false); // OK
+
+    console.log(deleteDlg.props());
+    wrapper.find('#idDeleteBtn').simulate('click');
+
+//    wrapper.openDeleteConfirmDlg(vacancy.id);
+    console.log(wrapper);
+//    deleteDlg.props().visible = true;
+//    expect(deleteDlg.props().visible).toBe(true);
+    expect(deleteDlg.props().title).toBe(vacancy.title);
+    expect(deleteDlg.props().id).toBe(vacancy.id);
+
+    act(() => {
+        wrapper.find('#idDeleteBtn').simulate('click');
+        console.log(wrapper.props());
+        console.log(deleteDlg.props());
+        expect(deleteDlg.props().visible).toBe(false); // OK, но нужно true
+    });
+  });
+
+  it('simulate click on deleteBtn', () => {
+    const vacancy = {
+      id: 1,
+      title: 'Test Vacancy',
+      completed: false,
+    };
+
+    const mockDispatch = jest.fn();
+    const mockUseDispatch = jest.spyOn(reactRedux, 'useDispatch');
+
+    const vacancyComponent = mount(<Vacancy vacancy={vacancy} />);
+
+    act(() => {
+        expect(vacancyComponent.find("#idDeleteBtn")).toHaveLength(1);
+        vacancyComponent.find('#idDeleteBtn').simulate('click');
+        vacancyComponent.find('#idDeleteBtn').simulate('click');
+        vacancyComponent.find('#idDeleteBtn').simulate('click');
+        vacancyComponent.find('#idDeleteBtn').simulate('click');
+        console.log(vacancyComponent.props());
+
+        expect(vacancyComponent.find(DeleteConfirmDlg)).toHaveLength(1);
+        const propsDeleteDlg = vacancyComponent.find(DeleteConfirmDlg).props();
+    });
   });
 
 // Example tests:

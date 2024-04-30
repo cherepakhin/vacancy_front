@@ -35,8 +35,8 @@ describe("<App />", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
 //    console.log(wrapper.debug());
-    console.log(wrapper.props().children);
-    console.log(wrapper.props().children[1].props);
+//    console.log(wrapper.props().children);
+//    console.log(wrapper.props().children[1].props);
 
     // Row in ToolBar className
     expect(wrapper.props().children[1].props.className).toEqual('fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered');

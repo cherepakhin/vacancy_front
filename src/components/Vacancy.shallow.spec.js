@@ -3,6 +3,7 @@ import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 import { act } from '@testing-library/react';
 import * as reactRedux from 'react-redux';
+import { useSelector, useDispatch, mockStore } from "react-redux";
 
 import Vacancy from "./Vacancy";
 import DeleteConfirmDlg from "./DeleteConfirmDlg";
@@ -173,8 +174,18 @@ describe("<Vacancy />", () => {
       completed: false,
     };
 
-    const mockDispatch = jest.fn();
-    const mockUseDispatch = jest.spyOn(reactRedux, 'useDispatch');
+    const reactRedux = { useDispatch, useSelector }
+    const useDispatchMock = jest.spyOn(reactRedux, "useDispatch");
+    const useSelectorMock = jest.spyOn(reactRedux, "useSelector");
+    const initialState = {
+          vacancy: {
+                id: 1,
+                title: 'Test Vacancy',
+                completed: false,
+              },
+        };
+
+    useSelectorMock.mockReturnValue(initialState);
 
     const vacancyComponent = mount(<Vacancy vacancy={vacancy} />);
 
@@ -184,7 +195,6 @@ describe("<Vacancy />", () => {
         vacancyComponent.find('#idDeleteBtn').simulate('click');
         vacancyComponent.find('#idDeleteBtn').simulate('click');
         vacancyComponent.find('#idDeleteBtn').simulate('click');
-        console.log(vacancyComponent.props());
 
         expect(vacancyComponent.find(DeleteConfirmDlg)).toHaveLength(1);
         const propsDeleteDlg = vacancyComponent.find(DeleteConfirmDlg).props();

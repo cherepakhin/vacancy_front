@@ -15,10 +15,9 @@ describe("<App />", () => {
     const appView = toJson(wrapper);
 
     expect(appView.type).toEqual("Container");
-    expect(appView.props["className"]).toEqual("md-0 pt-0 main-app-container bg-light");
   });
 
-  it("Container className", () => {
+  it("className Container in App", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
     expect(props.className).toEqual("md-0 pt-0 main-app-container bg-light");

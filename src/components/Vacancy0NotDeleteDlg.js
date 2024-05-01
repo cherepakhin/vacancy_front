@@ -18,7 +18,7 @@ const Vacancy0NotDeleteDlg = ({visible, fnVacancy0NotDeleteDlgClose}) => {
         </Modal.Header>
         <Modal.Body id="body">Вакансию -1 нельзя удалять.</Modal.Body>
         <Modal.Footer>
-            <Button id="ok" className="col-2" variant="primary" onClick={handleClose}>Закрыть</Button>
+            <Button id="ok" className="col-2.5 text-center" variant="primary" onClick={handleClose}>Закрыть</Button>
         </Modal.Footer>
       </Modal>
   );

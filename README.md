@@ -183,6 +183,16 @@ css:
 
 В мобилах курсора нет, поэтому показывать всегда.
 
+#### Отступы
+
+[https://learn.javascript.ru/css-units#otnositelno-shrifta-em](https://learn.javascript.ru/css-units#otnositelno-shrifta-em)
+
+Относительно шрифта: em.
+1em – __текущий размер шрифта__.
+Можно брать любые пропорции от текущего шрифта: 2em, 0.5em и т.п.
+Размеры в em – относительные, они определяются по текущему контексту.
+
+
 #### Ссылки
 
 - [Диаграмма состояний](https://app.diagrams.net/?src=about#G1i8cVXJXj7xbnOIqtzitvihxvn_yiwOuJ#%7B%22pageId%22%3A%226vxvHjby1d88luMmcxHr%22%7D)<br/>

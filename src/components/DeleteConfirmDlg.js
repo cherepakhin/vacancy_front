@@ -21,8 +21,8 @@ const DeleteConfirmDlg = ({id, title, visible, fnVacancyDeleteConfirm, fnVacancy
         </Modal.Header>
         <Modal.Body id="body">{"{id: "+id+", title: '"+title+"'}?"}</Modal.Body>
         <Modal.Footer>
-            <Button id="ok" className="col-2" variant="primary" onClick={handleConfirm}>Да</Button>
-            <Button id="cancel" className="col-2" variant="secondary" onClick={handleCancel}>Нет</Button>
+            <Button id="ok" className="col-2 text-center" variant="primary" onClick={handleConfirm}>Да</Button>
+            <Button id="cancel" className="col-2 text-center" variant="secondary" onClick={handleCancel}>Нет</Button>
         </Modal.Footer>
       </Modal>
   );

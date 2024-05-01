@@ -44,7 +44,6 @@
 .list-group-item-action {
   text-align: center;
   padding-right: 1ch;
-  padding-left: 1ch;
 
   clear: both;
   height: 1px;
@@ -68,9 +67,9 @@
 }
 
 .list-group-item-action-last {
-  right: 1ch;
-  min-width: 7ch;
-  max-width: 7ch !important;
+  right: 2ch;
+  min-width: 8ch;
+  max-width: 8ch !important;
 }
 
 .list-group-item-date {
@@ -81,7 +80,6 @@
 }
 
 .list-group-item-action span {
-  display: none;
   color: #c00;
 }
 

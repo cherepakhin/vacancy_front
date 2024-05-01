@@ -152,6 +152,37 @@ css:
 </Col>
 ````    
 
+#### Hover
+
+В обычном состоянии скрыть (__display: none;__):
+
+````json
+.list-group-item-action span {
+  display: none;
+  color: #c00;
+}
+
+````
+
+При наведении курсора (__.list-group-item:hover__):
+ - показать (__display: inline;__);
+ - изменить курсор (__cursor: pointer;__)
+ - подчеркнуть (__text-decoration: underline;__)
+
+````json
+.main-app-container .list-group-item:hover .list-group-item-action span {
+  display: inline;
+  cursor: pointer;
+}
+
+.list-group-item-action span:hover {
+  text-decoration: underline;
+}
+
+````
+
+В мобилах курсора нет, поэтому показывать всегда.
+
 #### Ссылки
 
 - [Диаграмма состояний](https://app.diagrams.net/?src=about#G1i8cVXJXj7xbnOIqtzitvihxvn_yiwOuJ#%7B%22pageId%22%3A%226vxvHjby1d88luMmcxHr%22%7D)<br/>

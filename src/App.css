@@ -67,9 +67,10 @@
 }
 
 .list-group-item-action-last {
-  right: 2ch;
+  right: 1ch;
   min-width: 8ch;
   max-width: 8ch !important;
+  margin-left: 8px;
 }
 
 .list-group-item-date {
@@ -133,4 +134,9 @@
 
 .list-group {
     border-radius: 0px !important;
+}
+
+.last-button {
+    left: 4px;
+    margin-left: 8px;
 }

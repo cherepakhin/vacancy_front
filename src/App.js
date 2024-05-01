@@ -20,7 +20,7 @@ function App() {
             <Button className="ml-0 pl-1 pr-1 col-1">Все</Button> {/* для первой колонки отступ СЛЕВА =0, для остальных ml-1 */}
             <Button className="ml-1 pl-1 pr-1 col-1">Текущие</Button> {/* margin left = 1 */}
             <Button className="ml-1 pl-1 pr-1 col-1">Новая</Button>
-            <Button className="ml-1 pl-1 pr-1 col-1">Фильтр</Button>
+            <Button className="ml-1 pl-1 pr-1 col-1 last-button">Фильтр</Button>
         </Col>
       </Row>
       {/*TODO: убрать это поле */}

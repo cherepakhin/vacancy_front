@@ -12,7 +12,7 @@ describe("<App Toolbar />", () => {
 
   it("ClassName ToolBar of App", () => {
     const wrapper = shallow(<App />);
-    // for demo shop props:
+    // for demo logging props:
     //    const props = wrapper.props();
     //    console.log(wrapper.debug());
     //    console.log(wrapper.props().children);

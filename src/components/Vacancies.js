@@ -18,4 +18,8 @@ const Vacancies = ({ vacancies }) => {
 
 }
 
+Vacancies.defaultProps = {
+    vacancies: [],
+}
+
 export default Vacancies;

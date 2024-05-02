@@ -38,7 +38,7 @@ function App() {
       </Row>
       <Row className="mt-0 pt-0">
         <Col>
-          <h4>Список вакансий</h4>
+          <h4 id="label_list_vacancies">Список вакансий</h4>
         </Col>
       </Row>
       <Row>

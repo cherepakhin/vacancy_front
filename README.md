@@ -192,6 +192,22 @@ css:
 Можно брать любые пропорции от текущего шрифта: 2em, 0.5em и т.п.
 Размеры в em – относительные, они определяются по текущему контексту.
 
+#### О тестировании
+
+Элемент:
+
+````html
+<h4 id="label_list_vacancies">Список вакансий</h4>
+````
+Тест текста:
+
+````java
+it("Check content", () => {
+  const wrapper = mount(<App />);
+  const label = wrapper.find("#label_list_vacancies").text();
+  expect(label).toEqual("Список вакансий");
+});
+````
 
 #### Ссылки
 

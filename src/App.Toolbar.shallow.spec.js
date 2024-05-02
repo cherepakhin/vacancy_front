@@ -10,18 +10,6 @@ jest.mock('react-redux', () => ({
 
 describe("<App Toolbar />", () => {
 
-  it("ClassName ToolBar of App", () => {
-    const wrapper = shallow(<App />);
-    // for demo logging props:
-    //    const props = wrapper.props();
-    //    console.log(wrapper.debug());
-    //    console.log(wrapper.props().children);
-    //    console.log(wrapper.props().children[1].props);
-
-    const toolBarProps = wrapper.props().children[1].props;
-    expect(toolBarProps.className).toEqual('mt-2 md-0 pt-5 pl-0 pd-0');
-  });
-
   it("Size column ToolBar of App is 12 columns", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();

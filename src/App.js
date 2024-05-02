@@ -17,14 +17,13 @@ function App() {
       {/* Row зафиксирован сверху экрана (fixed-top) */}
       <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
         {/* Одна колонка во всю ширину экрана (xs=12).*/}
-        {/* Отступ элементов внутри колонки сверху и снизу (mt-2 mb-2) = 8px */}
+        {/* Отступ элементов внутри колонки сверху(mt-2) и снизу (mb-2) = 8px */}
         <Col xs={12} className="mt-2 mb-2">
             {/* все кнопки имеют одинаковую ширину */}
             {/* on middle device 1 column(col-md-1),*/}
             {/* on small device 2 columns(col-sm-2)*/}
-            {/* для первой колонки отступ СЛЕВА =0, для остальных ml-1 */}
-            <Button className="ml-0 mr-0 col-md-1 col-sm-2">Все</Button>
-            {/* ml-1 margin left = 1 (1 char 'x') */}
+            {/* mr-1 margin right = 1 (1 char 'x') */}
+            <Button className="mr-1 col-md-1 col-sm-2">Все</Button>
             <Button className="mr-1 col-md-1 col-sm-2">Текущие</Button>
             <Button className="mr-1 col-md-1 col-sm-2">Новая</Button>
             <Button className="mr-1 col-md-1 col-sm-2">Фильтр</Button>

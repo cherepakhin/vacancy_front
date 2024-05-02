@@ -5,7 +5,7 @@ import NewVacancyPanel from "./NewVacancyPanel";
 
 describe("<NewVacancyPanel />", () => {
 
-  it("ClassName NewVacancyPanel area", () => {
+  it("NewVacancyPanel props", () => {
     const wrapper = shallow(<NewVacancyPanel />);
     // for demo logging props:
     //    const props = wrapper.props();

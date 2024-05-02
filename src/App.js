@@ -22,7 +22,7 @@ function App() {
             {/* все кнопки имеют одинаковую ширину */}
             {/* on middle device 1 column(col-md-1),*/}
             {/* on small device 2 columns(col-sm-2)*/}
-            {/* mr-1 margin right = 1 (1 char 'x') */}
+            {/* отступ элементов внутри колонки mr-1. margin right = 1 (1 char 'x') */}
             <Button className="mr-1 col-md-1 col-sm-2">Все</Button>
             <Button className="mr-1 col-md-1 col-sm-2">Текущие</Button>
             <Button className="mr-1 col-md-1 col-sm-2">Новая</Button>

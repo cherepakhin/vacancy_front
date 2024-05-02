@@ -10,18 +10,24 @@ function App() {
   const vacancies = useSelector(state => state);
 
   return (
-    <Container fluid className="md-0 pt-0 main-app-container bg-light"> {/*  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)*/}
-      {/* Toolbar */}
+    //  "ml-4" Margin Left (ml!) (https://react-bootstrap.github.io/docs/layout/grid)
+    // (comment OUTside Component)
+    <Container fluid className="md-0 pt-0 main-app-container bg-light">
+      {/* Toolbar (comment INside Component)*/}
       {/* Row зафиксирован сверху экрана (fixed-top) */}
       <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
-        {/* Одна колонка во всю ширину экрана (xs=12). Отступ элеиентов внутри колонки сверху и снизу (mt-2 mb-2) = 8px */}
+        {/* Одна колонка во всю ширину экрана (xs=12).*/}
+        {/* Отступ элементов внутри колонки сверху и снизу (mt-2 mb-2) = 8px */}
         <Col xs={12} className="mt-2 mb-2">
-            {/* все кнопки имеют одинаковую ширину on middle device 1 column(col-md-1), on small device 2 columns(col-sm-2) */}
-            <Button className="ml-0 mr-0 col-md-1 col-sm-2">Все</Button> {/* для первой колонки отступ СЛЕВА =0, для остальных ml-1 */}
+            {/* все кнопки имеют одинаковую ширину */}
+            {/* on middle device 1 column(col-md-1),*/}
+            {/* on small device 2 columns(col-sm-2)*/}
+            {/* для первой колонки отступ СЛЕВА =0, для остальных ml-1 */}
+            <Button className="ml-0 mr-0 col-md-1 col-sm-2">Все</Button>
             {/* ml-1 margin left = 1 (1 char 'x') */}
             <Button className="mr-1 col-md-1 col-sm-2">Текущие</Button>
             <Button className="mr-1 col-md-1 col-sm-2">Новая</Button>
-            <Button className="mr-0 col-md-1 col-sm-2">Фильтр</Button>
+            <Button className="mr-1 col-md-1 col-sm-2">Фильтр</Button>
         </Col>
       </Row>
       {/*TODO: убрать это поле */}

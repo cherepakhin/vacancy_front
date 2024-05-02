@@ -1,3 +1,5 @@
+// metrics for React App
+// https://create-react-app.dev/docs/measuring-performance/#:~:text=reportWebVitals
 const reportWebVitals = onPerfEntry => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {

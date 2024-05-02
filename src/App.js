@@ -1,9 +1,8 @@
 import React from 'react';
-import { Container, Col, Row } from "react-bootstrap";
-import VacancyList from "./components/VacancyList";
+import { Container } from "react-bootstrap";
 import MainToolbar from "./components/MainToolbar";
 import NewVacancyPanel from "./components/NewVacancyPanel";
-import ListVacanciesHeader from "./components/ListVacanciesHeader";
+import Vacancies from "./components/Vacancies";
 import { useSelector } from "react-redux";
 import './App.css';
 
@@ -17,12 +16,7 @@ function App() {
     <Container fluid className="md-0 pt-0 main-app-container bg-light">
       <MainToolbar />
       <NewVacancyPanel />
-      <ListVacanciesHeader />
-      <Row>
-        <Col xs={12}>
-          <VacancyList vacancies={ vacancies } />
-        </Col>
-      </Row>
+      <Vacancies vacancies={vacancies} />
     </Container>
   );
 }

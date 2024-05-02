@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row } from "react-bootstrap";
 
-const ListVacanciesHeader = () => {
+const VacanciesHeader = () => {
     return (
       <Row className="mt-0 pt-0">
         <Col>
@@ -11,4 +11,4 @@ const ListVacanciesHeader = () => {
     )
 }
 
-export default ListVacanciesHeader;
+export default VacanciesHeader;

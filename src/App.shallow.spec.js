@@ -28,7 +28,7 @@ describe("<App />", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
 
-    expect(props.children.length).toEqual(4);
+    expect(props.children.length).toEqual(3);
   });
 
 });

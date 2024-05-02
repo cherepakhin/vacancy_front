@@ -25,11 +25,10 @@ describe("<App Toolbar />", () => {
   it("Size column ToolBar of App is 12 columns", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
-    // children[3] - Container - 1, Row(toolbar) - 2, Col (toolbar) - 3
+    // children[3] - Container - 1, Toolbar Row - 2, Toolbar Row Col - 3
     const columnToolBarProps = wrapper.props().children[3].props;
     // toolbar column <Col xs={12}>
     expect(columnToolBarProps.children.props.xs).toEqual(12);
-
   });
 
   it("margin top, bottom ToolBar of App", () => {

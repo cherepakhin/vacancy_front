@@ -12,7 +12,7 @@ function App() {
   const vacancies = useSelector(state => state);
 
   return (
-    //  "ml-4" Margin Left (mL!) (https://react-bootstrap.github.io/docs/layout/grid)
+    //  "md-0" Margin Down (mD!) (https://react-bootstrap.github.io/docs/layout/grid)
     // this is comment OUTside Component. For comment INside Component see below.
     <Container fluid className="md-0 pt-0 main-app-container bg-light">
       <MainToolbar />

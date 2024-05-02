@@ -24,7 +24,7 @@ describe("<App />", () => {
     expect(props.className).toEqual("md-0 pt-0 main-app-container bg-light");
   });
 
-  it("Container + 4 row in App", () => {
+  it("App Container contains 4 area: toolbar, 'New Vacancy', label 'List vacancies', 'Vacancies list'", () => {
     const wrapper = shallow(<App />);
     const props = wrapper.props();
 

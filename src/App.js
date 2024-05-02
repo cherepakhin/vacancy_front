@@ -17,10 +17,10 @@ function App() {
         {/* Одна колонка во всю ширину экрана (xs=12). Отступ элеиентов внутри колонки сверху и снизу (mt-2 mb-2) = 8px */}
         <Col xs={12} className="mt-2 mb-2">
             {/* все кнопки имеют одинаковую ширину col-1*/}
-            <Button className="ml-0 pl-1 pr-1 col-1">Все</Button> {/* для первой колонки отступ СЛЕВА =0, для остальных ml-1 */}
-            <Button className="ml-1 pl-1 pr-1 col-1">Текущие</Button> {/* margin left = 1 */}
-            <Button className="ml-1 pl-1 pr-1 col-1">Новая</Button>
-            <Button className="ml-1 pl-1 pr-1 col-1 last-button">Фильтр</Button>
+            <Button className="ml-0 pl-1 pr-1 col-md-1 col-sm-2">Все</Button> {/* для первой колонки отступ СЛЕВА =0, для остальных ml-1 */}
+            <Button className="ml-1 pl-1 pr-1 col-md-1 col-sm-2">Текущие</Button> {/* margin left = 1 */}
+            <Button className="ml-1 pl-1 pr-1 col-md-1 col-sm-2">Новая</Button>
+            <Button className="ml-1 pl-1 pr-1 col-md-1 col-sm-2 last-button">Фильтр</Button>
         </Col>
       </Row>
       {/*TODO: убрать это поле */}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, FormControl, InputGroup } from "react-bootstrap";
-import * as actions from "../store/actions";
+import * as actions from "../../store/actions";
 import { useDispatch } from "react-redux";
 
 const AddNewVacancy = () => {

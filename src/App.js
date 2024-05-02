@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from "react-bootstrap";
 import MainToolbar from "./components/MainToolbar";
 import NewVacancyPanel from "./components/NewVacancyPanel";
-import Vacancies from "./components/Vacancies";
+import Vacancies from "./components/vacancies/Vacancies";
 import { useSelector } from "react-redux";
 import './App.css';
 

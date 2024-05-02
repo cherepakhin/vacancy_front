@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from "react-bootstrap";
-import AddNewVacancy from "./AddNewVacancy";
+import AddNewVacancy from "./vacancies/AddNewVacancy";
 
 // TODO: для ввода вакансий нужна не просто строка, а отдельный НЕ МОДАЛЬНЫЙ диалог (в модальный не влезет).
 const NewVacancyPanel = () => {

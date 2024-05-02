@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Form, ListGroup, Modal, Button } from "react-bootstrap";
-import { createToggleVacancyAction, }  from "../store/actions";
+import { createToggleVacancyAction, }  from "../../store/actions";
 
 import DeleteConfirmDlg from "./DeleteConfirmDlg";
 import Vacancy0NotDeleteDlg from "./Vacancy0NotDeleteDlg";
 
 import PropTypes from "prop-types";
-import * as actions from "../store/actions";
+import * as actions from "../../store/actions";
 
 const Vacancy = ({ vacancy }) => {
 // for testing use props uncomment

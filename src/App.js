@@ -3,6 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import VacancyList from "./components/VacancyList";
 import MainToolbar from "./components/MainToolbar";
 import NewVacancyPanel from "./components/NewVacancyPanel";
+import ListVacanciesHeader from "./components/ListVacanciesHeader";
 import { useSelector } from "react-redux";
 import './App.css';
 
@@ -16,11 +17,7 @@ function App() {
     <Container fluid className="md-0 pt-0 main-app-container bg-light">
       <MainToolbar />
       <NewVacancyPanel />
-      <Row className="mt-0 pt-0">
-        <Col>
-          <h4 id="label_list_vacancies">Список вакансий</h4>
-        </Col>
-      </Row>
+      <ListVacanciesHeader />
       <Row>
         <Col xs={12}>
           <VacancyList vacancies={ vacancies } />

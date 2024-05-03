@@ -1,7 +1,7 @@
 import reducerVacancy from './reducerVacancy';
 
 describe("reducerVacancy tests", () => {
-  it("init", () => {
+  it("init reducerVacancy", () => {
     let state0 = reducerVacancy();
     expect(state0).toEqual([
       {"completed": false, "id": -1, "title": "не показывать -1"},

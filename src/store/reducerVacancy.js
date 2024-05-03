@@ -30,7 +30,7 @@ export default function reducerVacancy(state = state0, action) {
   console.log(state);
   console.log("reduserVacancy.js action:");
   if(action === undefined){
-    return state;
+    return [...state];
   }
   switch (action.type) {
     case actionTypes.VACANCY_ADD:

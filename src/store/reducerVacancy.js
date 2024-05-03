@@ -28,8 +28,9 @@ let state0 = [{ id: -1, title: 'не показывать -1', completed: false}
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);
-  console.log("reduserVacancy.js action:");
-  if(action === undefined){
+  console.log("reduserVacancy.js action: " + action);
+  if(action === undefined) {
+    console.log("undefined action in reducerVacancy.js");
     return [...state];
   }
   switch (action.type) {

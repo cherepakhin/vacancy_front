@@ -29,6 +29,9 @@ export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);
   console.log("reduserVacancy.js action:");
+  if(action === undefined){
+    return state;
+  }
   switch (action.type) {
     case actionTypes.VACANCY_ADD:
       console.log(action);

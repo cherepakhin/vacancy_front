@@ -1,30 +1,13 @@
-import * as actionTypes from './actionTypes';
+import * as actionTypes from '../actions/actionTypes';
 
-let lastId = 0;
-let state0 = [{ id: -1, title: 'не показывать -1', completed: false},
-    { id: -2, title: 'не показывать -2', completed: false},
-    { id: -3, title: 'не показывать -3', completed: false}];
-// Здесь разместить REST API
+let state0 = [
+               {"completed": false, "id": -1, "title": "не показывать -1"},
+               {"completed": false, "id": -2, "title": "не показывать -2"},
+               {"completed": false, "id": -3, "title": "не показывать -3"}
+             ];
 
-// reducer возвращает новый state c учетом action
-// эти функции вызывает dispatch с action
-//  AddNewTask: ...
-//    const handleTaskSubmit = () => {
-//        dispatch(actions.addTask({    // содержимое addTask см.ниже
-//          title: taskTitle
-//        }));
-//        setTaskTitle('');
-//      }
-//
-// actions.js:
-//export const addTask = title => ({
-//  type: actions.TASK_ADD,
-//  payload: title
-//});
+let lastId = 1;
 
-// store.js собирает и хранит измененные state из reducers
-//   (в данном случае только один reducer: reducerVacancy)
-// в нормальном приложении много reduserXXXXXX
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);

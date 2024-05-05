@@ -250,7 +250,7 @@ import renderer from 'react-test-renderer';
 
 ````
 
-[Пример snapshot](https://github.com/cherepakhin/vacancy_front/doc/DeleteConfirmDlg.spec.js.snap)
+[Пример snapshot](https://github.com/cherepakhin/vacancy_front/blob/add_fetch/doc/DeleteConfirmDlg.spec.js.snap)
 
 #### Ссылки
 

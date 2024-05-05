@@ -160,7 +160,6 @@ describe("DeleteConfirmDlg test", () => {
   });
 
   it("showDeleteConfirmDlg match snapshot", () => {
-    // NOT  <DeleteConfirmDlg {...props}, BUT <DeleteConfirmDlg id='100' title="Vacancy 1" visible="true"/>
     const vacancy = {
       id: 100,
       title: "Vacancy 1",

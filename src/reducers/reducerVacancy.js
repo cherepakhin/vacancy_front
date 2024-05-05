@@ -6,7 +6,7 @@ let state0 = [
                {"completed": false, "id": -3, "title": "не показывать -3"}
              ];
 
-let lastId = 1;
+let lastId = 1; //TODO: get from backend
 
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");

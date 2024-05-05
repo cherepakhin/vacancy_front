@@ -15,7 +15,7 @@ function App() {
     // this is comment OUTside Component. For comment INside Component see below.
     <Container fluid className="md-0 pt-0 main-app-container bg-light">
       <MainToolbar />
-      <NewVacancyPanel />
+      <NewVacancyPanel /> //TODO: remove to dialog for new vacancy
       <Vacancies vacancies={vacancies} />
     </Container>
   );

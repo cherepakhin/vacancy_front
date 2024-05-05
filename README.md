@@ -236,7 +236,7 @@ const tree = renderer.create(<DeleteConfirmDlg {...vacancy} />);
 
 Решение:
 
-Использовать "enzyme-to-json" вместо "react-test-renderer". В проекте использовано это решение.
+Использовать "enzyme-to-json" вместо "react-test-renderer".
 
 ````java
 import toJson from "enzyme-to-json";
@@ -249,6 +249,8 @@ import renderer from 'react-test-renderer';
     ...
 
 ````
+
+[Пример snapshot](https://github.com/cherepakhin/vacancy_front/doc/DeleteConfirmDlg.spec.js.snap)
 
 #### Ссылки
 

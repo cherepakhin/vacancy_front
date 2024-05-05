@@ -1,6 +1,9 @@
 import React from "react";
 import toJson from "enzyme-to-json";
 import { shallow, mount } from "enzyme";
+import renderer from 'react-test-renderer';
+import EnzymeToJson from 'enzyme-to-json';
+
 import DeleteConfirmDlg from "./DeleteConfirmDlg";
 import { Modal, Button, ModalFooter } from "react-bootstrap";
 
@@ -155,4 +158,20 @@ describe("DeleteConfirmDlg test", () => {
     expect(wrapper.find(Modal.Body)).toHaveLength(1);
     expect(wrapper.find({ id: "body" }).text()).toBe("{id: 100, title: 'Vacancy 1'}?");
   });
+
+  it("showDeleteConfirmDlg match snapshot", () => {
+    // NOT  <DeleteConfirmDlg {...props}, BUT <DeleteConfirmDlg id='100' title="Vacancy 1" visible="true"/>
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      visible: true,
+      fnVacancyDeleteConfirm: jest.fn(),
+      fnVacancyDeleteCancel: jest.fn()
+    };
+
+    const wrapper = mount(<DeleteConfirmDlg {...vacancy} />);
+
+    expect(EnzymeToJson(wrapper)).toMatchSnapshot();
+  });
+
 });

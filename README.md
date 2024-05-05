@@ -209,6 +209,47 @@ it("Check content", () => {
 });
 ````
 
+#### Проблемы
+
+При тестировании через __renderer__:
+
+````java
+const tree = renderer.create(<DeleteConfirmDlg {...vacancy} />);
+    console.log(tree);
+    expect(tree).toMatchSnapshot();
+````
+Возникает ошибка:
+
+````text
+    TypeError: parentInstance.children.indexOf is not a function
+
+      168 |     };
+      169 |
+    > 170 |     const tree = renderer.create(<DeleteConfirmDlg {...vacancy} />);
+          |                           ^
+      171 |     console.log(tree);
+      172 |     expect(tree).toMatchSnapshot();
+      173 |   });
+````
+
+Описано в [https://stackforgeeks.com/blog/uncaught-typeerror-aindexof-is-not-a-function-error-when-opening-new-foundation-project](https://stackforgeeks.com/blog/uncaught-typeerror-aindexof-is-not-a-function-error-when-opening-new-foundation-project)
+
+Решение:
+
+Использовать "enzyme-to-json" вместо "react-test-renderer". В проекте использовано это решение.
+
+````java
+import toJson from "enzyme-to-json";
+import { shallow, mount } from "enzyme";
+import renderer from 'react-test-renderer';
+
+    ...
+    const wrapper = shallow(<DeleteConfirmDlg {...vacancy} />);
+    const dlg = toJson(wrapper);
+    ...
+
+````
+
 #### Ссылки
 
 - [Диаграмма состояний](https://app.diagrams.net/?src=about#G1i8cVXJXj7xbnOIqtzitvihxvn_yiwOuJ#%7B%22pageId%22%3A%226vxvHjby1d88luMmcxHr%22%7D)<br/>

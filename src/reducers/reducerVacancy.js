@@ -16,6 +16,7 @@ export default function reducerVacancy(state = state0, action) {
     console.log("undefined action in reducerVacancy.js");
     return [...state];
   }
+  let newState = {...state};
   switch (action.type) {
     case actionTypes.VACANCY_ADD:
       //TODO: add rest request
@@ -23,7 +24,6 @@ export default function reducerVacancy(state = state0, action) {
 
       // Пример простого добавление задачи в state из action.payload
       // ТУТ делается изменение state
-      let newState = {...state};
       console.log("newState before add: " + JSON.stringify(newState));
       newState.vacancies.push({
                                 id: ++lastId,
@@ -39,13 +39,15 @@ export default function reducerVacancy(state = state0, action) {
           return { ...vacancy, completed: !vacancy.completed }
         return vacancy;
       });
+      break;
 
     case actionTypes.VACANCY_REMOVE:
       //TODO: add rest request
       console.log("soFetch delete and get new list vacancies");
-      return state.vacancies.filter(vacancy => action.payload.id !== vacancy.id);
+      newState.vacancies = state.vacancies.filter(vacancy => action.payload.id !== vacancy.id);
+      return newState;
 
     default:
-      return state;
+      return newState;
   } // switch
 }

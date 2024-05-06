@@ -10,7 +10,7 @@ function App(props) { // receives props from index.js
 
   console.log(props); // {var1: "value_var_1"}. See index.js
   const state = useSelector(state => state);
-  console.log(state.vacancies);
+  console.log(state.vacancies); // {vacancies: [{id, ...},{id, ...}]}
 //  console.log(vacancies.vacancies);
   return (
     //  "md-0" Margin Down (mD!) (https://react-bootstrap.github.io/docs/layout/grid)

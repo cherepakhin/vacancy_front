@@ -11,11 +11,11 @@ export default function reducerVacancy(state = state0, action) {
   console.log(state);
   console.log("reduserVacancy.js action:");
   console.log(action);
-  var newState = {...state};
   if(action === undefined) {
     console.log("undefined action in reducerVacancy.js");
     return {...state};
   }
+  var newState = {...state};
   switch (action.type) {
     case actionTypes.VACANCY_ADD:
       //TODO: add rest request

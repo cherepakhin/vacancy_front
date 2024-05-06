@@ -5,6 +5,8 @@ import VacanciesHeader from "./VacanciesHeader";
 import VacancyList from "./VacancyList";
 
 const Vacancies = ({ vacancies }) => {
+  console.log(vacancies);
+  console.log(vacancies[0]);
   return (
       <div>
           <VacanciesHeader />
@@ -18,8 +20,8 @@ const Vacancies = ({ vacancies }) => {
 
 }
 
-Vacancies.defaultProps = {
-    vacancies: [],
-}
+//Vacancies.defaultProps = {
+//    vacancies: [],
+//}
 
 export default Vacancies;

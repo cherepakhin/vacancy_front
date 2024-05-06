@@ -1,20 +1,21 @@
 import * as actionTypes from '../actions/actionTypes';
 
-let state0 = [
+let state0 = {vacancies: [
                {"completed": false, "id": -1, "title": "не показывать -1"},
                {"completed": false, "id": -2, "title": "не показывать -2"},
                {"completed": false, "id": -3, "title": "не показывать -3"}
-             ];
+             ]};
 
 let lastId = 1; //TODO: get from backend
 
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);
-  console.log("reduserVacancy.js action: " + action);
+  console.log("reduserVacancy.js action:");
+  console.log(action);
   if(action === undefined) {
     console.log("undefined action in reducerVacancy.js");
-    return [...state];
+    return {...state};
   }
   switch (action.type) {
     case actionTypes.VACANCY_ADD:

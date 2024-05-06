@@ -8,7 +8,7 @@ import './App.css';
 
 function App(props) { // receives props from index.js
 
-  console.log(props);
+  console.log(props); // {var1: "value_var_1"}. See index.js
   const state = useSelector(state => state);
   console.log(state.vacancies);
 //  console.log(vacancies.vacancies);
@@ -17,7 +17,7 @@ function App(props) { // receives props from index.js
     // this is comment OUTside Component. For comment INside Component see below.
     <Container fluid className="md-0 pt-0 main-app-container bg-light">
       <MainToolbar />
-      <NewVacancyPanel /> {/* TOD   O: remove to dialog for new vacancy */}
+      <NewVacancyPanel /> {/* TODO: remove to dialog for new vacancy */}
       <Vacancies vacancies={state.vacancies} />
     </Container>
   );

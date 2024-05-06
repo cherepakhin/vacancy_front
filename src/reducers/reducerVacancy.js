@@ -32,12 +32,13 @@ export default function reducerVacancy(state = state0, action) {
       return newState;
 
     case actionTypes.VACANCY_TOGGLE:
-      return state.vacancies.map(vacancy => {
-        if (vacancy.id === action.payload.id)
-          return { ...vacancy, completed: !vacancy.completed }
-        return vacancy;
-      });
-
+      var changedVacancies = newState.vacancies.map(vacancy => {
+                                                               if (vacancy.id === action.payload.id)
+                                                                 return { ...vacancy, completed: !vacancy.completed }
+                                                               return vacancy;
+                                                             });
+      newState.vacancies = changedVacancies;
+      return newState;
     case actionTypes.VACANCY_REMOVE:
       //TODO: add rest request
       console.log("soFetch delete and get new list vacancies");

@@ -2,8 +2,6 @@ import * as actionTypes from '../actions/actionTypes';
 
 let state0 = {vacancies: [
                {"completed": false, "id": -1, "title": "не показывать -1"},
-               {"completed": false, "id": -2, "title": "не показывать -2"},
-               {"completed": false, "id": -3, "title": "не показывать -3"}
              ]};
 
 let lastId = 1; //TODO: get from backend
@@ -24,11 +22,14 @@ export default function reducerVacancy(state = state0, action) {
 
       // Пример простого добавление задачи в state из action.payload
       // ТУТ делается изменение state
-      return [...state, {
-        id: ++lastId,
-        title: action.payload.title,
-        completed: false,
-      }];
+      let newState = {...state};
+      newState.vacancies.push({
+                                id: ++lastId,
+                                title: action.payload.title,
+                                completed: false,
+                              });
+      console.log("newState-->"+ JSON.stringify(newState));
+      return newState;
 
     case actionTypes.VACANCY_TOGGLE:
       return state.map(vacancy => {

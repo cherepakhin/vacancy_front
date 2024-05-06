@@ -10,7 +10,7 @@ import store from './store/store';
 ReactDOM.render(
   <Provider store={ store }>
     <React.StrictMode>
-      <App />
+      <App var1="value_var_1"/>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')

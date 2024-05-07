@@ -254,9 +254,16 @@ import renderer from 'react-test-renderer';
 
 [Пример snapshot](https://github.com/cherepakhin/vacancy_front/blob/add_fetch/doc/DeleteConfirmDlg.spec.js.snap)
 
-Локальные snapshots помещаются в подкаталог __snapshots__, пример:
+Локальные snapshots помещаются в подкаталог __snapshots__, пример теста:
 
 [src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap)
+
+````java
+    const wrapper = mount(<DeleteConfirmDlg {...vacancy} />);
+
+    expect(EnzymeToJson(wrapper)).toMatchSnapshot();
+
+````
 
 #### Ссылки
 

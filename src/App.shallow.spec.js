@@ -72,10 +72,10 @@ describe("<App />", () => {
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       const appView = toJson(wrapper);
 
-      expect(appView.children[3].type).toBe('Vacancies');
+      expect(appView.children[2].type).toBe('Vacancies');
     });
 
-    it("App Container contains 5 area(Row): toolbar, 'New Vacancy', label 'List vacancies', EMPTY!!!, 'Vacancies list'", () => {
+    it("App Container contains 4 area(Row): toolbar, 'New Vacancy', label 'List vacancies', 'Vacancies list'", () => {
       let testState = {
         app: {},
         vacancies: {}
@@ -84,7 +84,7 @@ describe("<App />", () => {
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       const props = wrapper.props();
 
-      expect(props.children.length).toEqual(5);
+      expect(props.children.length).toEqual(3);
     });
 
     it("appView.node.props.fluid in <App />", () => {

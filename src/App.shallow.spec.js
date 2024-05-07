@@ -21,6 +21,69 @@ describe("<App />", () => {
         vacancies: {}
       };
       const wrapper = shallow(<AppUnwrapped {...testState} />);
+      console.log(wrapper); // -> {}
+      const appView = toJson(wrapper);
+      console.log(appView);
+      console.log(appView.node);
+      console.log(appView.node.props);
+//      console.log(appView.node.props.children[0]type: [Function: MainToolbar]);
+      expect(appView.node.type.displayName).toBe('Container');
+      expect(appView.node.props.className).toBe('md-0 pt-0 main-app-container bg-light');
+      console.log(appView.node.props.children[0].type);
+      console.log(appView.children[0].type);
+      expect(appView.children[0].type).toBe('MainToolbar');
+//      expect(appView.node.props.children[0].type).toBe([Function: MainToolbar]);
+      expect(appView.node.props.fluid).toBe(true);
+//  <ref *1> App { props: { app: {}, vacancies: {} },
+//      {
+//        node: {
+//          nodeType: 'function',
+//          type: {
+//            '$$typeof': Symbol(react.forward_ref),
+//            render: [Function (anonymous)],
+//            displayName: 'Container',
+//            defaultProps: [Object]
+//          },
+//          props: {
+//            fluid: true,
+//            className: 'md-0 pt-0 main-app-container bg-light',
+//            children: [Array]
+//          },
+//          key: undefined,
+//          ref: null,
+//          instance: null,
+//          rendered: [ [Object], [Object], ' ', [Object], '  ' ]
+//        },
+//        type: 'Container',
+//        props: { fluid: true, className: 'md-0 pt-0 main-app-container bg-light' },
+//        children: [
+//          {
+//            node: [Object],
+//            type: 'MainToolbar',
+//            props: {},
+//            children: null,
+//            '$$typeof': Symbol(react.test.json)
+//          },
+//          {
+//            node: [Object],
+//            type: 'NewVacancyPanel',
+//            props: {},
+//            children: null,
+//            '$$typeof': Symbol(react.test.json)
+//          },
+//          ' ',
+//          {
+//            node: [Object],
+//            type: 'Vacancies',
+//            props: [Object],
+//            children: null,
+//            '$$typeof': Symbol(react.test.json)
+//          },
+//          '  '
+//        ],
+//        '$$typeof': Symbol(react.test.json)
+//      }
+
       expect(1).toEqual(1);
     });
 });

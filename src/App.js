@@ -19,24 +19,34 @@ class App extends React.Component { // receives props from index.js
       console.log("App.render() this:");
       console.log(this);
       console.log("App.render() this.props.vacancies:");
+      // this.props. обязательно!!! this.vacancies не работает.
       console.log(this.props.app.vacancies);
+      console.log(this.props.vacancies);
       return (
         //  "md-0" Margin Down (mD!) (https://react-bootstrap.github.io/docs/layout/grid)
         // this is comment OUTside Component. For comment INside Component see below.
         <Container fluid className="md-0 pt-0 main-app-container bg-light">
           <MainToolbar />
           <NewVacancyPanel /> {/* TODO: remove to dialog for new vacancy */}
-          <Vacancies vacancies={this.props.app.vacancies} />  {/* TODO: remove to dialog for new vacancy */}
+          {/* __THIS.PROPS__!!! */}
+          <Vacancies vacancies={this.props.vacancies} />  {/* TODO: remove to dialog for new vacancy */}
         </Container>
       );
   }
 }
 
-function mapStateToProps(state) { // перенос из state в this.props....
-    console.log("App. mapStateToProps:"+JSON.stringify(state)); // App. mapStateToProps:{"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}]}
-    console.log("App. state.vacancies:"+JSON.stringify(state)); // App. state.vacancies:[{"completed":false,"id":-1,"title":"не показывать -1"}]
+// перенос из state в this.props.
+// В render() будет доступно через <Vacancies vacancies={this.props.app.vacancies}.
+// __THIS.PROPS__!!! этот путь формируется по умолчанию функцией mapStateToProps
+// __this.app.vacancies__!!! никак не делается
+function mapStateToProps(state) {
+    console.log("App. state.vacancies: "+JSON.stringify(state)); // App. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}]}
     return {
-        app: state // "vacanciesFromState:" внутри компонета доступно через this.props.vacancies
+        // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies
+        // Доступен весь state. На пример: state.VACANCIES доступен через this.props.app.VACANCIES (__THIS.PROPS__!!!)
+        app: state,
+        // так будет доступно через <Vacancies vacancies={this.props.vacancies} />
+        vacancies: state.vacancies
     }
 }
 

@@ -15,6 +15,18 @@ jest.mock('react-redux', () => {
 });
 
 describe("<App />", () => {
+    it("displayName is Container in <App />", () => {
+      let testState = {
+        app: {},
+        vacancies: {}
+      };
+
+      const wrapper = shallow(<AppUnwrapped {...testState} />);
+      const appView = toJson(wrapper);
+
+      expect(appView.node.type.displayName).toBe('Container');
+    });
+
     it("Container in <App />", () => {
       let testState = {
         app: {},
@@ -27,11 +39,12 @@ describe("<App />", () => {
       console.log(appView.node);
       console.log(appView.node.props);
 //      console.log(appView.node.props.children[0]type: [Function: MainToolbar]);
-      expect(appView.node.type.displayName).toBe('Container');
       expect(appView.node.props.className).toBe('md-0 pt-0 main-app-container bg-light');
-      console.log(appView.node.props.children[0].type);
-      console.log(appView.children[0].type);
+//      console.log(appView.node.props.children[0].type);
       expect(appView.children[0].type).toBe('MainToolbar');
+      expect(appView.children[1].type).toBe('NewVacancyPanel');
+//      console.log(appView.children[2]); // EMPTY!!! What is it???
+      expect(appView.children[3].type).toBe('Vacancies');
 //      expect(appView.node.props.children[0].type).toBe([Function: MainToolbar]);
       expect(appView.node.props.fluid).toBe(true);
 //  <ref *1> App { props: { app: {}, vacancies: {} },
@@ -71,7 +84,7 @@ describe("<App />", () => {
 //            children: null,
 //            '$$typeof': Symbol(react.test.json)
 //          },
-//          ' ',
+//          ' ', // EMPTY!!! What is it???
 //          {
 //            node: [Object],
 //            type: 'Vacancies',
@@ -83,8 +96,6 @@ describe("<App />", () => {
 //        ],
 //        '$$typeof': Symbol(react.test.json)
 //      }
-
-      expect(1).toEqual(1);
     });
 });
 

@@ -29,8 +29,7 @@ class App extends React.Component { // receives props from index.js
         <Container fluid className="md-0 pt-0 main-app-container bg-light">
           <MainToolbar />
           <NewVacancyPanel /> {/* TODO: remove to dialog for new vacancy */}
-          {/* __THIS.PROPS__!!! */}
-          <Vacancies vacancies={this.props.vacancies} />  {/* TODO: remove to dialog for new vacancy */}
+          <Vacancies vacancies={this.props.vacancies} />  {/* __THIS.PROPS__!!! TODO: remove to dialog for new vacancy */}
         </Container>
       );
   }

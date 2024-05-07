@@ -9,14 +9,14 @@ let lastId = 1; //TODO: get from backend
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);
-  console.log("reduserVacancy.js action:");
+  console.log("reduserVacancy.js: action:");
   console.log(action);
   if(action === undefined) {
-    console.log("undefined action in reducerVacancy.js");
+    console.log("reduserVacancy.js: undefined action in reducerVacancy.js");
     return {...state};
   }
   var newState = {...state};
-  console.log("newState-->"+ JSON.stringify(newState));
+  console.log("reduserVacancy.js: newState-->"+ JSON.stringify(newState));
   switch (action.type) {
     case actionTypes.VACANCY_ADD:
       //TODO: add rest request
@@ -29,7 +29,7 @@ export default function reducerVacancy(state = state0, action) {
                                 title: action.payload.title,
                                 completed: false,
                               });
-      console.log("newState-->"+ JSON.stringify(newState));
+      console.log("reduserVacancy.js: newState-->"+ JSON.stringify(newState));
       return newState;
 
     case actionTypes.VACANCY_TOGGLE:
@@ -42,7 +42,7 @@ export default function reducerVacancy(state = state0, action) {
       return newState;
     case actionTypes.VACANCY_REMOVE:
       //TODO: add rest request
-      console.log("soFetch delete and get new list vacancies");
+      console.log("reduserVacancy.js: soFetch delete and get new list vacancies");
       var filtered = newState.vacancies.filter(vacancy => action.payload.id !== vacancy.id)
       console.log(filtered);
       newState.vacancies = filtered;

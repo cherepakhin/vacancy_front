@@ -4,12 +4,15 @@ import { connect } from "react-redux";
 
 import toJson from "enzyme-to-json";
 
-//import { App } from "./App";
+import { AppUnwrapped } from "./App";
 
-jest.mock('react-redux', () => ({
-   useDispatch: jest.fn(),
-   useSelector: jest.fn(),
-}));
+jest.mock('react-redux', () => {
+    return {
+    ...jest.requireActual('react-redux'),
+    useSelector: jest.fn(),
+    useDispatch: () => jest.fn()
+  };
+});
 
 describe("<App />", () => {
     it("Container in <App />", () => {
@@ -17,7 +20,7 @@ describe("<App />", () => {
         app: {},
         vacancies: {}
       };
-//      const wrapper = shallow(<App {...testState} />);
+      const wrapper = shallow(<AppUnwrapped {...testState} />);
       expect(1).toEqual(1);
     });
 });

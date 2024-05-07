@@ -40,7 +40,7 @@ class App extends React.Component { // receives props from index.js
 // __THIS.PROPS__!!! этот путь формируется по умолчанию функцией mapStateToProps
 // __this.app.vacancies__!!! никак не делается
 function mapStateToProps(state) {
-    console.log("App. state.vacancies: "+JSON.stringify(state)); // App. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}]}
+    console.log("App. state.vacancies: " + JSON.stringify(state)); // App. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}]}
     return {
         // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies
         // Доступен весь state. На пример: state.VACANCIES доступен через this.props.app.VACANCIES (__THIS.PROPS__!!!)
@@ -62,4 +62,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 var AppConnected = connect(mapStateToProps, mapDispatchToProps)(App);
-export default AppConnected;
+
+export { AppConnected, App };

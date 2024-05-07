@@ -3,7 +3,8 @@ import { shallow } from "enzyme";
 import { connect } from "react-redux";
 
 import toJson from "enzyme-to-json";
-//import App from "./App";
+
+//import { App } from "./App";
 
 jest.mock('react-redux', () => ({
    useDispatch: jest.fn(),
@@ -12,9 +13,11 @@ jest.mock('react-redux', () => ({
 
 describe("<App />", () => {
     it("Container in <App />", () => {
-//      const App = require("./App");
-//      const wrapper = shallow(<App />);
-      // expect(toJson(wrapper)).toMatchSnapshot();
+      let testState = {
+        app: {},
+        vacancies: {}
+      };
+//      const wrapper = shallow(<App {...testState} />);
       expect(1).toEqual(1);
     });
 });

@@ -16,6 +16,7 @@ export default function reducerVacancy(state = state0, action) {
     return {...state};
   }
   var newState = {...state};
+  console.log("newState-->"+ JSON.stringify(newState));
   switch (action.type) {
     case actionTypes.VACANCY_ADD:
       //TODO: add rest request

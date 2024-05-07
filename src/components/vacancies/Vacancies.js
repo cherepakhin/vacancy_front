@@ -5,6 +5,8 @@ import VacanciesHeader from "./VacanciesHeader";
 import VacancyList from "./VacancyList";
 
 const Vacancies = ({ vacancies }) => {
+  console.log("Vacancies param vacancies:");
+  console.log(vacancies);
   return (
       <div>
           <VacanciesHeader />

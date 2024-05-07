@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
+import { connect } from "react-redux";
 import toJson from "enzyme-to-json";
 import App from "./App";
 

@@ -27,6 +27,30 @@ describe("<App />", () => {
       expect(appView.node.type.displayName).toBe('Container');
     });
 
+    it("className <App />", () => {
+      let testState = {
+        app: {},
+        vacancies: {}
+      };
+
+      const wrapper = shallow(<AppUnwrapped {...testState} />);
+      const appView = toJson(wrapper);
+
+      expect(appView.node.props.className).toBe('md-0 pt-0 main-app-container bg-light');
+    });
+
+    it("MainToolbar in <App />", () => {
+      let testState = {
+        app: {},
+        vacancies: {}
+      };
+
+      const wrapper = shallow(<AppUnwrapped {...testState} />);
+      const appView = toJson(wrapper);
+
+      expect(appView.children[0].type).toBe('MainToolbar');
+    });
+
     it("Container in <App />", () => {
       let testState = {
         app: {},
@@ -39,9 +63,7 @@ describe("<App />", () => {
       console.log(appView.node);
       console.log(appView.node.props);
 //      console.log(appView.node.props.children[0]type: [Function: MainToolbar]);
-      expect(appView.node.props.className).toBe('md-0 pt-0 main-app-container bg-light');
 //      console.log(appView.node.props.children[0].type);
-      expect(appView.children[0].type).toBe('MainToolbar');
       expect(appView.children[1].type).toBe('NewVacancyPanel');
 //      console.log(appView.children[2]); // EMPTY!!! What is it???
       expect(appView.children[3].type).toBe('Vacancies');

@@ -51,6 +51,18 @@ describe("<App />", () => {
       expect(appView.children[0].type).toBe('MainToolbar');
     });
 
+    it("NewVacancyPanel in <App />", () => {
+      let testState = {
+        app: {},
+        vacancies: {}
+      };
+
+      const wrapper = shallow(<AppUnwrapped {...testState} />);
+      const appView = toJson(wrapper);
+
+      expect(appView.children[1].type).toBe('NewVacancyPanel');
+    });
+
     it("Container in <App />", () => {
       let testState = {
         app: {},
@@ -64,7 +76,6 @@ describe("<App />", () => {
       console.log(appView.node.props);
 //      console.log(appView.node.props.children[0]type: [Function: MainToolbar]);
 //      console.log(appView.node.props.children[0].type);
-      expect(appView.children[1].type).toBe('NewVacancyPanel');
 //      console.log(appView.children[2]); // EMPTY!!! What is it???
       expect(appView.children[3].type).toBe('Vacancies');
 //      expect(appView.node.props.children[0].type).toBe([Function: MainToolbar]);

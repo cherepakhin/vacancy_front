@@ -9,9 +9,7 @@ import store from './store/store';
 
 ReactDOM.render(
   <Provider store={ store }>
-    <React.StrictMode>
-      <AppConnected var1="value_var_1"/>
-    </React.StrictMode>
+    <AppConnected var1="value_var_1"/>
   </Provider>,
   document.getElementById('root')
 );

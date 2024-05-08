@@ -3,10 +3,10 @@ import { Col, Row, Button } from "react-bootstrap";
 
 const MainToolbar = () => {
     return (
+      <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
       {/* className="fixed-top" - row fixed on TOP PAGE  */}
       {/* "mt-0 md-1 ml-0" - margin top, margin bottom, margin left */}
       {/* "pd-1 pl-0" - padding down, padding left */}
-      <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
         {/* xs={12} одна колонка во всю ширину экрана(12). */}
         {/* Отступ элементов внутри колонки сверху(mt-2) и снизу (mb-2) = 8px */}
         <Col xs={12} className="mt-2 mb-2">

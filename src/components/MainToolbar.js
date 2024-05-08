@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { Col, Row, Button } from "react-bootstrap";
 import * as actions from "../actions/actions";
 import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
 
 const MainToolbar = () => {
 
   const [visibleNewVacancyDlg, setVisibleNewVacancyDlg] = useState(false);
   const dispatch = useDispatch();
+
+  console.log(visibleNewVacancyDlg);
 
   const handleShowDialogNewVacancy = (e) => {
       console.log("visibleNewVacancyDlg: " + visibleNewVacancyDlg);
@@ -20,6 +23,11 @@ const MainToolbar = () => {
     let visibleNewVacancyDlgAction = actions.createVisibleNewVacancyDlgAction(visibleNewVacancyDlg);
     console.log(visibleNewVacancyDlgAction);
     dispatch(visibleNewVacancyDlgAction);
+  }
+
+  const getTitle = () => {
+    console.log(visibleNewVacancyDlg);
+    return visibleNewVacancyDlg ? "Hide" : "Show";
   }
 
   return (
@@ -38,10 +46,29 @@ const MainToolbar = () => {
         <Button className="mr-1 col-md-1 col-sm-2">Текущие</Button>
         <Button className="mr-1 col-md-1 col-sm-2" onClick={handleShowDialogNewVacancy}>Новая</Button>
         <Button className="mr-1 col-md-1 col-sm-2">Фильтр</Button>
-        <Button className="mr-1 col-md-1 col-sm-2">{visibleNewVacancyDlg? "true" : "false"}</Button>
+        <Button className="mr-1 col-md-1 col-sm-2">{getTitle()}</Button>
       </Col>
     </Row>
   )
 }
 
-export default MainToolbar;
+const mapDispatchToProps = (dispatch) => {
+  return {
+  }
+}
+
+const mapStateToProps = (state) => {
+    console.log("MainToolBar. state.vacancies: " + JSON.stringify(state)); // App. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}]}
+    return {
+        // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies
+        // Доступен весь state. На пример: state.VACANCIES доступен через this.props.app.VACANCIES (__THIS.PROPS__!!!)
+        app: state,
+        // так будет доступно через <Vacancies vacancies={this.props.vacancies} />
+//        vacancies: state.vacancies,
+//        visibleNewVacancyDlg: state.visibleNewVacancyDlg
+    }
+}
+
+var MainToolbarConnect = connect(mapStateToProps, mapDispatchToProps)(MainToolbar);
+
+export { MainToolbarConnect as MainToolbar };

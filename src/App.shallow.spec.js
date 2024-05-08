@@ -71,11 +71,11 @@ describe("<App />", () => {
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       const appView = toJson(wrapper);
-
+      console.log(appView);
       expect(appView.children[2].type).toBe('Vacancies');
     });
 
-    it("App Container contains 4 area(Row): toolbar, 'New Vacancy', label 'List vacancies', 'Vacancies list'", () => {
+    it("App Container contains 3 area(Row): MainToolbar, NewVacancyPanel, Vacancies", () => {
       let testState = {
         app: {},
         vacancies: {}

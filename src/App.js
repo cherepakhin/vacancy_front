@@ -26,7 +26,7 @@ class App extends React.Component { // receives props from index.js
         //  "md-0" Margin Down (mD!) (https://react-bootstrap.github.io/docs/layout/grid)
         // this is comment OUTside Component. For comment INside Component see below.
         // path for test appView.node.props.className
-        // {/* __THIS.PROPS__!!! */}
+        // Attention:  access to props with __THIS.props.*__
         <Container fluid className="md-0 pt-0 main-app-container bg-light">
           <MainToolbar />
           <NewVacancyPanel />

@@ -22,14 +22,17 @@ class App extends React.Component { // receives props from index.js
       // this.props. обязательно!!! this.vacancies не работает.
       console.log(this.props.app.vacancies);
       console.log(this.props.vacancies);
+      console.log(this.props);
       return (
         //  "md-0" Margin Down (mD!) (https://react-bootstrap.github.io/docs/layout/grid)
         // this is comment OUTside Component. For comment INside Component see below.
         // path for test appView.node.props.className
         // Attention:  access to props with __THIS.props.*__
+        // <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
+
         <Container fluid className="md-0 pt-0 main-app-container bg-light">
           <MainToolbar />
-          <NewVacancyPanel />
+          <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
           <Vacancies vacancies={this.props.vacancies} />
         </Container>
       );

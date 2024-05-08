@@ -9,15 +9,17 @@ const MainToolbar = () => {
   const dispatch = useDispatch();
 
   const handleShowDialogNewVacancy = (e) => {
+      console.log("visibleNewVacancyDlg: " + visibleNewVacancyDlg);
+//      setVisibleNewVacancyDlg(!visibleNewVacancyDlg); // work local, other component don't see state
+
 //    console.log("MainToolbar.js. showDialogNewVacancy:");
 //    console.log(e);
 //    setShowDialogNewVacancy(true); // setting state variable will after exit from function
 
-      setVisibleNewVacancyDlg(!visibleNewVacancyDlg);
 //    console.log(visibleNewVacancyDlg);
-//    let visibleNewVacancyDlgAction = actions.createVisibleNewVacancyDlgAction(!visibleNewVacancyDlg);
-//    console.log(visibleNewVacancyDlgAction);
-//    dispatch(visibleNewVacancyDlgAction);
+    let visibleNewVacancyDlgAction = actions.createVisibleNewVacancyDlgAction(visibleNewVacancyDlg);
+    console.log(visibleNewVacancyDlgAction);
+    dispatch(visibleNewVacancyDlgAction);
   }
 
   return (

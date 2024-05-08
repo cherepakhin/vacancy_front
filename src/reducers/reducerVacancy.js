@@ -52,7 +52,9 @@ export default function reducerVacancy(state = state0, action) {
 
     case actionTypes.SHOW_NEW_VACANCY_DLG:
       console.log("actionTypes.SHOW_NEW_VACANCY_DLG="+JSON.stringify(action));
-      newState.visibleNewVacancyDlg = action.payload;
+      console.log("before newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
+      newState.visibleNewVacancyDlg = !newState.visibleNewVacancyDlg;
+      console.log("after newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
       return newState;
 
     default:

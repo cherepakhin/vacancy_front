@@ -20,7 +20,7 @@ class App extends React.Component { // receives props from index.js
       console.log(this);
       console.log("App.render() this.props.vacancies:");
       // this.props. обязательно!!! this.vacancies не работает.
-      console.log(this.props.app.vacancies);
+//      console.log(this.props.app.vacancies);
       console.log(this.props.vacancies);
       console.log(this.props);
       return (
@@ -48,7 +48,7 @@ const mapStateToProps = (state) => {
     return {
         // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies
         // Доступен весь state. На пример: state.VACANCIES доступен через this.props.app.VACANCIES (__THIS.PROPS__!!!)
-        app: state,
+//        app: state,
         // так будет доступно через <Vacancies vacancies={this.props.vacancies} />
         vacancies: state.vacancies,
         visibleNewVacancyDlg: state.visibleNewVacancyDlg

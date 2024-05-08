@@ -1,9 +1,12 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { connect } from "react-redux";
 import toJson from "enzyme-to-json";
-import MainToolbar from "./MainToolbar";
+
+import { MainToolbar } from "./MainToolbar";
 
 jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
    useDispatch: jest.fn(),
    useSelector: jest.fn(),
 }));

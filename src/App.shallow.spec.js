@@ -48,7 +48,7 @@ describe("<App />", () => {
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       const appView = toJson(wrapper);
 
-      expect(appView.children[0].type).toBe('MainToolbar');
+      expect(appView.children[0].type).toBe('Connect(MainToolbar)');
     });
 
     it("NewVacancyPanel in <App />", () => {

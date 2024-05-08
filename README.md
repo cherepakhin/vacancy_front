@@ -185,6 +185,10 @@ css:
 
 #### Отступы
 
+Подробнее об отступах в комментариях [src/components/MainToolbar.js](src/components/MainToolbar.js)
+
+#### Шрифт
+
 [https://learn.javascript.ru/css-units#otnositelno-shrifta-em](https://learn.javascript.ru/css-units#otnositelno-shrifta-em)
 
 Относительно шрифта: em.

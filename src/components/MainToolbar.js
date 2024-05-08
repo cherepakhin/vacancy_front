@@ -9,8 +9,6 @@ const MainToolbar = () => {
   const [visibleNewVacancyDlg, setVisibleNewVacancyDlg] = useState(false);
   const dispatch = useDispatch();
 
-  console.log(visibleNewVacancyDlg);
-
   const handleShowDialogNewVacancy = (e) => {
       console.log("visibleNewVacancyDlg: " + visibleNewVacancyDlg);
 //      setVisibleNewVacancyDlg(!visibleNewVacancyDlg); // work local, other component don't see state

@@ -1,8 +1,10 @@
 import * as actionTypes from '../actions/actionTypes';
 
-let state0 = {vacancies: [
-               {"completed": false, "id": -1, "title": "не показывать -1"},
-             ]};
+let state0 = { vacancies: [
+                {"completed": false, "id": -1, "title": "не показывать -1"},
+                ],
+               visibleNewVacancyDlg: false,
+             };
 
 let lastId = 1; //TODO: get from backend
 
@@ -46,6 +48,11 @@ export default function reducerVacancy(state = state0, action) {
       var filtered = newState.vacancies.filter(vacancy => action.payload.id !== vacancy.id)
       console.log(filtered);
       newState.vacancies = filtered;
+      return newState;
+
+    case actionTypes.SHOW_NEW_VACANCY_DLG:
+      console.log("actionTypes.SHOW_NEW_VACANCY_DLG="+JSON.stringify(action));
+      newState.visibleNewVacancyDlg = action.payload;
       return newState;
 
     default:

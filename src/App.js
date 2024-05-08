@@ -47,7 +47,8 @@ const mapStateToProps = (state) => {
         // Доступен весь state. На пример: state.VACANCIES доступен через this.props.app.VACANCIES (__THIS.PROPS__!!!)
         app: state,
         // так будет доступно через <Vacancies vacancies={this.props.vacancies} />
-        vacancies: state.vacancies
+        vacancies: state.vacancies,
+        visibleNewVacancyDlg: state.visibleNewVacancyDlg
     }
 }
 

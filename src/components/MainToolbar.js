@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Row, Button } from "react-bootstrap";
+import * as actions from "../actions/actions";
+import { useDispatch } from "react-redux";
 
 const MainToolbar = () => {
-  const handleShowDialogNewVacncy = (e) => {
-    console.log(e);
+
+  const [visibleNewVacancyDlg, setVisibleNewVacancyDlg] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleShowDialogNewVacancy = (e) => {
+//    console.log("MainToolbar.js. showDialogNewVacancy:");
+//    console.log(e);
+//    setShowDialogNewVacancy(true); // setting state variable will after exit from function
+
+      setVisibleNewVacancyDlg(!visibleNewVacancyDlg);
+//    console.log(visibleNewVacancyDlg);
+//    let visibleNewVacancyDlgAction = actions.createVisibleNewVacancyDlgAction(!visibleNewVacancyDlg);
+//    console.log(visibleNewVacancyDlgAction);
+//    dispatch(visibleNewVacancyDlgAction);
   }
+
   return (
     <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
     {/* className="fixed-top" - row fixed on TOP PAGE  */}
@@ -19,8 +34,9 @@ const MainToolbar = () => {
         {/* mr-1 отступ справа внутри колонки margin right = 1 (1 char 'x') */}
         <Button className="mr-1 col-md-1 col-sm-2">Все</Button>
         <Button className="mr-1 col-md-1 col-sm-2">Текущие</Button>
-        <Button className="mr-1 col-md-1 col-sm-2" onClick={handleShowDialogNewVacncy}>Новая</Button>
+        <Button className="mr-1 col-md-1 col-sm-2" onClick={handleShowDialogNewVacancy}>Новая</Button>
         <Button className="mr-1 col-md-1 col-sm-2">Фильтр</Button>
+        <Button className="mr-1 col-md-1 col-sm-2">{visibleNewVacancyDlg? "true" : "false"}</Button>
       </Col>
     </Row>
   )

@@ -31,6 +31,7 @@ export default function reducerVacancy(state = state0, action) {
                                 title: action.payload.title,
                                 completed: false,
                               });
+      newState.visibleNewVacancyDlg = false;
       console.log("reduserVacancy.js: newState-->"+ JSON.stringify(newState));
       return newState;
 

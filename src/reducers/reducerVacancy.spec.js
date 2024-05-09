@@ -31,7 +31,7 @@ describe("reducerVacancy tests", () => {
 
     expect(newState.vacancies.length).toEqual(2);
     expect(newState.vacancies[0]).toEqual(vacancy0);
-    let vacancyMustAdded = {"completed": false, id:2, "title": "TITLE_ADD"}; // id -2 generated in reducer
+    let vacancyMustAdded = {"completed": false, id:2, "title": "TITLE_ADD"}; // id 2 generated in reducer
     expect(newState.vacancies[1]).toEqual(vacancyMustAdded);
   });
 

@@ -196,6 +196,46 @@ css:
 Можно брать любые пропорции от текущего шрифта: 2em, 0.5em и т.п.
 Размеры в em – относительные, они определяются по текущему контексту.
 
+#### Диалоги
+
+В примере 3 диалога:
+
+__More dialog__ - диалог, встроенный в компоненту Vacancy.
+__DeleteConfirmDlg__, __Vacancy0NotDeleteDlg__ - диалоги в отдельных компонентах. __Vacancy0NotDeleteDlg__ - простой диалог с сообщением. __DeleteConfirmDlg__ диалог, возвращающий результат о выборе. 
+
+````java
+    <ListGroup.Item className={completed && 'vacancy-completed'}>
+      <Modal show={visibleMoreDlg} className="rounded-0">
+        <Modal.Header closeButton>
+          <Modal.Title>Подробнее о вакансии</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{"JSON: {id: "+id+", title: '"+title+"'}"}</Modal.Body>
+        <Modal.Footer>
+            <Button className="col-3 text-center" variant="primary" onClick={closeMoreDlg}>Закрыть</Button>
+        </Modal.Footer>
+      </Modal>
+
+      <DeleteConfirmDlg id={id} title={title} visible={visibleDeleteConfirmDlg}
+        fnVacancyDeleteConfirm={(id) => confirmDeleteConfirmDlg(id)}
+        fnVacancyDeleteCancel={cancelDeleteConfirmDlg}
+      />
+
+      <Vacancy0NotDeleteDlg visible={visibleVacancy0NotDeleteDlg}
+        fnVacancy0NotDeleteDlgClose={closeVacancy0NotDeleteDlg}
+      />
+
+      <div id="idLastEvent" className="col-1 list-group-item-date" title="Последнее событие">
+        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">26.04.2023 </span>
+      </div>
+      <div id="idMoreBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
+        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
+      </div>
+      <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-last" title="Удалить вакансию">
+        <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={-1} role="button">Удалить</span>
+      </div>
+    </ListGroup.Item>
+
+````
 #### О тестировании
 
 Элемент:

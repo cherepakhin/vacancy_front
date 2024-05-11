@@ -4,10 +4,12 @@ import * as actions from "../actions/actions";
 import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 
-const MainToolbar = () => {
-
+const MainToolbar = (props) => {
+  console.log("props");
+  console.log(props);
   const [visibleNewVacancyDlg, setVisibleNewVacancyDlg] = useState(false);
   const dispatch = useDispatch();
+  let captionVisible = false;
 
   const handleShowDialogNewVacancy = (e) => {
       console.log("visibleNewVacancyDlg: " + visibleNewVacancyDlg);
@@ -19,13 +21,26 @@ const MainToolbar = () => {
 
 //    console.log(visibleNewVacancyDlg);
     let visibleNewVacancyDlgAction = actions.createVisibleNewVacancyDlgAction(visibleNewVacancyDlg);
-    console.log(visibleNewVacancyDlgAction);
+    console.log(visibleNewVacancyDlgAction); // work! {"type": "SHOW_NEW_VACANCY_DLG","payload": {"visible": false}}
     dispatch(visibleNewVacancyDlgAction);
   }
 
   const getTitle = () => {
+    // console.log(this); // undefined
+//     console.log(this.app);
+//     console.log(app); // error
+    // console.log(this.props); // error
+    // console.log(caption); // not work! always only Show
+    // console.log(this); // undefined
+    // console.log(props); // undefined
+    // console.log(state); // undefined
     console.log(visibleNewVacancyDlg);
-    return visibleNewVacancyDlg ? "Hide" : "Show";
+//    console.log(this.props); // undefined
+    console.log(props.visibleNewVacancyDlg);
+    let caption = props.visibleNewVacancyDlg ? "Dlg opened" : "Dlg closed";
+//    return captionVisible? "Hide" : "Show";
+    return caption;
+
   }
 
   return (
@@ -56,15 +71,24 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log("MainToolBar. state.vacancies: " + JSON.stringify(state)); // App. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}]}
-    return {
-        // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies
-        // Доступен весь state. На пример: state.VACANCIES доступен через this.props.app.VACANCIES (__THIS.PROPS__!!!)
-        app: state,
-        // так будет доступно через <Vacancies vacancies={this.props.vacancies} />
-//        vacancies: state.vacancies,
-//        visibleNewVacancyDlg: state.visibleNewVacancyDlg
-    }
+    // work!
+    // for visibleNewVacancyDlg=false
+    // MainToolBar. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}],"visibleNewVacancyDlg":false}
+    // for visibleNewVacancyDlg=true
+    // MainToolBar. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}],"visibleNewVacancyDlg":true}
+    console.log("MainToolBar. state.vacancies: " + JSON.stringify(state));
+    const app = {...state};
+    console.log(app); // work! {vacancies: [...], visibleNewVacancyDlg: false}
+    console.log(app.visibleNewVacancyDlg); // work!
+    return app;
+//    return {
+//        // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies
+//        // Доступен весь state. На пример: state.VACANCIES доступен через this.props.app.VACANCIES (__THIS.PROPS__!!!)
+//        app: {...state},
+//        // так будет доступно через <Vacancies vacancies={this.props.vacancies} />
+////        vacancies: state.vacancies,
+////        visibleNewVacancyDlg: state.visibleNewVacancyDlg
+//    }
 }
 
 var MainToolbarConnect = connect(mapStateToProps, mapDispatchToProps)(MainToolbar);

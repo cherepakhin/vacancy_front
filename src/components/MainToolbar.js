@@ -34,14 +34,13 @@ const MainToolbar = (props) => {
 //     console.log(this.app);
 //     console.log(app); // error
     // console.log(this.props); // error
-    // console.log(caption); // not work! always only Show
+    // console.log(caption); // not work SWITCH! always only "Show"
     // console.log(this); // undefined
     // console.log(props); // undefined
     // console.log(state); // undefined
-    console.log(visibleNewVacancyDlg); // OK. log: false
-//    console.log(this.props); // undefined
-    console.log(props); //OK in connect. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
-    console.log(props.visibleNewVacancyDlg); // OK in connect. log: false
+    console.log(visibleNewVacancyDlg); // Don't delete console.log. OK. log: false
+    console.log(props); //Don't delete console.log. OK in connect. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
+    console.log(props.visibleNewVacancyDlg); // Don't delete console.log. OK in connect, in prod. log: false
     let caption = props.visibleNewVacancyDlg ? "Dlg opened" : "Dlg closed";
 //    return captionVisible? "Hide" : "Show";
     return caption;

@@ -84,4 +84,49 @@ describe("<MainToolbar />", () => {
 //    console.log(instance.testMethod); // TypeError: Cannot read properties of null (reading 'testMethod')
   });
 
+  it("check style 'All' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    console.log(wrapper.props().children);
+    console.log(wrapper.props().children.props.children[0]);
+    expect(wrapper.props().children.props.children[0].props.className).toEqual('mr-1 col-md-1 col-sm-2');
+    expect(wrapper.props().children.props.children[0].props.children).toEqual('Все');
+//    const btn = wrapper.props().children[0];
+//    console.log(btn);
+//    expect(mainToolbarProps.className).toEqual('fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered');
+  });
+
+  it("check title 'All' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[0].props.children).toEqual('Все');
+  });
+
+  it("check style 'Current' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[1].props.className).toEqual('mr-1 col-md-1 col-sm-2');
+  });
+
+  it("check title 'Current' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[1].props.children).toEqual('Текущие');
+  });
+
+  it("check style 'NewVacancy' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[2].props.className).toEqual('mr-1 col-md-1 col-sm-2');
+  });
+
+  it("check title 'NewVacancy' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[2].props.children).toEqual('Новая');
+  });
+
+  it("check style 'Filter' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[3].props.className).toEqual('mr-1 col-md-1 col-sm-2');
+  });
+
+  it("check title 'Filter' in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[3].props.children).toEqual('Фильтр');
+  });
 });

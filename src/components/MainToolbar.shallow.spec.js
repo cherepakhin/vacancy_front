@@ -129,4 +129,19 @@ describe("<MainToolbar />", () => {
     const wrapper = shallow(<MainToolbar />);
     expect(wrapper.props().children.props.children[3].props.children).toEqual('Фильтр');
   });
+
+  it("check style btn Status VacancyDlg in MainToolbar", () => {
+    const wrapper = shallow(<MainToolbar />);
+    expect(wrapper.props().children.props.children[4].props.className).toEqual('mr-1 col-md-1 col-sm-2');
+  });
+
+  it("check title btn status VacancyDlg in MainToolbar for CLOSED VacancyDlg", () => {
+    const wrapper = shallow(<MainToolbar visibleNewVacancyDlg={false} />);
+    expect(wrapper.props().children.props.children[4].props.children).toEqual('Dlg closed');
+  });
+
+  it("check title btn status VacancyDlg in MainToolbar for OPENED VacancyDlg", () => {
+    const wrapper = shallow(<MainToolbar visibleNewVacancyDlg={true} />);
+    expect(wrapper.props().children.props.children[4].props.children).toEqual('Dlg opened');
+  });
 });

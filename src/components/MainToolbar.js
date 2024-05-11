@@ -34,9 +34,10 @@ const MainToolbar = (props) => {
     // console.log(this); // undefined
     // console.log(props); // undefined
     // console.log(state); // undefined
-    console.log(visibleNewVacancyDlg);
+    console.log(visibleNewVacancyDlg); // OK. log: false
 //    console.log(this.props); // undefined
-    console.log(props.visibleNewVacancyDlg);
+    console.log(props); //OK. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
+    console.log(props.visibleNewVacancyDlg); // OK. log: false
     let caption = props.visibleNewVacancyDlg ? "Dlg opened" : "Dlg closed";
 //    return captionVisible? "Hide" : "Show";
     return caption;
@@ -71,15 +72,16 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    // work!
+    // work! show full state
     // for visibleNewVacancyDlg=false
     // MainToolBar. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}],"visibleNewVacancyDlg":false}
     // for visibleNewVacancyDlg=true
     // MainToolBar. state.vacancies: {"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}],"visibleNewVacancyDlg":true}
-    console.log("MainToolBar. state.vacancies: " + JSON.stringify(state));
+    // state={"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}],"visibleNewVacancyDlg":true}
+    console.log("MainToolBar. state: " + JSON.stringify(state));
     const app = {...state};
     console.log(app); // work! {vacancies: [...], visibleNewVacancyDlg: false}
-    console.log(app.visibleNewVacancyDlg); // work!
+    console.log(app.visibleNewVacancyDlg); // work! log: false
     return app;
 //    return {
 //        // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies

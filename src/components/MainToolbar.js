@@ -25,6 +25,10 @@ const MainToolbar = (props) => {
     dispatch(visibleNewVacancyDlgAction);
   }
 
+  const testMethod = () => {
+    return "test";
+  }
+
   const getTitle = () => {
     // console.log(this); // undefined
 //     console.log(this.app);
@@ -36,8 +40,8 @@ const MainToolbar = (props) => {
     // console.log(state); // undefined
     console.log(visibleNewVacancyDlg); // OK. log: false
 //    console.log(this.props); // undefined
-    console.log(props); //OK. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
-    console.log(props.visibleNewVacancyDlg); // OK. log: false
+    console.log(props); //OK in connect. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
+    console.log(props.visibleNewVacancyDlg); // OK in connect. log: false
     let caption = props.visibleNewVacancyDlg ? "Dlg opened" : "Dlg closed";
 //    return captionVisible? "Hide" : "Show";
     return caption;

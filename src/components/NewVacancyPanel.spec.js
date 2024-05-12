@@ -107,4 +107,11 @@ describe("<NewVacancyPanel />", () => {
     const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
     expect(colNewVacancyPanel.props().className).toEqual('');
   });
+
+  it("check className for hidden colNewVacancyPanel in NewVacancyPanel visible={false}", () => {
+    const wrapper = shallow(<NewVacancyPanel visible={false}/>);
+    const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
+    expect(colNewVacancyPanel.props().className).toEqual('d-none');
+  });
+
 });

@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import VacancyList from "./VacancyList";
 
 /**
-* This test only for VacancyList component. Tests content item of Vacancy testing in VacancyList.spec.js
+* This test only for VacancyList component. Tests content item of Vacancy testing in Vacancy.spec.js
 */
 describe("<VacancyList />", () => {
 

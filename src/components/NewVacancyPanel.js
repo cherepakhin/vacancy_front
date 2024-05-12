@@ -10,7 +10,7 @@ const NewVacancyPanel = (props) => {
         add className="d-none" for hide on all screens
         or .d-{sm,md,lg,xl,xxl}-none for hide on xs, sm, md, lg, xl, xxl screens
         (https://getbootstrap.com/docs/5.1/utilities/display/) */}
-        <Col id="colNewVacancyPanel" xs={6} className={props.visible? "" : "d-none"}>           {/* className={props.show.visible? "" : "d-none"} add className="d-none" for hide, xs={6} 10 cells (https://react-bootstrap.github.io/docs/layout/grid)*/}
+        <Col id="colNewVacancyPanel" xs={12} className={props.visible? "" : "d-none"}>           {/* className={props.show.visible? "" : "d-none"} add className="d-none" for hide, xs={6} 10 cells (https://react-bootstrap.github.io/docs/layout/grid)*/}
           <h4 id="headerNewVacancyPanel">Новая вакансия</h4>
           <AddNewVacancy />
         </Col>

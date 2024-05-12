@@ -5,11 +5,31 @@ import { useDispatch } from "react-redux";
 
 const AddNewVacancy = () => {
 // Вызовите useState на верхнем уровне вашего компонента, чтобы объявить переменную состояния.
-  const [vacancyTitle, setVacancyTitle] = useState('-'); // '-' - значение по умолчанию
+  const [vacancyTitle, setVacancyTitle] = useState(''); // '' - значение по умолчанию, описание вакансии
+  const [vacancyCompany, setVacancyCompany] = useState(''); // компания
+  const [vacancySource, setVacancySource] = useState(''); // источник вакансии (сайт)
+  const [vacancyContact, setVacancyContact] = useState(''); // контакт(tel, email, telegram,...)
+  const [vacancyComment, setVacancyComment] = useState(''); // комментарий
   const dispatch = useDispatch();
 
   const handleVacancyTitleChange = (e) => {
     setVacancyTitle(e.target.value);
+  }
+
+  const handleVacancyCompanyChange = (e) => {
+    setVacancyCompany(e.target.value);
+  }
+
+  const handleVacancySourceChange = (e) => {
+    setVacancySource(e.target.value);
+  }
+
+  const handleVacancyContactChange = (e) => {
+    setVacancyContact(e.target.value);
+  }
+
+  const handleVacancyCommentChange = (e) => {
+    setVacancyComment(e.target.value);
   }
 
   const handleVacancySubmit = () => {
@@ -28,13 +48,35 @@ const AddNewVacancy = () => {
     setVacancyTitle('');
   }
 
+  const handleVacancyCancel = () => {
+    console.log('cancel');
+    //TODO: dispatch(cancelAddVacancyAction);
+  }
+
   return (
-    <InputGroup className="mb-2 ml-0">
-      <FormControl placeholder="Название новой вакансии" value={vacancyTitle} onChange={e => handleVacancyTitleChange(e)} />
-      <InputGroup.Append>
-        <Button onClick={handleVacancySubmit}>Сохранить</Button>
-      </InputGroup.Append>
-    </InputGroup>
+    <div>
+      <div className="mb-2 ml-0">
+        <FormControl id="vacancyTitle" placeholder="Название новой вакансии"
+          value={vacancyTitle} onChange={e => handleVacancyTitleChange(e)} />
+        <FormControl id="vacancyCompany" className="mt-2" placeholder="Компания"
+          value={vacancyCompany} onChange={e => handleVacancyCompanyChange(e)} />
+        <FormControl id="vacancySource" className="mt-2" placeholder="Источник вакансии (н.п. ссылка на сайт)"
+          value={vacancySource} onChange={e => handleVacancySourceChange(e)} />
+        <FormControl id="vacancyContact" className="mt-2" placeholder="Контакты (ФИО, telegram, email, телефон)"
+          value={vacancyContact} onChange={e => handleVacancyContactChange(e)} />
+        <FormControl id="vacancyComment" className="mt-2" placeholder="Дополнительная информация"
+          value={vacancyComment} onChange={e => handleVacancyCommentChange(e)} />
+      </div>
+      <Button className="ml-1 mb-2 pr-2 float-end" onClick={handleVacancyCancel}>&nbsp;&nbsp;Отмена&nbsp;&nbsp;&nbsp;</Button>
+      <Button className="pl-2 mb-2 float-end" onClick={handleVacancySubmit}>Сохранить</Button>
+    </div>
+//    <InputGroup className="mb-2 ml-0">
+//      <FormControl placeholder="Название новой вакансии"
+//        value={vacancyTitle} onChange={e => handleVacancyTitleChange(e)} />
+//      <InputGroup.Append>
+//        <Button onClick={handleVacancySubmit}>Сохранить</Button>
+//      </InputGroup.Append>
+//    </InputGroup>
   )
 }
 

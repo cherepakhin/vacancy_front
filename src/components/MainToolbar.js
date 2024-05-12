@@ -41,7 +41,7 @@ const MainToolbar = (props) => {
     console.log(visibleNewVacancyDlg); // Don't delete console.log. OK. log: false
     console.log(props); //Don't delete console.log. OK in connect. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
     console.log(props.visibleNewVacancyDlg); // Don't delete console.log. OK in connect, in prod. log: false
-    let caption = props.visibleNewVacancyDlg ? "Dlg opened" : "Dlg closed";
+    let caption = props.visibleNewVacancyDlg ? "Dlg open" : "Dlg close";
 //    return captionVisible? "Hide" : "Show";
     return caption;
 

@@ -21,6 +21,54 @@ describe("<VacancyList />", () => {
     expect(wrapper.find({ id: "vacancyId1" })).toHaveLength(1);
   });
 
+  it("Vacancy 0 in VacancyList renders id correctly", () => {
+    const props = {
+        vacancies: [
+        {id: 0, title: "vacancy0", completed: false},
+        {id: 1, title: "vacancy1", completed: true},
+        ]
+    };
+
+    const wrapper = shallow(<VacancyList {...props} />);
+
+    expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
+    var vacancy0 = wrapper.find({ id: "vacancyId0" });
+
+    expect(vacancy0.prop("id")).toEqual("vacancyId0");
+  });
+
+  it("prop 'vacancy' correctly in Vacancy0 in VacancyList", () => {
+    const props = {
+        vacancies: [
+        {id: 0, title: "vacancy0", completed: false},
+        {id: 1, title: "vacancy1", completed: true},
+        ]
+    };
+
+    const wrapper = shallow(<VacancyList {...props} />);
+
+    expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
+    var vacancy0 = wrapper.find({ id: "vacancyId0" });
+
+    expect(vacancy0.prop("vacancy")).toEqual({"completed": false, "id": 0, "title": "vacancy0"});
+  });
+
+  it("key Vacancy0 in VacancyList renders id correctly", () => {
+    const props = {
+        vacancies: [
+        {id: 0, title: "vacancy0", completed: false},
+        {id: 1, title: "vacancy1", completed: true},
+        ]
+    };
+
+    const wrapper = shallow(<VacancyList {...props} />);
+
+    expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
+    var vacancy0 = wrapper.find({ id: "vacancyId0" });
+
+    expect(vacancy0.key()).toEqual("0");
+  });
+
   it("count children VacancyList", () => {
     const props = {
         vacancies: [

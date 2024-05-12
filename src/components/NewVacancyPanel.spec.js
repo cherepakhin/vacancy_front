@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import NewVacancyPanel from "./NewVacancyPanel";
+import AddNewVacancy from "./vacancies/AddNewVacancy";
 
 describe("<NewVacancyPanel />", () => {
 
@@ -54,6 +55,13 @@ describe("<NewVacancyPanel />", () => {
     const wrapper = shallow(<NewVacancyPanel visible={false}/>);
 
     expect(wrapper.props().children[1].props.children[1].props.children).toEqual('Новая вакансия');
+  });
+
+  it("props children 1 in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel />);
+
+    expect(wrapper.props().children.length).toEqual(2);
+    expect(wrapper.find(AddNewVacancy).length).toBe(1);
   });
 
 });

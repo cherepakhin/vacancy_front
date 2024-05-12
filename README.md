@@ -255,6 +255,37 @@ it("Check content", () => {
 
 Комментарии вида {/*TODO...*/} в компонентах помещаются в выходной html при render() и учитываются при тестировании. Н.п. смещается индекс children.
 
+#### Тестирование с вложенными компонентами
+
+Пример компонента: [src/components/NewVacancyPanel.js](src/components/NewVacancyPanel.js)
+Пример теста: [src/components/NewVacancyPanel.spec.js](src/components/NewVacancyPanel.spec.js)
+
+Компонент NewVacancyPanel содержит компонент AddNewVacancy:
+
+````java
+const NewVacancyPanel = (props) => {
+return (
+  <Row className="mt-2 md-0 pt-5 pl-0 pd-0">    
+    <Col xs={6} className={props.visible? "" : "d-none"}>
+      <h4>Новая вакансия</h4>
+      <AddNewVacancy />
+    </Col>
+  </Row>
+  )
+}
+````
+
+Тест, что NewVacancyPanel содержит компонент AddNewVacancy:
+
+````java
+  it("props children 1 in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel visible={false}/>);
+
+    expect(wrapper.props().children.length).toEqual(2);
+    expect(wrapper.find(AddNewVacancy).length).toBe(1); // find!!!
+  });
+````
+
 #### Проблемы
 
 При тестировании через __renderer__:

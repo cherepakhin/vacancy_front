@@ -57,11 +57,19 @@ describe("<NewVacancyPanel />", () => {
     expect(wrapper.props().children[1].props.children[1].props.children).toEqual('Новая вакансия');
   });
 
-  it("props children 1 in NewVacancyPanel", () => {
+  it("NewVacancyPanel contains AddNewVacancy", () => {
     const wrapper = shallow(<NewVacancyPanel />);
 
     expect(wrapper.props().children.length).toEqual(2);
+    console.log(wrapper.props().children);
+    console.log(wrapper.props().children[1].props);
     expect(wrapper.find(AddNewVacancy).length).toBe(1);
+  });
+
+  it("find idNewVacancyPanel in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel />);
+    const newVacancyPanel = wrapper.find('#idNewVacancyPanel');
+    expect(newVacancyPanel.length).toBe(1);
   });
 
 });

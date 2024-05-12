@@ -278,7 +278,7 @@ return (
 Тест, что NewVacancyPanel содержит компонент AddNewVacancy:
 
 ````java
-  it("props children 1 in NewVacancyPanel", () => {
+  it("NewVacancyPanel contains AddNewVacancy", () => {
     const wrapper = shallow(<NewVacancyPanel visible={false}/>);
 
     expect(wrapper.props().children.length).toEqual(2);

@@ -51,10 +51,39 @@ describe("<NewVacancyPanel />", () => {
     expect(wrapper.props().children[1].props.children[1].type).toEqual('h4');
   });
 
-  it("'Новая вакансия' in NewVacancyPanel", () => {
+  it("h4 in NewVacancyPanel with find by id", () => {
+    const wrapper = shallow(<NewVacancyPanel visible={true}/>);
+    const headerNewVacancyPanel = wrapper.find('#headerNewVacancyPanel');
+
+    expect(headerNewVacancyPanel.props().id).toEqual('headerNewVacancyPanel');
+    expect(headerNewVacancyPanel.props().children).toEqual('Новая вакансия');
+    expect(headerNewVacancyPanel.type()).toEqual('h4');
+  });
+
+  it("check id headerNewVacancyPanel in NewVacancyPanel with find by id", () => {
+    const wrapper = shallow(<NewVacancyPanel visible={true}/>);
+    const headerNewVacancyPanel = wrapper.find('#headerNewVacancyPanel');
+
+    expect(headerNewVacancyPanel.props().id).toEqual('headerNewVacancyPanel');
+  });
+
+  it("check text in NewVacancyPanel with find by id", () => {
+    const wrapper = shallow(<NewVacancyPanel visible={true}/>);
+    const headerNewVacancyPanel = wrapper.find('#headerNewVacancyPanel');
+
+    expect(headerNewVacancyPanel.props().children).toEqual('Новая вакансия');
+  });
+
+  it("check caption in NewVacancyPanel with methods children->props->children...", () => {
     const wrapper = shallow(<NewVacancyPanel visible={false}/>);
 
     expect(wrapper.props().children[1].props.children[1].props.children).toEqual('Новая вакансия');
+  });
+
+  it("check caption in headerNewVacancyPanel of NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel visible="true"/>);
+    const headerNewVacancyPanel = wrapper.find('#headerNewVacancyPanel');
+    expect(headerNewVacancyPanel.text()).toEqual('Новая вакансия');
   });
 
   it("NewVacancyPanel contains AddNewVacancy", () => {

@@ -96,13 +96,13 @@ describe("<NewVacancyPanel />", () => {
     expect(colNewVacancyPanel.props().className).toEqual('d-none');
   });
 
-  it("check className for showed colNewVacancyPanel in NewVacancyPanel", () => {
+  it("check className for showed colNewVacancyPanel in NewVacancyPanel visible={true}", () => {
     const wrapper = shallow(<NewVacancyPanel visible={true}/>);
     const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
     expect(colNewVacancyPanel.props().className).toEqual('');
   });
 
-  it("check className '' for showed colNewVacancyPanel in NewVacancyPanel", () => {
+  it("check className '' for showed colNewVacancyPanel in NewVacancyPanel visible=\"true\"", () => {
     const wrapper = shallow(<NewVacancyPanel visible="true"/>);
     const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
     expect(colNewVacancyPanel.props().className).toEqual('');

@@ -72,4 +72,39 @@ describe("<NewVacancyPanel />", () => {
     expect(newVacancyPanel.length).toBe(1);
   });
 
+  it("find colNewVacancyPanel in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel />);
+    const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
+    expect(colNewVacancyPanel.length).toBe(1);
+  });
+
+  it("find headerNewVacancyPanel in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel />);
+    const headerNewVacancyPanel = wrapper.find('#headerNewVacancyPanel');
+    expect(headerNewVacancyPanel.length).toBe(1);
+  });
+
+  it("check xs colNewVacancyPanel in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel />);
+    const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
+    expect(colNewVacancyPanel.props().xs).toEqual(6);
+  });
+
+  it("check className for hidden colNewVacancyPanel in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel />);
+    const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
+    expect(colNewVacancyPanel.props().className).toEqual('d-none');
+  });
+
+  it("check className for showed colNewVacancyPanel in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel visible={true}/>);
+    const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
+    expect(colNewVacancyPanel.props().className).toEqual('');
+  });
+
+  it("check className '' for showed colNewVacancyPanel in NewVacancyPanel", () => {
+    const wrapper = shallow(<NewVacancyPanel visible="true"/>);
+    const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
+    expect(colNewVacancyPanel.props().className).toEqual('');
+  });
 });

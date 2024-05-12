@@ -67,8 +67,8 @@ const AddNewVacancy = () => {
         <FormControl id="vacancyComment" className="mt-2" placeholder="Дополнительная информация"
           value={vacancyComment} onChange={e => handleVacancyCommentChange(e)} />
       </div>
-      <Button className="mr-0 col-md-1 col-sm-2 float-end" onClick={handleVacancySubmit}>Сохранить</Button>
-      <Button className="mr-1 col-md-1 col-sm-2 float-end" onClick={handleVacancyCancel}>Отмена</Button>
+      <Button className="mr-0 col-md-1 col-sm-2 float-end" onClick={handleVacancyCancel}>Отмена</Button>
+      <Button className="mr-1 col-md-1 col-sm-2 float-end" onClick={handleVacancySubmit}>Сохранить</Button>
     </div>
 //    <InputGroup className="mb-2 ml-0">
 //      <FormControl placeholder="Название новой вакансии"

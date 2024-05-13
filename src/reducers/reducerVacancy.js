@@ -1,7 +1,13 @@
 import * as actionTypes from '../actions/actionTypes';
 
 let state0 = { vacancies: [
-                {"completed": false, "id": -1, "title": "не показывать -1"},
+                {"id": -1,
+                "title": "Не удалять",
+                "company": "-",
+                "source": "-",
+                "contact": "-",
+                "comment": "-",
+                "completed": false},
                 ],
                visibleNewVacancyDlg: false,
              };
@@ -26,9 +32,18 @@ export default function reducerVacancy(state = state0, action) {
 
       // Пример простого добавление задачи в state из action.payload
       // ТУТ делается изменение state
+//        title: vacancyTitle,
+//        company: vacancyCompany,
+//        source: vacancySource,
+//        contact: vacancyContact,
+//        comment: vacancyComment};
       newState.vacancies.push({
                                 id: ++lastId,
                                 title: action.payload.title,
+                                company: action.payload.company,
+                                source: action.payload.source,
+                                contact: action.payload.contact,
+                                comment: action.payload.comment,
                                 completed: false,
                               });
       newState.visibleNewVacancyDlg = false;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FormControl, InputGroup } from "react-bootstrap";
+import { Button, FormControl } from "react-bootstrap";
 import * as actions from "../../actions/actions";
 import { useDispatch } from "react-redux";
 
@@ -38,8 +38,18 @@ const AddNewVacancy = () => {
 //      title: taskTitle
 //    }));
 
-// Variant 2. WORKED!
-    let addVacancyAction = actions.createAddVacancyAction({ title: vacancyTitle});
+// Variant 2. WORKED! копируются значения из формы в объект vacancy
+// значения полей в переменных с префиксом vacancy.
+// Переменные с префиксом vacancy.. нужны для того, чтобы заполнить значения в форме
+    let newVacancy = {
+        title: vacancyTitle,
+        company: vacancyCompany,
+        source: vacancySource,
+        contact: vacancyContact,
+        comment: vacancyComment,
+        completed: false
+        };
+    let addVacancyAction = actions.createAddVacancyAction(newVacancy);
 // actionAddTask:
 //   type: actions.TASK_ADD,
 //   payload: taskTitle
@@ -70,13 +80,6 @@ const AddNewVacancy = () => {
       <Button className="mr-0 col-md-1 col-sm-2 float-end" onClick={handleVacancyCancel}>Отмена</Button>
       <Button className="mr-1 col-md-1 col-sm-2 float-end" onClick={handleVacancySubmit}>Сохранить</Button>
     </div>
-//    <InputGroup className="mb-2 ml-0">
-//      <FormControl placeholder="Название новой вакансии"
-//        value={vacancyTitle} onChange={e => handleVacancyTitleChange(e)} />
-//      <InputGroup.Append>
-//        <Button onClick={handleVacancySubmit}>Сохранить</Button>
-//      </InputGroup.Append>
-//    </InputGroup>
   )
 }
 

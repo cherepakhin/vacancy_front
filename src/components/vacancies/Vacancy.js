@@ -12,7 +12,7 @@ import * as actions from "../../actions/actions";
 const Vacancy = ({ vacancy }) => {
 // for testing use props uncomment
 //  console.log("props=", task);
-  const { id, title, completed } = {...vacancy};
+  const { id, title, company, source, contact, comment, completed } = {...vacancy};
   const dispatch = useDispatch();
 
   const [visibleMoreDlg, setVisibleMoreDlg] = useState(false);
@@ -81,7 +81,7 @@ const Vacancy = ({ vacancy }) => {
         <Modal.Header closeButton>
           <Modal.Title>Подробнее о вакансии</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{"JSON: {id: "+id+", title: '"+title+"'}"}</Modal.Body>
+        <Modal.Body>{"JSON: " + JSON.stringify(vacancy)}</Modal.Body>
         <Modal.Footer>
             <Button className="col-3 text-center" variant="primary" onClick={closeMoreDlg}>Закрыть</Button>
         </Modal.Footer>

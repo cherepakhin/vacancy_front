@@ -10,7 +10,6 @@ let lastId = 1; //TODO: get from backend
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);
-  console.log(vacancy0);
   console.log("reduserVacancy.js: action:");
   console.log(action);
   if(action === undefined) {

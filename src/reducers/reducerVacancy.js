@@ -1,14 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
+import vacancy0 from '../components/vacancies/vacancy0';
 
-let state0 = { vacancies: [
-                {"id": -1,
-                "title": "Не удалять",
-                "company": "-",
-                "source": "-",
-                "contact": "-",
-                "comment": "-",
-                "completed": false},
-                ],
+let state0 = { vacancies: [vacancy0],
                visibleNewVacancyDlg: false,
              };
 
@@ -17,6 +10,7 @@ let lastId = 1; //TODO: get from backend
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
   console.log(state);
+  console.log(vacancy0);
   console.log("reduserVacancy.js: action:");
   console.log(action);
   if(action === undefined) {

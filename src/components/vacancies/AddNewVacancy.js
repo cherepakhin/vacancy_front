@@ -60,7 +60,8 @@ const AddNewVacancy = () => {
 
   const handleVacancyCancel = () => {
     console.log('cancel');
-    //TODO: dispatch(cancelAddVacancyAction);
+    let cancelAddVacancyAction = actions.createVisibleNewVacancyDlgAction(false);
+    TODO: dispatch(cancelAddVacancyAction);
   }
 
   return (

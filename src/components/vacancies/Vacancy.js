@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Form, ListGroup, Modal, Button } from "react-bootstrap";
+import { Form, ListGroup } from "react-bootstrap";
 import { createToggleVacancyAction }  from "../../actions/actions";
 
+import AboutVacancyDlg from "./AboutVacancyDlg";
 import DeleteConfirmDlg from "./DeleteConfirmDlg";
 import Vacancy0NotDeleteDlg from "./Vacancy0NotDeleteDlg";
 
@@ -15,17 +16,21 @@ const Vacancy = ({ vacancy }) => {
   const { id, title, company, source, contact, comment, completed } = {...vacancy};
   const dispatch = useDispatch();
 
-  const [visibleMoreDlg, setVisibleMoreDlg] = useState(false);
+  const [visibleAboutDlg, setVisibleAboutDlg] = useState(false);
   const [visibleDeleteConfirmDlg, setVisibleDeleteConfirmDlg] = useState(false);
   const [visibleVacancy0NotDeleteDlg, setVisibleVacancy0NotDeleteDlg] = useState(false);
 
-// show more dialog
-  const openMoreDlg= (id) => {
-    setVisibleMoreDlg(true);
+  const showLastEvent = () => {
+    console.log("showLastEvent");
   }
 
-  const closeMoreDlg = () => {
-    setVisibleMoreDlg(false);
+// show about dialog
+  const openAboutDlg = () => {
+    setVisibleAboutDlg(true);
+  }
+
+  const closeAboutDlg = () => {
+    setVisibleAboutDlg(false);
   }
 
   const openDeleteConfirmDlg = (vacancyId) => {
@@ -77,15 +82,9 @@ const Vacancy = ({ vacancy }) => {
   // DeleteConfirmDlg.js - пример диалога в отдельной компоненте
   return (
     <ListGroup.Item className={completed && 'vacancy-completed'}>
-      <Modal show={visibleMoreDlg} className="rounded-0">
-        <Modal.Header closeButton>
-          <Modal.Title>Подробнее о вакансии</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{"JSON: " + JSON.stringify(vacancy)}</Modal.Body>
-        <Modal.Footer>
-            <Button className="col-3 text-center" variant="primary" onClick={closeMoreDlg}>Закрыть</Button>
-        </Modal.Footer>
-      </Modal>
+      <AboutVacancyDlg vacancy={vacancy} visible={visibleAboutDlg}
+        fnClose={closeAboutDlg}
+      />
 
       <DeleteConfirmDlg id={id} title={title} visible={visibleDeleteConfirmDlg}
         fnVacancyDeleteConfirm={(id) => confirmDeleteConfirmDlg(id)}
@@ -97,7 +96,7 @@ const Vacancy = ({ vacancy }) => {
       />
 
       <div id="idLastEvent" className="col-1 list-group-item-date" title="Последнее событие">
-        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">26.04.2023 </span>
+        <span onClick={() => showLastEvent(id)} tabIndex={0} role="button">26.04.2023 </span>
       </div>
 
       <Form.Check
@@ -109,8 +108,8 @@ const Vacancy = ({ vacancy }) => {
         title={"title Form.Check id="+id + " " + ((completed ? "Отработана":"Не отработана"))}
       />
 
-      <div id="idMoreBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
-        <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
+      <div id="idAboutBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
+        <span onClick={() => openAboutDlg()} tabIndex={0} role="button">Подробнее</span>
       </div>
 
       <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-last" title="Удалить вакансию">

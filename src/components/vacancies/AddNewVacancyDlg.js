@@ -3,7 +3,7 @@ import { Button, FormControl } from "react-bootstrap";
 import * as actions from "../../actions/actions";
 import { useDispatch } from "react-redux";
 
-const AddNewVacancy = () => {
+const AddNewVacancyDlg = () => {
 // Вызовите useState на верхнем уровне вашего компонента, чтобы объявить переменную состояния.
   const [vacancyTitle, setVacancyTitle] = useState(''); // '' - значение по умолчанию, описание вакансии
   const [vacancyCompany, setVacancyCompany] = useState(''); // компания
@@ -84,4 +84,4 @@ const AddNewVacancy = () => {
   )
 }
 
-export default AddNewVacancy;
+export default AddNewVacancyDlg;

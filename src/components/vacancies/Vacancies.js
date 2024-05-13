@@ -8,7 +8,7 @@ const Vacancies = ({ vacancies, visible }) => {
   console.log("Vacancies param vacancies:");
   console.log(vacancies);
   return (
-      <div className={visible? "d-none" : ""}>
+      <div className={visible? "" : "d-none"}>
           <VacanciesHeader />
           <Row>
             <Col xs={12}>

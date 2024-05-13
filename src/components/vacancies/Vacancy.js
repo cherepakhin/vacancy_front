@@ -99,6 +99,7 @@ const Vacancy = ({ vacancy }) => {
       <div id="idLastEvent" className="col-1 list-group-item-date" title="Последнее событие">
         <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">26.04.2023 </span>
       </div>
+
       <Form.Check
         id={id}
         type="checkbox"
@@ -107,12 +108,15 @@ const Vacancy = ({ vacancy }) => {
         onChange={ () => dispatch(createToggleVacancyAction(id)) }
         title={"title Form.Check id="+id + " " + ((completed ? "Отработана":"Не отработана"))}
       />
+
       <div id="idMoreBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
         <span onClick={() => openMoreDlg(id)} tabIndex={0} role="button">Подробнее</span>
       </div>
+
       <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-last" title="Удалить вакансию">
         <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={-1} role="button">Удалить</span>
       </div>
+
     </ListGroup.Item>
   )
 }

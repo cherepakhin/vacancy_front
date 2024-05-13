@@ -50,6 +50,7 @@ const AddNewVacancy = () => {
         completed: false
         };
     let addVacancyAction = actions.createAddVacancyAction(newVacancy);
+//NOTE: don't delete comment
 // actionAddTask:
 //   type: actions.TASK_ADD,
 //   payload: taskTitle
@@ -59,7 +60,6 @@ const AddNewVacancy = () => {
   }
 
   const handleVacancyCancel = () => {
-    console.log('cancel');
     let cancelAddVacancyAction = actions.createVisibleNewVacancyDlgAction(false);
     TODO: dispatch(cancelAddVacancyAction);
   }

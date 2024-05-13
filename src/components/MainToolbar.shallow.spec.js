@@ -137,11 +137,11 @@ describe("<MainToolbar />", () => {
 
   it("check title btn status VacancyDlg in MainToolbar for CLOSED VacancyDlg", () => {
     const wrapper = shallow(<MainToolbar visibleNewVacancyDlg={false} />);
-    expect(wrapper.props().children.props.children[4].props.children).toEqual('Dlg closed');
+    expect(wrapper.props().children.props.children[4].props.children).toEqual('Dlg close');
   });
 
   it("check title btn status VacancyDlg in MainToolbar for OPENED VacancyDlg", () => {
     const wrapper = shallow(<MainToolbar visibleNewVacancyDlg={true} />);
-    expect(wrapper.props().children.props.children[4].props.children).toEqual('Dlg opened');
+    expect(wrapper.props().children.props.children[4].props.children).toEqual('Dlg open');
   });
 });

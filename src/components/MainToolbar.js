@@ -21,7 +21,7 @@ const MainToolbar = (props) => {
 
 //    console.log(visibleNewVacancyDlg);
     let visibleNewVacancyDlgAction = actions.createVisibleNewVacancyDlgAction(visibleNewVacancyDlg);
-    console.log(visibleNewVacancyDlgAction); // work! {"type": "SHOW_NEW_VACANCY_DLG","payload": {"visible": false}}
+//    console.log(visibleNewVacancyDlgAction); // work! {"type": "SHOW_NEW_VACANCY_DLG","payload": {"visible": false}}
     dispatch(visibleNewVacancyDlgAction);
   }
 
@@ -38,9 +38,9 @@ const MainToolbar = (props) => {
     // console.log(this); // undefined
     // console.log(props); // undefined
     // console.log(state); // undefined
-    console.log(visibleNewVacancyDlg); // Don't delete console.log. OK. log: false
-    console.log(props); //Don't delete console.log. OK in connect. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
-    console.log(props.visibleNewVacancyDlg); // Don't delete console.log. OK in connect, in prod. log: false
+//    console.log(visibleNewVacancyDlg); // Don't delete console.log. OK. log: false
+//    console.log(props); //Don't delete console.log. OK in connect. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
+//    console.log(props.visibleNewVacancyDlg); // Don't delete console.log. OK in connect, in prod. log: false
     let caption = props.visibleNewVacancyDlg ? "Dlg open" : "Dlg close";
 //    return captionVisible? "Hide" : "Show";
     return caption;
@@ -83,8 +83,8 @@ const mapStateToProps = (state) => {
     // state={"vacancies":[{"completed":false,"id":-1,"title":"не показывать -1"}],"visibleNewVacancyDlg":true}
     console.log("MainToolBar. state: " + JSON.stringify(state));
     const app = {...state};
-    console.log(app); // work! {vacancies: [...], visibleNewVacancyDlg: false}
-    console.log(app.visibleNewVacancyDlg); // work! log: false
+//    console.log(app); // work! {vacancies: [...], visibleNewVacancyDlg: false}
+//    console.log(app.visibleNewVacancyDlg); // work! log: false
     return app;
 //    return {
 //        // "vacanciesFromState:" внутри компонета доступно через this.props.app.vacancies

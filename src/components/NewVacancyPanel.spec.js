@@ -22,7 +22,7 @@ describe("<NewVacancyPanel />", () => {
     const wrapper = shallow(<NewVacancyPanel visible={true}/>);
     const panel = toJson(wrapper);
 
-    expect(wrapper.props().children[1].props.xs).toEqual(6);
+    expect(wrapper.props().children[1].props.xs).toEqual(12);
   });
 
   it("showed className NewVacancyPanel", () => {
@@ -43,9 +43,9 @@ describe("<NewVacancyPanel />", () => {
   it("h4 in NewVacancyPanel", () => {
     const wrapper = shallow(<NewVacancyPanel visible={false}/>);
     const panel = toJson(wrapper);
-    console.log(wrapper.props().children);
-    console.log(wrapper.props().children[0]);
-    console.log(wrapper.props().children[1]);
+//    console.log(wrapper.props().children);
+//    console.log(wrapper.props().children[0]);
+//    console.log(wrapper.props().children[1]);
 
     console.log(wrapper.props().children[1].props.children);
     expect(wrapper.props().children[1].props.children[1].type).toEqual('h4');
@@ -90,8 +90,8 @@ describe("<NewVacancyPanel />", () => {
     const wrapper = shallow(<NewVacancyPanel />);
 
     expect(wrapper.props().children.length).toEqual(2);
-    console.log(wrapper.props().children);
-    console.log(wrapper.props().children[1].props);
+//    console.log(wrapper.props().children);
+//    console.log(wrapper.props().children[1].props);
     expect(wrapper.find(AddNewVacancy).length).toBe(1);
   });
 
@@ -116,7 +116,7 @@ describe("<NewVacancyPanel />", () => {
   it("check xs colNewVacancyPanel in NewVacancyPanel", () => {
     const wrapper = shallow(<NewVacancyPanel />);
     const colNewVacancyPanel = wrapper.find('#colNewVacancyPanel');
-    expect(colNewVacancyPanel.props().xs).toEqual(6);
+    expect(colNewVacancyPanel.props().xs).toEqual(12);
   });
 
   it("check className for hidden colNewVacancyPanel in NewVacancyPanel with default props", () => {

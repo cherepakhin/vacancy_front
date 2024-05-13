@@ -1,7 +1,8 @@
 import * as actionTypes from '../actions/actionTypes';
 import vacancy0 from '../components/vacancies/vacancy0';
+import vacancyTest from '../components/vacancies/vacancyTest';
 
-let state0 = { vacancies: [vacancy0],
+let state0 = { vacancies: [vacancy0, vacancyTest],
                visibleNewVacancyDlg: false,
              };
 

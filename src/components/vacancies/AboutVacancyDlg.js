@@ -13,9 +13,22 @@ const AboutVacancyDlg = ({vacancy, visible, fnClose}) => {
         <Modal.Header closeButton>
           <Modal.Title id="header">О вакансии</Modal.Title>
         </Modal.Header>
-        <Modal.Body id="body">{"id: "+vacancy.id+", title: '"+vacancy.title}</Modal.Body>
+        <Modal.Body id="body">
+            <form>
+              <div>
+                <label><b>id: </b>{vacancy.id}</label><br/>
+                <label><b>Должность: </b>{vacancy.title}</label>
+                <label><b>Компания: </b>{vacancy.company}</label>
+                <label><b>Источник: </b>{vacancy.source}</label>
+                <label><b>Контакты: </b>{vacancy.contact}</label>
+                <label><b>Комментарий: </b>{vacancy.comment}</label>
+                <label><b>Отработана: </b>{vacancy.completed? "Да": "Нет"}</label>
+              </div>
+            </form>
+        </Modal.Body>
+
         <Modal.Footer>
-            <Button id="ok" className="col-2 text-center" variant="primary" onClick={handleClose}>Закрыть</Button>
+            <Button id="ok-button" className="col-3" variant="primary" onClick={handleClose}>Закрыть</Button>
         </Modal.Footer>
       </Modal>
   );

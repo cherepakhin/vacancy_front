@@ -66,7 +66,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-var AppConnect = connect(mapStateToProps, mapDispatchToProps)(App);
+let AppConnect = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export { App as AppUnwrapped };
 

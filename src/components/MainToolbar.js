@@ -96,7 +96,7 @@ const mapStateToProps = (state) => {
 //    }
 }
 
-var MainToolbarConnect = connect(mapStateToProps, mapDispatchToProps)(MainToolbar);
+let MainToolbarConnect = connect(mapStateToProps, mapDispatchToProps)(MainToolbar);
 
 export { MainToolbarConnect as MainToolbarConnect };
 export { MainToolbar as MainToolbar }; // for testing

@@ -32,7 +32,7 @@ describe("<VacancyList />", () => {
     const wrapper = shallow(<VacancyList {...props} />);
 
     expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
-    var vacancy0 = wrapper.find({ id: "vacancyId0" });
+    let vacancy0 = wrapper.find({ id: "vacancyId0" });
 
     expect(vacancy0.prop("id")).toEqual("vacancyId0");
   });
@@ -48,7 +48,7 @@ describe("<VacancyList />", () => {
     const wrapper = shallow(<VacancyList {...props} />);
 
     expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
-    var vacancy0 = wrapper.find({ id: "vacancyId0" });
+    let vacancy0 = wrapper.find({ id: "vacancyId0" });
 
     expect(vacancy0.prop("vacancy")).toEqual({"completed": false, "id": 0, "title": "vacancy0"});
   });
@@ -64,7 +64,7 @@ describe("<VacancyList />", () => {
     const wrapper = shallow(<VacancyList {...props} />);
 
     expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
-    var vacancy0 = wrapper.find({ id: "vacancyId0" });
+    let vacancy0 = wrapper.find({ id: "vacancyId0" });
 
     expect(vacancy0.key()).toEqual("0");
   });

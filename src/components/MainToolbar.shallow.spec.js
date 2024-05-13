@@ -127,7 +127,7 @@ describe("<MainToolbar />", () => {
 
   it("check title 'Filter' in MainToolbar", () => {
     const wrapper = shallow(<MainToolbar />);
-    expect(wrapper.props().children.props.children[3].props.children).toEqual('Фильтр');
+    expect(wrapper.props().children.props.children[3].props.children).toEqual('Найти');
   });
 
   it("check style btn Status VacancyDlg in MainToolbar", () => {

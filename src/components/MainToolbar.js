@@ -62,7 +62,7 @@ const MainToolbar = (props) => {
         <Button className="mr-1 col-md-1 col-sm-2">Все</Button>
         <Button className="mr-1 col-md-1 col-sm-2">Текущие</Button>
         <Button className="mr-1 col-md-1 col-sm-2" onClick={handleShowDialogNewVacancy}>Новая</Button>
-        <Button className="mr-1 col-md-1 col-sm-2">Фильтр</Button>
+        <Button className="mr-1 col-md-1 col-sm-2">Найти</Button>
         <Button className="mr-1 col-md-1 col-sm-2">{getTitle()}</Button>
       </Col>
     </Row>

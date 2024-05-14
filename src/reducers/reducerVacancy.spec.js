@@ -1,3 +1,4 @@
+import {format} from 'date-fns';
 import reducerVacancy from './reducerVacancy';
 import * as actionTypes from '../actions/actionTypes';
 
@@ -17,21 +18,49 @@ describe("reducerVacancy tests", () => {
   });
 
   it("add vacancy", () => {
-    let vacancy0 = {"completed": false, "title": "TITLE0"};
+    let vacancy0 = {
+           title: "TITLE0",
+           company: "COMPANY0",
+           source: "SOURCE0",
+           salary: "SALARY0",
+           contact: "CONTACT0",
+           comment: "COMMENT0",
+           completed: false
+    };
+
     let state0 = reducerVacancy({vacancies: [vacancy0]});
 
     expect(state0).toEqual({vacancies: [vacancy0,]});
 
     let action = {
         type: actionTypes.VACANCY_ADD,
-        payload: {title: "TITLE_ADD"}
+        payload: {
+          title: "TITLE_ADD",
+          company: "COMPANY1",
+          salary: "SALARY1",
+          source: "SOURCE1",
+          contact: "CONTACT1",
+          comment: "COMMENT1",
+          completed: false
+        }
     };
-
+//
     let newState = reducerVacancy(state0, action);
-
+//
     expect(newState.vacancies.length).toEqual(2);
     expect(newState.vacancies[0]).toEqual(vacancy0);
-    let vacancyMustAdded = {"completed": false, id:2, "title": "TITLE_ADD"}; // id 2 generated in reducer
+    let vacancyMustAdded = {
+          id:2,
+          date_created: format(new Date(),"dd.MM.yyyy"),
+          date_changed: format(new Date(),"dd.MM.yyyy"),
+          title: "TITLE_ADD",
+          company: "COMPANY1",
+          source: "SOURCE1",
+          salary: "SALARY1",
+          contact: "CONTACT1",
+          comment: "COMMENT1",
+          completed: false
+        }; // id 2 generated in reducer
     expect(newState.vacancies[1]).toEqual(vacancyMustAdded);
   });
 

@@ -1,3 +1,5 @@
+import {format} from 'date-fns';
+
 import * as actionTypes from '../actions/actionTypes';
 import vacancy0 from '../components/vacancies/vacancy0';
 import vacancyTest from '../components/vacancies/vacancyTest';
@@ -33,12 +35,12 @@ export default function reducerVacancy(state = state0, action) {
 //        comment: vacancyComment};
       newState.vacancies.push({
                                 id: ++lastId,
-                                date_created: action.payload.date_created,
-                                date_changed: action.payload.date_changed,
+                                date_created: format(new Date(),"dd.MM.yyyy"),
+                                date_changed: format(new Date(),"dd.MM.yyyy"),
                                 title: action.payload.title,
                                 company: action.payload.company,
                                 source: action.payload.source,
-                                salary: action.payload.isRequired,
+                                salary: action.payload.salary,
                                 contact: action.payload.contact,
                                 comment: action.payload.comment,
                                 completed: false,

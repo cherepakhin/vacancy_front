@@ -17,11 +17,11 @@ const AboutVacancyDlg = ({vacancy, visible, fnClose}) => {
             <form>
               <div>
                 <label><b>id: </b>{vacancy.id}</label><br/>
-                <label><b>Должность: </b>{vacancy.title}</label>
-                <label><b>Компания: </b>{vacancy.company}</label>
-                <label><b>Источник: </b>{vacancy.source}</label>
-                <label><b>Контакты: </b>{vacancy.contact}</label>
-                <label><b>Комментарий: </b>{vacancy.comment}</label>
+                <label><b>Должность: </b>{vacancy.title}</label><br/>
+                <label><b>Компания: </b>{vacancy.company}</label><br/>
+                <label><b>Источник: </b>{vacancy.source}</label><br/>
+                <label><b>Контакты: </b>{vacancy.contact}</label><br/>
+                <label><b>Комментарий: </b>{vacancy.comment}</label><br/>
                 <label><b>Отработана: </b>{vacancy.completed? "Да": "Нет"}</label>
               </div>
             </form>

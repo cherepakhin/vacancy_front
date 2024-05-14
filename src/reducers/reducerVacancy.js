@@ -33,6 +33,8 @@ export default function reducerVacancy(state = state0, action) {
 //        comment: vacancyComment};
       newState.vacancies.push({
                                 id: ++lastId,
+                                date_created: action.payload.date_created,
+                                date_changed: action.payload.date_changed,
                                 title: action.payload.title,
                                 company: action.payload.company,
                                 source: action.payload.source,

@@ -20,9 +20,10 @@ describe("AboutVacancyDlg test", () => {
     const wrapper = mount(<AboutVacancyDlg vacancy={{id: 100, title: "Vacancy 1"}} visible={true} fnClose={() => jest.fn()}/>);
     const dlg = toJson(wrapper);
     // demo log
+    // don't delete comments
     //    console.log(dlg);
     //    console.log(dlg.node.props);
-//    expect(dlg.children[0].props.className).toBe("rounded-0");
+    //    expect(dlg.children[0].props.className).toBe("rounded-0");
 
     expect(dlg.node.props.vacancy).toEqual(vacancy);
   });

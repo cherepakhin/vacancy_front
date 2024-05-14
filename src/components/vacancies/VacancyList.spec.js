@@ -10,70 +10,158 @@ describe("<VacancyList />", () => {
   it("VacancyList renders id correctly", () => {
     const props = {
         vacancies: [
-        {id: 0, title: "vacancy0", completed: false},
-        {id: 1, title: "vacancy1", completed: true},
+           {
+               id: 100,
+               title: "Vacancy 100",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: false
+           },
+           {
+               id: 101,
+               title: "Vacancy 101",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: true
+           },
         ]
     };
 
     const wrapper = shallow(<VacancyList {...props} />);
 
-    expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
-    expect(wrapper.find({ id: "vacancyId1" })).toHaveLength(1);
+    expect(wrapper.find({ id: "vacancyId100" })).toHaveLength(1);
+    expect(wrapper.find({ id: "vacancyId101" })).toHaveLength(1);
   });
 
   it("Vacancy 0 in VacancyList renders id correctly", () => {
     const props = {
         vacancies: [
-        {id: 0, title: "vacancy0", completed: false},
-        {id: 1, title: "vacancy1", completed: true},
+           {
+               id: 100,
+               title: "Vacancy 100",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: false
+           },
+           {
+               id: 101,
+               title: "Vacancy 101",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: true
+           },
         ]
     };
 
     const wrapper = shallow(<VacancyList {...props} />);
 
-    expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
-    let vacancy0 = wrapper.find({ id: "vacancyId0" });
+    expect(wrapper.find({ id: "vacancyId100" })).toHaveLength(1);
+    let vacancy0 = wrapper.find({ id: "vacancyId100" });
 
-    expect(vacancy0.prop("id")).toEqual("vacancyId0");
+    expect(vacancy0.prop("id")).toEqual("vacancyId100");
   });
 
   it("prop 'vacancy' correctly in Vacancy0 in VacancyList", () => {
     const props = {
         vacancies: [
-        {id: 0, title: "vacancy0", completed: false},
-        {id: 1, title: "vacancy1", completed: true},
+           {
+               id: 100,
+               title: "Vacancy 100",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: false
+           },
+           {
+               id: 101,
+               title: "Vacancy 101",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: true
+           },
         ]
     };
 
     const wrapper = shallow(<VacancyList {...props} />);
 
-    expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
-    let vacancy0 = wrapper.find({ id: "vacancyId0" });
+    expect(wrapper.find({ id: "vacancyId101" })).toHaveLength(1);
+    let vacancy0 = wrapper.find({ id: "vacancyId101" });
 
-    expect(vacancy0.prop("vacancy")).toEqual({"completed": false, "id": 0, "title": "vacancy0"});
+    expect(vacancy0.prop("vacancy")).toEqual({
+               id: 101,
+               title: "Vacancy 101",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: true
+    });
   });
 
   it("key Vacancy0 in VacancyList renders id correctly", () => {
     const props = {
         vacancies: [
-        {id: 0, title: "vacancy0", completed: false},
-        {id: 1, title: "vacancy1", completed: true},
+           {
+               id: 100,
+               title: "Vacancy 100",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: false
+           },
+           {
+               id: 101,
+               title: "Vacancy 101",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: true
+           },
         ]
     };
 
     const wrapper = shallow(<VacancyList {...props} />);
 
-    expect(wrapper.find({ id: "vacancyId0" })).toHaveLength(1);
-    let vacancy0 = wrapper.find({ id: "vacancyId0" });
+    expect(wrapper.find({ id: "vacancyId101" })).toHaveLength(1);
+    let vacancy101 = wrapper.find({ id: "vacancyId101" });
 
-    expect(vacancy0.key()).toEqual("0");
+    expect(vacancy101.key()).toEqual("101");
   });
 
   it("count children VacancyList", () => {
     const props = {
         vacancies: [
-        {id: 0, title: "vacancy0", completed: false},
-        {id: 1, title: "vacancy1", completed: true},
+           {
+               id: 100,
+               title: "Vacancy 100",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: false
+           },
+           {
+               id: 101,
+               title: "Vacancy 101",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: true
+           },
         ]
     };
 
@@ -87,8 +175,24 @@ describe("<VacancyList />", () => {
   it("exists ListGroup in VacancyList", () => {
     const props = {
         vacancies: [
-        {id: 0, title: "vacancy0", completed: false},
-        {id: 1, title: "vacancy1", completed: true},
+           {
+               id: 100,
+               title: "Vacancy 100",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: false
+           },
+           {
+               id: 101,
+               title: "Vacancy 101",
+               company: "Company 1",
+               source: "Source 1",
+               contact: "Contact 1",
+               comment: "Comment 1",
+               completed: true
+           },
         ]
     };
 

@@ -32,6 +32,10 @@ describe("<Vacancy />", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
       completed: false
     };
 
@@ -46,6 +50,10 @@ describe("<Vacancy />", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
       completed: false
     };
 
@@ -56,9 +64,9 @@ describe("<Vacancy />", () => {
     expect(wrapper.props().children[1].props).toEqual(
         expect.objectContaining(
         {
-            id: 100,
-            title: "Vacancy 1",
-            visible: false,
+          id: 100,
+          title: "Vacancy 1",
+          visible: false,
         })
     );
   });
@@ -67,6 +75,10 @@ describe("<Vacancy />", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
       completed: false
     };
 
@@ -75,7 +87,7 @@ describe("<Vacancy />", () => {
 
     expect(formCheck.props.id).toBe(vacancy.id);
     expect(formCheck.props.type).toBe("checkbox");
-    expect(formCheck.props.label).toBe("100. Vacancy 1");
+    expect(formCheck.props.label).toBe("100. Company 1. Vacancy 1");
     expect(formCheck.props.checked).toBe(vacancy.completed);
   });
 
@@ -83,6 +95,10 @@ describe("<Vacancy />", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
       completed: false
     };
 
@@ -97,6 +113,10 @@ describe("<Vacancy />", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
       completed: false
     };
 
@@ -110,9 +130,13 @@ describe("<Vacancy />", () => {
 
   it('should open the delete confirmation dialog (https://chat.lmsys.org/)', () => {
     const vacancy = {
-      id: 1,
-      title: 'Test Vacancy',
-      completed: false,
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
     };
 
     const wrapper = mount(<Vacancy vacancy={vacancy} />);
@@ -126,9 +150,13 @@ describe("<Vacancy />", () => {
 
   it('should open the delete confirmation dialog with mount (https://chat.lmsys.org/)', () => {
     const vacancy = {
-      id: 1,
-      title: 'Test Vacancy',
-      completed: false,
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
     };
 
     const wrapper = mount(<Vacancy vacancy={vacancy} />);
@@ -165,9 +193,13 @@ describe("<Vacancy />", () => {
 
   it('simulate click on deleteBtn', () => {
     const vacancy = {
-      id: 1,
-      title: 'Test Vacancy',
-      completed: false,
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
     };
 
     const reactRedux = { useDispatch, useSelector }

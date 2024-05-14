@@ -21,6 +21,10 @@ VacancyList.propTypes = {
     vacancies: PropTypes.arrayOf(PropTypes.shape({
             id: PropTypes.number.isRequired,
             title: PropTypes.string.isRequired,
+            company: PropTypes.string.isRequired,
+            source: PropTypes.string.isRequired,
+            contact: PropTypes.string.isRequired,
+            comment: PropTypes.string.isRequired,
             completed: PropTypes.bool.isRequired
     }))
 }

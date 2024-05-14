@@ -71,7 +71,7 @@ describe("<App />", () => {
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       const appView = toJson(wrapper);
-      console.log(appView);
+//      console.log(appView);
       expect(appView.children[2].type).toBe('Vacancies');
     });
 
@@ -95,9 +95,9 @@ describe("<App />", () => {
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       console.log(wrapper); // -> {}
       const appView = toJson(wrapper);
-      console.log(appView);
-      console.log(appView.node);
-      console.log(appView.node.props);
+//      console.log(appView);
+//      console.log(appView.node);
+//      console.log(appView.node.props);
 //      console.log(appView.node.props.children[0]type: [Function: MainToolbar]);
 //      console.log(appView.node.props.children[0].type);
 //      console.log(appView.children[2]); // EMPTY!!! What is it???

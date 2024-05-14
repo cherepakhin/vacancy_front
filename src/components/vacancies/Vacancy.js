@@ -102,7 +102,7 @@ const Vacancy = ({ vacancy }) => {
       <Form.Check
         id={id}
         type="checkbox"
-        label={id+". "+title}
+        label={id+". "+company+". "+title}
         checked={completed}
         onChange={ () => dispatch(createToggleVacancyAction(id)) }
         title={"title Form.Check id="+id + " " + ((completed ? "Отработана":"Не отработана"))}
@@ -124,6 +124,10 @@ Vacancy.propTypes = {
     vacancy: PropTypes.shape({
             id: PropTypes.number.isRequired,
             title: PropTypes.string.isRequired,
+            company: PropTypes.string.isRequired,
+            source: PropTypes.string.isRequired,
+            contact: PropTypes.string.isRequired,
+            comment: PropTypes.string.isRequired,
             completed: PropTypes.bool.isRequired
   }).isRequired
 }

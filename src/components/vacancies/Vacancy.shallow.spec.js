@@ -122,10 +122,6 @@ describe("<Vacancy />", () => {
     expect(wrapper.find("#idDeleteBtn")).toHaveLength(1);
 
     const deleteDlg = wrapper.find(DeleteConfirmDlg);
-//    console.log(wrapper);
-//    console.log(deleteDlg.props());
-//    expect(deleteDlg.props().visible).toBe(true);
-//    expect(wrapper.find(DeleteConfirmDlg).props.visible).toBe(true);
   });
 
   it('should open the delete confirmation dialog with mount (https://chat.lmsys.org/)', () => {

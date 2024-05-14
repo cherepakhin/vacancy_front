@@ -241,5 +241,4 @@ describe("<VacancyList />", () => {
     const vacancyList = wrapper.find({ id: "vacancyList" });
     expect(vacancyList).toHaveLength(1);
   });
-
 });

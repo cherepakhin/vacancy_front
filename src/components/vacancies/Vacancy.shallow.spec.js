@@ -122,8 +122,8 @@ describe("<Vacancy />", () => {
     expect(wrapper.find("#idDeleteBtn")).toHaveLength(1);
 
     const deleteDlg = wrapper.find(DeleteConfirmDlg);
-    console.log(wrapper);
-    console.log(deleteDlg.props());
+//    console.log(wrapper);
+//    console.log(deleteDlg.props());
 //    expect(deleteDlg.props().visible).toBe(true);
 //    expect(wrapper.find(DeleteConfirmDlg).props.visible).toBe(true);
   });
@@ -144,16 +144,16 @@ describe("<Vacancy />", () => {
     const deleteDlg = wrapper.find(DeleteConfirmDlg);
 
 //    wrapper.setVisibleDeleteConfirmDlg(true);
-    console.log("=============================");
-    console.log(deleteDlg.props());
+//    console.log("=============================");
+//    console.log(deleteDlg.props());
     deleteDlg.props().fnVacancyDeleteCancel(); // console.log("handleVacancyDeleteCancel" );
     expect(deleteDlg.props().visible).toBe(false); // OK
 
-    console.log(deleteDlg.props());
+//    console.log(deleteDlg.props());
     wrapper.find('#idDeleteBtn').simulate('click');
 
 //    wrapper.openDeleteConfirmDlg(vacancy.id);
-    console.log(wrapper);
+//    console.log(wrapper);
 //    deleteDlg.props().visible = true;
 //    expect(deleteDlg.props().visible).toBe(true);
     expect(deleteDlg.props().title).toBe(vacancy.title);
@@ -161,8 +161,8 @@ describe("<Vacancy />", () => {
 
     act(() => {
         wrapper.find('#idDeleteBtn').simulate('click');
-        console.log(wrapper.props());
-        console.log(deleteDlg.props());
+//        console.log(wrapper.props());
+//        console.log(deleteDlg.props());
         expect(deleteDlg.props().visible).toBe(false); // OK, но нужно true
     });
   });

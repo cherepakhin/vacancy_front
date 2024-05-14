@@ -42,8 +42,7 @@ describe("<Vacancy />", () => {
     expect(vacancyView.children.length).toBe(7); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
   });
 
-//TODO: move to DeleteConfirmDlg.spec.js
-  it("showDeleteConfirmDlg hidden in Vacancy", () => {
+  it("DeleteConfirmDlg hidden in Vacancy", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
@@ -51,8 +50,9 @@ describe("<Vacancy />", () => {
     };
 
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
-    expect(wrapper.props().children[0].type.displayName).toEqual("Modal");
+    expect(wrapper.props().children[1].type.name).toEqual("DeleteConfirmDlg");
 
+    //wrapper.props().children[1] is DeleteConfirmDlg. (see Vacancy.js)
     expect(wrapper.props().children[1].props).toEqual(
         expect.objectContaining(
         {

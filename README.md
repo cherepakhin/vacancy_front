@@ -286,6 +286,37 @@ return (
   });
 ````
 
+Тест вложенного компонента:
+
+Пример теста в [src/components/vacancies/Vacancy.shallow.spec.js](src/components/vacancies/Vacancy.shallow.spec.js):
+
+Тестируемый код:
+
+````java
+return (
+<ListGroup.Item className={completed && 'vacancy-completed'}>
+    <AboutVacancyDlg vacancy={vacancy} visible={visibleAboutDlg} fnClose={closeAboutDlg}/>
+
+    <DeleteConfirmDlg id={id} title={title} visible={visibleDeleteConfirmDlg}
+        fnVacancyDeleteConfirm={(id) => confirmDeleteConfirmDlg(id)}
+        fnVacancyDeleteCancel={cancelDeleteConfirmDlg}
+    />
+....
+````
+
+Тест DeleteConfirmDlg:
+
+````java
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      completed: false
+    };
+
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+    expect(wrapper.props().children[1].type.name).toEqual("DeleteConfirmDlg");
+````
+
 #### Проблемы
 
 При тестировании через __renderer__:
@@ -346,7 +377,6 @@ var используется, когда нужна переменная с фу
 
 let применяется, когда нужна переменная с блочной областью видимости, которую не нужно тянуть в другие части программы. Также он позволяет избежать неожиданного поведения, связанного с поднятием. Если вы используете var, эта переменная «утечёт» за пределы цикла и будет доступна во всей функции.
 В современной разработке и новых проектах разработчики предпочитают let и const из-за их предсказуемости и надёжности.
-
 
 #### Ссылки
 

@@ -36,6 +36,7 @@ export default function reducerVacancy(state = state0, action) {
                                 title: action.payload.title,
                                 company: action.payload.company,
                                 source: action.payload.source,
+                                salary: action.payload.isRequired,
                                 contact: action.payload.contact,
                                 comment: action.payload.comment,
                                 completed: false,

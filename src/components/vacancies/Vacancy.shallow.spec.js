@@ -106,7 +106,26 @@ describe("<Vacancy />", () => {
 
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     const vacancyView = toJson(wrapper);
+//    console.log(vacancyView.children[0].props);
+//      console.log src/components/vacancies/Vacancy.shallow.spec.js:109
+//        {
+//          vacancy: {
+//            id: 100,
+//            title: 'Vacancy 1',
+//            company: 'Company 1',
+//            date_created: '01.02.2020',
+//            date_changed: '02.03.2020',
+//            salary: '0',
+//            source: 'Source 1',
+//            contact: 'Contact 1',
+//            comment: 'Comment 1',
+//            completed: false
+//          },
+//          visible: false,
+//          fnClose: [Function: closeAboutDlg]
+//        }
 
+    // children[0] is AboutVacancyDlg. (see Vacancy.js)
     expect(vacancyView.children[0].props.visible).toEqual(false);
   });
 

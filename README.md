@@ -236,6 +236,11 @@ __DeleteConfirmDlg__, __Vacancy0NotDeleteDlg__ - диалоги в отдель�
     </ListGroup.Item>
 
 ````
+
+#### Даты
+
+Использован [moment](https://momentjs.com/).
+
 #### О тестировании
 
 Элемент:

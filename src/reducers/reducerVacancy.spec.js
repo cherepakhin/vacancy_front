@@ -1,4 +1,5 @@
-import {format} from 'date-fns';
+import moment from 'moment';
+
 import reducerVacancy from './reducerVacancy';
 import * as actionTypes from '../actions/actionTypes';
 
@@ -51,8 +52,8 @@ describe("reducerVacancy tests", () => {
     expect(newState.vacancies[0]).toEqual(vacancy0);
     let vacancyMustAdded = {
           id:2,
-          date_created: format(new Date(),"dd.MM.yyyy"),
-          date_changed: format(new Date(),"dd.MM.yyyy"),
+          date_created: moment().format('DD.MM.YYYY'),
+          date_changed: moment().format('DD.MM.YYYY'),
           title: "TITLE_ADD",
           company: "COMPANY1",
           source: "SOURCE1",

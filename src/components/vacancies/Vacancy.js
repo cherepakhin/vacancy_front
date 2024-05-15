@@ -13,7 +13,7 @@ import * as actions from "../../actions/actions";
 const Vacancy = ({ vacancy }) => {
 // for testing use props uncomment
 //  console.log("props=", task);
-  const { id, title, company, source, contact, comment, completed } = {...vacancy};
+  const { id, title, company, source, contact, comment, completed, date_created, date_changed } = {...vacancy};
   const dispatch = useDispatch();
 
   const [visibleAboutDlg, setVisibleAboutDlg] = useState(false);
@@ -96,7 +96,7 @@ const Vacancy = ({ vacancy }) => {
       />
 
       <div id="idLastEvent" className="col-1 list-group-item-date" title="Последнее событие">
-        <span onClick={() => showLastEvent(id)} tabIndex={0} role="button">26.04.2023 </span>
+        <span onClick={() => showLastEvent(id)} tabIndex={0} role="button">{date_created}</span>
       </div>
 
       <Form.Check

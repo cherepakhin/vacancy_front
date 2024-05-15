@@ -1,4 +1,4 @@
-import {format} from 'date-fns';
+import moment from 'moment';
 
 import * as actionTypes from '../actions/actionTypes';
 import vacancy0 from '../components/vacancies/vacancy0';
@@ -28,15 +28,10 @@ export default function reducerVacancy(state = state0, action) {
 
       // Пример простого добавление задачи в state из action.payload
       // ТУТ делается изменение state
-//        title: vacancyTitle,
-//        company: vacancyCompany,
-//        source: vacancySource,
-//        contact: vacancyContact,
-//        comment: vacancyComment};
       newState.vacancies.push({
                                 id: ++lastId,
-                                date_created: format(new Date(),"dd.MM.yyyy"),
-                                date_changed: format(new Date(),"dd.MM.yyyy"),
+                                date_created: moment().format('DD.MM.YYYY'),
+                                date_changed: moment().format('DD.MM.YYYY'),
                                 title: action.payload.title,
                                 company: action.payload.company,
                                 source: action.payload.source,

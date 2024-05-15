@@ -96,7 +96,7 @@ const Vacancy = ({ vacancy }) => {
       />
 
       <div id="idLastEvent" className="col-1 list-group-item-date" title="Последнее событие">
-        <span onClick={() => showLastEvent(id)} tabIndex={0} role="button">{date_created}</span>
+        <span onClick={() => showLastEvent(id)} tabIndex={0}>{date_changed}</span>
       </div>
 
       <Form.Check

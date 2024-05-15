@@ -49,6 +49,67 @@ describe("<Vacancy />", () => {
     expect(vacancyView.children.length).toBe(7); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
   });
 
+  it("Check structure view: Form.Check, moreBtn, deleteBtn", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+    const vacancyView = toJson(wrapper);
+
+    expect(vacancyView.type).toEqual("ListGroupItem");
+    expect(vacancyView.children.length).toBe(7); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
+  });
+
+  it("Check content in Vacancy", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+    const vacancyView = toJson(wrapper);
+
+    expect(vacancyView.children[0].props.vacancy).toEqual(vacancy);
+  });
+
+  it("Check hidden AboutVacancyDlg in Vacancy", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+    const vacancyView = toJson(wrapper);
+
+    expect(vacancyView.children[0].props.visible).toEqual(false);
+  });
+
   it("DeleteConfirmDlg hidden in Vacancy", () => {
     const vacancy = {
       id: 100,
@@ -98,6 +159,7 @@ describe("<Vacancy />", () => {
     expect(formCheck.props.type).toBe("checkbox");
     expect(formCheck.props.label).toBe("100. Company 1. Vacancy 1");
     expect(formCheck.props.checked).toBe(vacancy.completed);
+    expect(wrapper.find("#idLastEvent")).toHaveLength(1);
   });
 
   it("check showMoreBtn props in Vacancy", () => {

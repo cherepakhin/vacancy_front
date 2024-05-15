@@ -88,13 +88,6 @@
   max-width: 12ch !important;
 }
 
-.list-group-item-action-last {
-  text-align: center;
-  right: 1ch;
-  min-width: 9ch;
-  max-width: 9ch !important;
-}
-
 .list-group-item-date {
   left: -1ch;
   right: 1ch;

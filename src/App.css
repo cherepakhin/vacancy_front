@@ -49,8 +49,8 @@
   height: 1px;
   float:left;
 
-  min-width: 12ch;
-  max-width: 12ch !important;
+  min-width: 10ch;
+  max-width: 10ch !important;
 }
 
 .list-group-item-action-event {
@@ -67,10 +67,10 @@
 }
 
 .list-group-item-action-last {
+  text-align: center;
   right: 1ch;
-  min-width: 8ch;
-  max-width: 8ch !important;
-  margin-left: 8px;
+  min-width: 9ch;
+  max-width: 9ch !important;
 }
 
 .list-group-item-date {

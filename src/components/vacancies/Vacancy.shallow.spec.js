@@ -46,7 +46,7 @@ describe("<Vacancy />", () => {
     const vacancyView = toJson(wrapper);
 
     expect(vacancyView.type).toEqual("ListGroupItem");
-    expect(vacancyView.children.length).toBe(7); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
+    expect(vacancyView.children.length).toBe(8); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
   });
 
   it("Check structure view: Form.Check, moreBtn, deleteBtn", () => {
@@ -67,7 +67,7 @@ describe("<Vacancy />", () => {
     const vacancyView = toJson(wrapper);
 
     expect(vacancyView.type).toEqual("ListGroupItem");
-    expect(vacancyView.children.length).toBe(7); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
+    expect(vacancyView.children.length).toBe(8); // showDeleteConfirmDlg, showVisibleMoreDlg, Form.Check, Подробнее, Удалить, dlg vacancy -1
   });
 
   it("Check content in Vacancy", () => {
@@ -217,7 +217,7 @@ describe("<Vacancy />", () => {
     };
 
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
-    const deleteBtn = wrapper.props().children[6];
+    const deleteBtn = wrapper.props().children[7];
 
     expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-action-last");
     expect(deleteBtn.props["children"].props.children).toBe("Удалить");

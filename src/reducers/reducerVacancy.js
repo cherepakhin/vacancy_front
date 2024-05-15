@@ -25,7 +25,7 @@ export default function reducerVacancy(state = state0, action) {
     case actionTypes.VACANCY_ADD:
       //TODO: add rest request
       //TODO: and refresh all vacancies
-
+      //TODO: add dozer mapper for convert backend model to frontend
       // Пример простого добавление задачи в state из action.payload
       // ТУТ делается изменение state
       newState.vacancies.push({

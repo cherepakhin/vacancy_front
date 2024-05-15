@@ -43,14 +43,36 @@
 
 .list-group-item-action {
   text-align: center;
-  padding-right: 1ch;
+  padding-right: 0ch;
 
-  clear: both;
   height: 1px;
-  float:left;
+  float:center;
 
   min-width: 10ch;
   max-width: 10ch !important;
+}
+
+.list-group-item-action-open {
+  text-align: center;
+  margin-right: 1ch;
+
+  height: 1px;
+  float:center;
+
+  min-width: 7ch;
+  max-width: 7ch !important;
+}
+
+.list-group-item-action-delete {
+  text-align: center;
+  padding-right: 0ch;
+  margin-right: 1ch;
+
+  height: 1px;
+  float:center;
+
+  min-width: 7ch;
+  max-width: 7ch !important;
 }
 
 .list-group-item-action-event {

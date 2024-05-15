@@ -112,11 +112,11 @@ const Vacancy = ({ vacancy }) => {
         <span onClick={() => openAboutDlg()} tabIndex={1} role="button">Подробнее</span>
       </div>
 
-      <div id="idEditBtn" className="col-1 list-group-item-action" title="Изменить вакансию">
-        <span onClick={() => openAboutDlg()} tabIndex={2} role="button">Изменить</span>
+      <div id="idOpenBtn" className="col-1 list-group-item-action list-group-item-action-open" title="Открыть вакансию">
+        <span onClick={() => openAboutDlg()} tabIndex={2} role="button">Открыть</span>
       </div>
 
-      <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-last" title="Удалить вакансию">
+      <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-delete" title="Удалить вакансию">
         <span onClick={() => openDeleteConfirmDlg(id)} tabIndex={3} role="button">Удалить</span>
       </div>
 

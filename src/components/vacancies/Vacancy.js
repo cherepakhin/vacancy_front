@@ -109,7 +109,7 @@ const Vacancy = ({ vacancy }) => {
       />
 
       <div id="idAboutBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
-        <span onClick={() => openAboutDlg()} tabIndex={1} role="button">Подробнее</span>
+        <span onClick={() => openAboutDlg()} tabIndex={1} role="button">Описание</span>
       </div>
 
       <div id="idOpenBtn" className="col-1 list-group-item-action list-group-item-action-open" title="Открыть вакансию">

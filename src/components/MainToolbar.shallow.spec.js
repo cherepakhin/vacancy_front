@@ -1,9 +1,5 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import { connect } from "react-redux";
-import toJson from "enzyme-to-json";
-import { create } from "react-test-renderer";
-import { render, screen } from "@testing-library/react";
 
 import { MainToolbar } from "./MainToolbar";
 

@@ -239,6 +239,24 @@ describe("DeleteConfirmDlg test", () => {
       expect(label).toEqual("Контакты: Contact 1");
   });
 
+  it("DeleteConfirmDlg check id=comment text in Modal.Body", () => {
+    const vacancy = {
+      id: 100,
+      contact: "Contact 1",
+      comment: "Comment 1",
+      visible: true,
+    };
+
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+      const label = wrapper.find({ id: "comment" }).text();
+      expect(label).toEqual("Комментарий: Comment 1");
+  });
+
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
 //  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {
 //    const vacancy = {

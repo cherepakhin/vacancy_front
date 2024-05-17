@@ -1,0 +1,74 @@
+    {
+      node: {
+        nodeType: 'function',
+        type: {
+          '$$typeof': Symbol(react.forward_ref),
+          render: [Function (anonymous)],
+          displayName: 'Modal',
+          defaultProps: [Object],
+          Body: [Object],
+          Header: [Object],
+          Title: [Object],
+          Footer: [Object],
+          Dialog: [Object],
+          TRANSITION_DURATION: 300,
+          BACKDROP_TRANSITION_DURATION: 150
+        },
+        props: {
+          show: true,
+          className: 'rounded-0',
+          children: [Array],
+          backdrop: true,
+          keyboard: true,
+          autoFocus: true,
+          enforceFocus: true,
+          restoreFocus: true,
+          animation: true,
+          dialogAs: [Object]
+        },
+        key: undefined,
+        ref: null,
+        instance: null,
+        rendered: [ [Object], [Object], [Object] ]
+      },
+      type: 'Modal',
+      props: {
+        show: true,
+        className: 'rounded-0',
+        backdrop: true,
+        keyboard: true,
+        autoFocus: true,
+        enforceFocus: true,
+        restoreFocus: true,
+        animation: true,
+        dialogAs: {
+          '$$typeof': Symbol(react.forward_ref),
+          render: [Function (anonymous)],
+          displayName: 'ModalDialog'
+        }
+      },
+      children: [
+        {
+          node: [Object],
+          type: 'ModalHeader',
+          props: [Object],
+          children: [Array],
+          '$$typeof': Symbol(react.test.json)
+        },
+        {
+          node: [Object],
+          type: 'ModalBody',
+          props: [Object],
+          children: [Array],
+          '$$typeof': Symbol(react.test.json)
+        },
+        {
+          node: [Object],
+          type: 'ModalFooter',
+          props: {},
+          children: [Array],
+          '$$typeof': Symbol(react.test.json)
+        }
+      ],
+      '$$typeof': Symbol(react.test.json)
+    }

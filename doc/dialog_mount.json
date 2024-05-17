@@ -1,0 +1,77 @@
+{
+      node: {
+        nodeType: 'function',
+        type: [Function: DeleteConfirmDlg] { propTypes: [Object] },
+        props: {
+          vacancy: [Object],
+          visible: true,
+          fnVacancyDeleteConfirm: [Function],
+          fnVacancyDeleteCancel: [Function]
+        },
+        key: undefined,
+        ref: null,
+        instance: null,
+        rendered: {
+          nodeType: 'function',
+          type: [Object],
+          props: [Object],
+          key: undefined,
+          ref: null,
+          instance: null,
+          rendered: [Object]
+        }
+      },
+      type: 'DeleteConfirmDlg',
+      props: {
+        vacancy: { id: 100, title: 'Vacancy 1', visible: true },
+        visible: true,
+        fnVacancyDeleteConfirm: [Function: mockConstructor] {
+          _isMockFunction: true,
+          getMockImplementation: [Function (anonymous)],
+          mock: [Getter/Setter],
+          mockClear: [Function (anonymous)],
+          mockReset: [Function (anonymous)],
+          mockRestore: [Function (anonymous)],
+          mockReturnValueOnce: [Function (anonymous)],
+          mockResolvedValueOnce: [Function (anonymous)],
+          mockRejectedValueOnce: [Function (anonymous)],
+          mockReturnValue: [Function (anonymous)],
+          mockResolvedValue: [Function (anonymous)],
+          mockRejectedValue: [Function (anonymous)],
+          mockImplementationOnce: [Function (anonymous)],
+          mockImplementation: [Function (anonymous)],
+          mockReturnThis: [Function (anonymous)],
+          mockName: [Function (anonymous)],
+          getMockName: [Function (anonymous)]
+        },
+        fnVacancyDeleteCancel: [Function: mockConstructor] {
+          _isMockFunction: true,
+          getMockImplementation: [Function (anonymous)],
+          mock: [Getter/Setter],
+          mockClear: [Function (anonymous)],
+          mockReset: [Function (anonymous)],
+          mockRestore: [Function (anonymous)],
+          mockReturnValueOnce: [Function (anonymous)],
+          mockResolvedValueOnce: [Function (anonymous)],
+          mockRejectedValueOnce: [Function (anonymous)],
+          mockReturnValue: [Function (anonymous)],
+          mockResolvedValue: [Function (anonymous)],
+          mockRejectedValue: [Function (anonymous)],
+          mockImplementationOnce: [Function (anonymous)],
+          mockImplementation: [Function (anonymous)],
+          mockReturnThis: [Function (anonymous)],
+          mockName: [Function (anonymous)],
+          getMockName: [Function (anonymous)]
+        }
+      },
+      children: [
+        {
+          node: [Object],
+          type: 'Modal',
+          props: [Object],
+          children: [Array],
+          '$$typeof': Symbol(react.test.json)
+        }
+      ],
+      '$$typeof': Symbol(react.test.json)
+    }

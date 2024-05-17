@@ -13,25 +13,47 @@ jest.mock('react-redux', () => ({
 }));
 
 describe("DeleteConfirmDlg test", () => {
-  it("showDeleteConfirmDlg check structure with MOUNT", () => {
+  it("DeleteConfirmDlg is modal", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
       visible: true,
-      fnVacancyDeleteConfirm: jest.fn(),
-      fnVacancyDeleteCancel: jest.fn()
     };
-//      const wrapper = shallow(<DeleteConfirmDlg id='100' title="Vacancy 1"/>);
-//    const wrapper = mount(<DeleteConfirmDlg {...vacancy} />);
-//    const dlg = toJson(wrapper);
-//    // demo log
-//    //    console.log(dlg);
+    const wrapper = mount(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+    const dlg = toJson(wrapper);
+    console.log(dlg);
 //    //    console.log(dlg.node.props);
-//    expect(dlg.children[0].type).toBe("Modal");
+    expect(dlg.type).toBe("DeleteConfirmDlg");
+    expect(dlg.node.props.visible).toBe(true);
+    console.log(dlg.props);
+
+    expect(dlg.children[0].type).toBe("Modal");
 //    expect(dlg.children[0].props.show).toBe(true);
 //    expect(dlg.children[0].props.className).toBe("rounded-0");
 //
 //    expect(dlg.node.props).toEqual(vacancy);
+  });
+
+  it("showDeleteConfirmDlg check rounded0", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      visible: true,
+    };
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+    const dlg = toJson(wrapper);
+    console.log(dlg);
+    expect(dlg.node.props.className).toBe("rounded-0");
   });
 
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.

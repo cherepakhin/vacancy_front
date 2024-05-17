@@ -322,6 +322,8 @@ return (
     expect(wrapper.props().children[1].type.name).toEqual("DeleteConfirmDlg");
 ````
 
+Примеры представления с [mount](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap) и [shallow]((src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap))
+
 #### Проблемы
 
 При тестировании через __renderer__:

@@ -79,7 +79,6 @@ describe("DeleteConfirmDlg test", () => {
         fnVacancyDeleteConfirm={jest.fn()}
         fnVacancyDeleteCancel={jest.fn()} />);
 
-    const dlg = toJson(wrapper);
     expect(wrapper.find(Modal.Title).text()).toBe("Удалить?");
   });
 

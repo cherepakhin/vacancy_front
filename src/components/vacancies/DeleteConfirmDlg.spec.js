@@ -366,6 +366,23 @@ describe("DeleteConfirmDlg test", () => {
     expect(fnVacancyDeleteCancelMock).toHaveBeenCalledWith(100);
   });
 
+  it("DeleteConfirmDlg toMatchSnapshot()", () => {
+    const vacancy = {
+      id: 100,
+      contact: "Contact 1",
+      comment: "Comment 1",
+      visible: true,
+    };
+
+    const wrapper = mount(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+    expect(EnzymeToJson(wrapper)).toMatchSnapshot();
+  });
+
 // TODO: Комментарии удалить после ПОЛНОГО понятия тестирования
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
 //  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {

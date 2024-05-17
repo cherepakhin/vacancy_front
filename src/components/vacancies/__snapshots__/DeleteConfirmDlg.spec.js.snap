@@ -7,7 +7,7 @@ exports[`DeleteConfirmDlg test DeleteConfirmDlg toMatchSnapshot() 1`] = `
   vacancy={
     Object {
       "comment": "Comment 1",
-      "contact": "Contact 1",
+      "contact": "Contact 2",
       "id": 100,
       "visible": true,
     }
@@ -588,7 +588,7 @@ exports[`DeleteConfirmDlg test DeleteConfirmDlg toMatchSnapshot() 1`] = `
                             <b>
                               Контакты: 
                             </b>
-                            Contact 1
+                            Contact 2
                           </label>
                           <br />
                           <label
@@ -1206,7 +1206,7 @@ exports[`DeleteConfirmDlg test DeleteConfirmDlg toMatchSnapshot() 1`] = `
                                 <b>
                                   Контакты: 
                                 </b>
-                                Contact 1
+                                Contact 2
                               </label>
                               <br />
                               <label
@@ -1832,7 +1832,7 @@ exports[`DeleteConfirmDlg test DeleteConfirmDlg toMatchSnapshot() 1`] = `
                             <b>
                               Контакты: 
                             </b>
-                            Contact 1
+                            Contact 2
                           </label>
                           <br />
                           <label
@@ -2445,7 +2445,7 @@ exports[`DeleteConfirmDlg test DeleteConfirmDlg toMatchSnapshot() 1`] = `
                           <b>
                             Контакты: 
                           </b>
-                          Contact 1
+                          Contact 2
                         </label>
                         <br />
                         <label
@@ -2695,7 +2695,7 @@ exports[`DeleteConfirmDlg test DeleteConfirmDlg toMatchSnapshot() 1`] = `
                                 <b>
                                   Контакты: 
                                 </b>
-                                Contact 1
+                                Contact 2
                               </label>
                               <br />
                               <label

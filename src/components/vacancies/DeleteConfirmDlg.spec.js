@@ -362,7 +362,7 @@ describe("DeleteConfirmDlg test", () => {
     btnCancel.simulate("click");
     btnCancel.simulate("click"); // control click
 
-    expect(fnVacancyDeleteCancelMock).toHaveBeenCalledTimes(2);
+    expect(fnVacancyDeleteCancelMock).toHaveBeenCalledTimes(2); // +control click
     expect(fnVacancyDeleteCancelMock).toHaveBeenCalledWith(100);
   });
 

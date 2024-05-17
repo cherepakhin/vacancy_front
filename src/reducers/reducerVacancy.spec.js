@@ -10,7 +10,7 @@ describe("reducerVacancy tests", () => {
                                                {"completed": false, "id": -2, "title": "не показывать -2"},
                                                {"completed": false, "id": -3, "title": "не показывать -3"}
                                              ]});
-    console.log(state0);
+    // console.log(state0); // DON`T DELETE COMMENT
     expect(state0).toEqual({vacancies: [
       {"completed": false, "id": -1, "title": "не показывать -1"},
       {"completed": false, "id": -2, "title": "не показывать -2"},

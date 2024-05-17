@@ -14,7 +14,7 @@ describe("<MainToolbar />", () => {
   it("Size column MainToolbar is 12 columns", () => {
     const wrapper = shallow(<MainToolbar />);
     // children[3] - Container - 1, Toolbar Row - 2, Toolbar Row Col - 3
-    console.log(wrapper.props());
+    // console.log(wrapper.props()); // DON`T DELETE COMMENT
     const columnToolBarProps = wrapper.props();
     // toolbar column <Col xs={12}>
     expect(columnToolBarProps.children.props.xs).toEqual(12);
@@ -33,15 +33,15 @@ describe("<MainToolbar />", () => {
 //      root: [Getter],
     const wrapper = shallow(<MainToolbar />);
 //    const mainToolbar = () => render(<MainToolbar />);
-    console.log("------------------------mainToolbar.root");
-    console.log(wrapper.props().children.props);
+    // console.log("------------------------mainToolbar.root"); // DON`T DELETE COMMENT
+    // console.log(wrapper.props().children.props); // DON`T DELETE COMMENT
     //        xs: 12,
     //        className: 'mt-2 mb-2',
 
     expect(wrapper.props().children.props.xs).toEqual(12);
     expect(wrapper.props().children.props.className).toEqual('mt-2 mb-2');
 //    console.log(wrapper.instance()); // null
-    console.log(wrapper); // ShallowWrapper {}
+    // console.log(wrapper); // ShallowWrapper {} // DON`T DELETE COMMENT
     // TypeError: Cannot read properties of null (reading 'testMethod')
     // expect(wrapper.instance().testMethod()).toEqual("testMethod");
 
@@ -58,9 +58,9 @@ describe("<MainToolbar />", () => {
   it("testMethod with mount", () => {
 //    const component = shallow(<MainToolbar />);
     // console.log(component.testMethod()); // TypeError: component.testMethod is not a function
-    console.log("------------------------mount mainToolbar.root");
-    console.log(mount(<MainToolbar />).props()); // {}
-    console.log(mount(<MainToolbar aaa="bbb" />).props()); // { aaa: 'bbb' }
+    // console.log("------------------------mount mainToolbar.root"); // DON`T DELETE COMMENT
+    // console.log(mount(<MainToolbar />).props()); // {} // DON`T DELETE COMMENT
+    // console.log(mount(<MainToolbar aaa="bbb" />).props()); // { aaa: 'bbb' }
     expect(mount(<MainToolbar aaa="bbb" />).props().aaa).toEqual("bbb");
     expect(mount(<MainToolbar visibleNewVacancyDlg="true" />).props().visibleNewVacancyDlg).toEqual("true");
 //    console.log(mount(<MainToolbar visibleNewVacancyDlg="true" />).props()); // { visibleNewVacancyDlg: 'true' }
@@ -82,8 +82,9 @@ describe("<MainToolbar />", () => {
 
   it("check style 'All' in MainToolbar", () => {
     const wrapper = shallow(<MainToolbar />);
-    console.log(wrapper.props().children);
-    console.log(wrapper.props().children.props.children[0]);
+
+//    console.log(wrapper.props().children); // DON`T DELETE COMMENT
+//    console.log(wrapper.props().children.props.children[0]); // DON`T DELETE COMMENT
     expect(wrapper.props().children.props.children[0].props.className).toEqual('mr-1 col-md-1 col-sm-2');
     expect(wrapper.props().children.props.children[0].props.children).toEqual('Все');
 //    const btn = wrapper.props().children[0];

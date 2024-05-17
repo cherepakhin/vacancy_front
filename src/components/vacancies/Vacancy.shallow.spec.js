@@ -271,7 +271,8 @@ describe("<Vacancy />", () => {
 
 //    wrapper.setVisibleDeleteConfirmDlg(true);
 //    console.log("=============================");
-    console.log(deleteDlg.props());
+
+//    console.log(deleteDlg.props()); // DON`T DELETE COMMENT
     deleteDlg.props().fnVacancyDeleteCancel(); // console.log("handleVacancyDeleteCancel" );
     expect(deleteDlg.props().visible).toBe(false); // OK
 

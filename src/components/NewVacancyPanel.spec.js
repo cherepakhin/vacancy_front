@@ -47,7 +47,7 @@ describe("<NewVacancyPanel />", () => {
 //    console.log(wrapper.props().children[0]);
 //    console.log(wrapper.props().children[1]);
 
-    console.log(wrapper.props().children[1].props.children);
+    // console.log(wrapper.props().children[1].props.children); // DON`T DELETE COMMENT
     expect(wrapper.props().children[1].props.children[1].type).toEqual('h4');
   });
 

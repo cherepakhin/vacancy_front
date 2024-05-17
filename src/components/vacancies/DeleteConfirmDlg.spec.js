@@ -363,6 +363,7 @@ describe("DeleteConfirmDlg test", () => {
     btnCancel.simulate("click"); // control click
 
     expect(fnVacancyDeleteCancelMock).toHaveBeenCalledTimes(2);
+    expect(fnVacancyDeleteCancelMock).toHaveBeenCalledWith(100);
   });
 
 // TODO: Комментарии удалить после ПОЛНОГО понятия тестирования

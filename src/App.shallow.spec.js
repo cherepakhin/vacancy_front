@@ -93,7 +93,7 @@ describe("<App />", () => {
         vacancies: {}
       };
       const wrapper = shallow(<AppUnwrapped {...testState} />);
-      console.log(wrapper); // -> {}
+      // console.log(wrapper); // -> {} // DON`T DELETE COMMENT
       const appView = toJson(wrapper);
 //      console.log(appView);
 //      console.log(appView.node);

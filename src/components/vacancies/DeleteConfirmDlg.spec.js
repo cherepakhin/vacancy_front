@@ -369,7 +369,7 @@ describe("DeleteConfirmDlg test", () => {
   it("DeleteConfirmDlg toMatchSnapshot()", () => {
     const vacancy = {
       id: 100,
-      contact: "Contact 1",
+      contact: "Contact 2",
       comment: "Comment 1",
       visible: true,
     };

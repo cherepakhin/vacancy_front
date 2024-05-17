@@ -343,7 +343,14 @@ return (
   });
 ````
 
-Получаемый snapshot сравнивается с [src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap). Если snapshot не найден, то он создается и при следующих тестированиях, полученные snapshot,  сравниваются с ним. 
+Получаемый snapshot сравнивается с [src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap). Если snapshot не найден, то он создается и при следующих тестированиях, полученные snapshot,  сравниваются с ним. Может появится следующее сообщение: 
+
+````java
+Snapshot Summary
+› 1 snapshot failed from 1 test suite. Inspect your code changes or press `u` to update them.
+````
+
+Нажать 'u' для обновления snapshot.
 
 Примеры представления с [mount](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap) и [shallow]((src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap))
 

@@ -335,6 +335,28 @@ describe("<Vacancy />", () => {
     });
   });
 
+  it("check title idOpenBtn props in Vacancy", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+    const deleteBtn = wrapper.props().children[6];
+
+    expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-action-open");
+    expect(deleteBtn.props["children"].props.children).toBe("Изменить");
+    expect(deleteBtn.props.title).toBe("Подробнее о вакансии");
+  });
+
 // Example tests:
 //    const children = toJson(wrapper.children);
 //    console.log(children);

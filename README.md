@@ -343,7 +343,7 @@ return (
   });
 ````
 
-Получаемый snapshot сравнивается с [src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap)
+Получаемый snapshot сравнивается с [src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap). Если snapshot не найден, то он создается и при следующих тестированиях, полученные snapshot,  сравниваются с ним. 
 
 Примеры представления с [mount](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap) и [shallow]((src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap))
 

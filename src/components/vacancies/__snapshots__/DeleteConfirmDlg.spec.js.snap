@@ -1,0 +1,2775 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteConfirmDlg test DeleteConfirmDlg toMatchSnapshot() 1`] = `
+<DeleteConfirmDlg
+  fnVacancyDeleteCancel={[MockFunction]}
+  fnVacancyDeleteConfirm={[MockFunction]}
+  vacancy={
+    Object {
+      "comment": "Comment 1",
+      "contact": "Contact 1",
+      "id": 100,
+      "visible": true,
+    }
+  }
+  visible={true}
+>
+  <Modal
+    animation={true}
+    autoFocus={true}
+    backdrop={true}
+    className="rounded-0"
+    dialogAs={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "displayName": "ModalDialog",
+        "render": [Function],
+      }
+    }
+    enforceFocus={true}
+    keyboard={true}
+    restoreFocus={true}
+    show={true}
+  >
+    <Modal
+      autoFocus={true}
+      backdrop={true}
+      backdropTransition={[Function]}
+      containerClassName="modal-open"
+      enforceFocus={true}
+      keyboard={true}
+      manager={
+        BootstrapModalManager {
+          "containers": Array [
+            <body
+              class="modal-open"
+              style="padding-right: 0px;"
+            >
+              <div
+                aria-hidden="true"
+                class="fade modal-backdrop show"
+              />
+              <div
+                aria-hidden="true"
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                            Vacancy 1
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                class="fade modal-backdrop show"
+              />
+              <div
+                aria-hidden="true"
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                            Vacancy 1
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                class="fade modal-backdrop show"
+              />
+              <div
+                aria-hidden="true"
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                            Vacancy 1
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="fade modal-backdrop show"
+              />
+              <div
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                            Contact 1
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                            Comment 1
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </body>,
+          ],
+          "data": Array [
+            Object {
+              "classes": Array [
+                "modal-open",
+              ],
+              "modals": Array [
+                Object {
+                  "add": [Function],
+                  "backdrop": <div
+                    aria-hidden="true"
+                    class="fade modal-backdrop show"
+                  />,
+                  "dialog": <div
+                    aria-hidden="true"
+                    aria-modal="true"
+                    class="fade rounded-0 modal show"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="modal-dialog"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-header"
+                        >
+                          <div
+                            class="modal-title h4"
+                            id="header"
+                          >
+                            Удалить?
+                          </div>
+                          <button
+                            class="close"
+                            type="button"
+                          >
+                            <span
+                              aria-hidden="true"
+                            >
+                              ×
+                            </span>
+                            <span
+                              class="sr-only"
+                            >
+                              Close
+                            </span>
+                          </button>
+                        </div>
+                        <div
+                          class="modal-body"
+                          id="body"
+                        >
+                          <form>
+                            <div>
+                              <label
+                                id="id"
+                              >
+                                <b>
+                                  id: 
+                                </b>
+                                100
+                              </label>
+                              <br />
+                              <label
+                                id="title"
+                              >
+                                <b>
+                                  Должность: 
+                                </b>
+                                Vacancy 1
+                              </label>
+                              <br />
+                              <label
+                                id="company"
+                              >
+                                <b>
+                                  Компания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_created"
+                              >
+                                <b>
+                                  Дата создания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_changed"
+                              >
+                                <b>
+                                  Дата изменения: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="source"
+                              >
+                                <b>
+                                  Источник: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="contact"
+                              >
+                                <b>
+                                  Контакты: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="comment"
+                              >
+                                <b>
+                                  Комментарий: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="completed"
+                              >
+                                <b>
+                                  Отработана: 
+                                </b>
+                                Нет
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                        <div
+                          class="modal-footer"
+                        >
+                          <button
+                            class="col-2 text-center btn btn-primary"
+                            id="ok"
+                            type="button"
+                          >
+                            Да
+                          </button>
+                          <button
+                            class="col-2 text-center btn btn-secondary"
+                            id="cancel"
+                            type="button"
+                          >
+                            Нет
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>,
+                  "isTopModal": [Function],
+                  "remove": [Function],
+                  "setBackdropRef": [Function],
+                  "setDialogRef": [Function],
+                },
+                Object {
+                  "add": [Function],
+                  "backdrop": <div
+                    aria-hidden="true"
+                    class="fade modal-backdrop show"
+                  />,
+                  "dialog": <div
+                    aria-hidden="true"
+                    aria-modal="true"
+                    class="fade rounded-0 modal show"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="modal-dialog"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-header"
+                        >
+                          <div
+                            class="modal-title h4"
+                            id="header"
+                          >
+                            Удалить?
+                          </div>
+                          <button
+                            class="close"
+                            type="button"
+                          >
+                            <span
+                              aria-hidden="true"
+                            >
+                              ×
+                            </span>
+                            <span
+                              class="sr-only"
+                            >
+                              Close
+                            </span>
+                          </button>
+                        </div>
+                        <div
+                          class="modal-body"
+                          id="body"
+                        >
+                          <form>
+                            <div>
+                              <label
+                                id="id"
+                              >
+                                <b>
+                                  id: 
+                                </b>
+                                100
+                              </label>
+                              <br />
+                              <label
+                                id="title"
+                              >
+                                <b>
+                                  Должность: 
+                                </b>
+                                Vacancy 1
+                              </label>
+                              <br />
+                              <label
+                                id="company"
+                              >
+                                <b>
+                                  Компания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_created"
+                              >
+                                <b>
+                                  Дата создания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_changed"
+                              >
+                                <b>
+                                  Дата изменения: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="source"
+                              >
+                                <b>
+                                  Источник: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="contact"
+                              >
+                                <b>
+                                  Контакты: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="comment"
+                              >
+                                <b>
+                                  Комментарий: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="completed"
+                              >
+                                <b>
+                                  Отработана: 
+                                </b>
+                                Нет
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                        <div
+                          class="modal-footer"
+                        >
+                          <button
+                            class="col-2 text-center btn btn-primary"
+                            id="ok"
+                            type="button"
+                          >
+                            Да
+                          </button>
+                          <button
+                            class="col-2 text-center btn btn-secondary"
+                            id="cancel"
+                            type="button"
+                          >
+                            Нет
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>,
+                  "isTopModal": [Function],
+                  "remove": [Function],
+                  "setBackdropRef": [Function],
+                  "setDialogRef": [Function],
+                },
+                Object {
+                  "add": [Function],
+                  "backdrop": <div
+                    aria-hidden="true"
+                    class="fade modal-backdrop show"
+                  />,
+                  "dialog": <div
+                    aria-hidden="true"
+                    aria-modal="true"
+                    class="fade rounded-0 modal show"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="modal-dialog"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-header"
+                        >
+                          <div
+                            class="modal-title h4"
+                            id="header"
+                          >
+                            Удалить?
+                          </div>
+                          <button
+                            class="close"
+                            type="button"
+                          >
+                            <span
+                              aria-hidden="true"
+                            >
+                              ×
+                            </span>
+                            <span
+                              class="sr-only"
+                            >
+                              Close
+                            </span>
+                          </button>
+                        </div>
+                        <div
+                          class="modal-body"
+                          id="body"
+                        >
+                          <form>
+                            <div>
+                              <label
+                                id="id"
+                              >
+                                <b>
+                                  id: 
+                                </b>
+                                100
+                              </label>
+                              <br />
+                              <label
+                                id="title"
+                              >
+                                <b>
+                                  Должность: 
+                                </b>
+                                Vacancy 1
+                              </label>
+                              <br />
+                              <label
+                                id="company"
+                              >
+                                <b>
+                                  Компания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_created"
+                              >
+                                <b>
+                                  Дата создания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_changed"
+                              >
+                                <b>
+                                  Дата изменения: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="source"
+                              >
+                                <b>
+                                  Источник: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="contact"
+                              >
+                                <b>
+                                  Контакты: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="comment"
+                              >
+                                <b>
+                                  Комментарий: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="completed"
+                              >
+                                <b>
+                                  Отработана: 
+                                </b>
+                                Нет
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                        <div
+                          class="modal-footer"
+                        >
+                          <button
+                            class="col-2 text-center btn btn-primary"
+                            id="ok"
+                            type="button"
+                          >
+                            Да
+                          </button>
+                          <button
+                            class="col-2 text-center btn btn-secondary"
+                            id="cancel"
+                            type="button"
+                          >
+                            Нет
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>,
+                  "isTopModal": [Function],
+                  "remove": [Function],
+                  "setBackdropRef": [Function],
+                  "setDialogRef": [Function],
+                },
+                Object {
+                  "add": [Function],
+                  "backdrop": <div
+                    class="fade modal-backdrop show"
+                  />,
+                  "dialog": <div
+                    aria-modal="true"
+                    class="fade rounded-0 modal show"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="modal-dialog"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-header"
+                        >
+                          <div
+                            class="modal-title h4"
+                            id="header"
+                          >
+                            Удалить?
+                          </div>
+                          <button
+                            class="close"
+                            type="button"
+                          >
+                            <span
+                              aria-hidden="true"
+                            >
+                              ×
+                            </span>
+                            <span
+                              class="sr-only"
+                            >
+                              Close
+                            </span>
+                          </button>
+                        </div>
+                        <div
+                          class="modal-body"
+                          id="body"
+                        >
+                          <form>
+                            <div>
+                              <label
+                                id="id"
+                              >
+                                <b>
+                                  id: 
+                                </b>
+                                100
+                              </label>
+                              <br />
+                              <label
+                                id="title"
+                              >
+                                <b>
+                                  Должность: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="company"
+                              >
+                                <b>
+                                  Компания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_created"
+                              >
+                                <b>
+                                  Дата создания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_changed"
+                              >
+                                <b>
+                                  Дата изменения: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="source"
+                              >
+                                <b>
+                                  Источник: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="contact"
+                              >
+                                <b>
+                                  Контакты: 
+                                </b>
+                                Contact 1
+                              </label>
+                              <br />
+                              <label
+                                id="comment"
+                              >
+                                <b>
+                                  Комментарий: 
+                                </b>
+                                Comment 1
+                              </label>
+                              <br />
+                              <label
+                                id="completed"
+                              >
+                                <b>
+                                  Отработана: 
+                                </b>
+                                Нет
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                        <div
+                          class="modal-footer"
+                        >
+                          <button
+                            class="col-2 text-center btn btn-primary"
+                            id="ok"
+                            type="button"
+                          >
+                            Да
+                          </button>
+                          <button
+                            class="col-2 text-center btn btn-secondary"
+                            id="cancel"
+                            type="button"
+                          >
+                            Нет
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>,
+                  "isTopModal": [Function],
+                  "remove": [Function],
+                  "setBackdropRef": [Function],
+                  "setDialogRef": [Function],
+                },
+              ],
+              "overflowing": true,
+              "style": Object {
+                "overflow": "",
+                "paddingRight": "",
+              },
+            },
+          ],
+          "handleContainerOverflow": true,
+          "hideSiblingNodes": true,
+          "modals": Array [
+            Object {
+              "add": [Function],
+              "backdrop": <div
+                aria-hidden="true"
+                class="fade modal-backdrop show"
+              />,
+              "dialog": <div
+                aria-hidden="true"
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                            Vacancy 1
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>,
+              "isTopModal": [Function],
+              "remove": [Function],
+              "setBackdropRef": [Function],
+              "setDialogRef": [Function],
+            },
+            Object {
+              "add": [Function],
+              "backdrop": <div
+                aria-hidden="true"
+                class="fade modal-backdrop show"
+              />,
+              "dialog": <div
+                aria-hidden="true"
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                            Vacancy 1
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>,
+              "isTopModal": [Function],
+              "remove": [Function],
+              "setBackdropRef": [Function],
+              "setDialogRef": [Function],
+            },
+            Object {
+              "add": [Function],
+              "backdrop": <div
+                aria-hidden="true"
+                class="fade modal-backdrop show"
+              />,
+              "dialog": <div
+                aria-hidden="true"
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                            Vacancy 1
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>,
+              "isTopModal": [Function],
+              "remove": [Function],
+              "setBackdropRef": [Function],
+              "setDialogRef": [Function],
+            },
+            Object {
+              "add": [Function],
+              "backdrop": <div
+                class="fade modal-backdrop show"
+              />,
+              "dialog": <div
+                aria-modal="true"
+                class="fade rounded-0 modal show"
+                role="dialog"
+                style="display: block;"
+                tabindex="-1"
+              >
+                <div
+                  class="modal-dialog"
+                >
+                  <div
+                    class="modal-content"
+                  >
+                    <div
+                      class="modal-header"
+                    >
+                      <div
+                        class="modal-title h4"
+                        id="header"
+                      >
+                        Удалить?
+                      </div>
+                      <button
+                        class="close"
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="modal-body"
+                      id="body"
+                    >
+                      <form>
+                        <div>
+                          <label
+                            id="id"
+                          >
+                            <b>
+                              id: 
+                            </b>
+                            100
+                          </label>
+                          <br />
+                          <label
+                            id="title"
+                          >
+                            <b>
+                              Должность: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="company"
+                          >
+                            <b>
+                              Компания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_created"
+                          >
+                            <b>
+                              Дата создания: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="date_changed"
+                          >
+                            <b>
+                              Дата изменения: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="source"
+                          >
+                            <b>
+                              Источник: 
+                            </b>
+                          </label>
+                          <br />
+                          <label
+                            id="contact"
+                          >
+                            <b>
+                              Контакты: 
+                            </b>
+                            Contact 1
+                          </label>
+                          <br />
+                          <label
+                            id="comment"
+                          >
+                            <b>
+                              Комментарий: 
+                            </b>
+                            Comment 1
+                          </label>
+                          <br />
+                          <label
+                            id="completed"
+                          >
+                            <b>
+                              Отработана: 
+                            </b>
+                            Нет
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="modal-footer"
+                    >
+                      <button
+                        class="col-2 text-center btn btn-primary"
+                        id="ok"
+                        type="button"
+                      >
+                        Да
+                      </button>
+                      <button
+                        class="col-2 text-center btn btn-secondary"
+                        id="cancel"
+                        type="button"
+                      >
+                        Нет
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>,
+              "isTopModal": [Function],
+              "remove": [Function],
+              "setBackdropRef": [Function],
+              "setDialogRef": [Function],
+            },
+          ],
+          "scrollbarSize": 0,
+        }
+      }
+      onEnter={[Function]}
+      onEntering={[Function]}
+      onEscapeKeyDown={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      renderBackdrop={[Function]}
+      renderDialog={[Function]}
+      restoreFocus={true}
+      show={true}
+      transition={[Function]}
+    >
+      <Portal
+        containerInfo={
+          <body
+            class="modal-open"
+            style="padding-right: 0px;"
+          >
+            <div
+              aria-hidden="true"
+              class="fade modal-backdrop show"
+            />
+            <div
+              aria-hidden="true"
+              aria-modal="true"
+              class="fade rounded-0 modal show"
+              role="dialog"
+              style="display: block;"
+              tabindex="-1"
+            >
+              <div
+                class="modal-dialog"
+              >
+                <div
+                  class="modal-content"
+                >
+                  <div
+                    class="modal-header"
+                  >
+                    <div
+                      class="modal-title h4"
+                      id="header"
+                    >
+                      Удалить?
+                    </div>
+                    <button
+                      class="close"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        Close
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="modal-body"
+                    id="body"
+                  >
+                    <form>
+                      <div>
+                        <label
+                          id="id"
+                        >
+                          <b>
+                            id: 
+                          </b>
+                          100
+                        </label>
+                        <br />
+                        <label
+                          id="title"
+                        >
+                          <b>
+                            Должность: 
+                          </b>
+                          Vacancy 1
+                        </label>
+                        <br />
+                        <label
+                          id="company"
+                        >
+                          <b>
+                            Компания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_created"
+                        >
+                          <b>
+                            Дата создания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_changed"
+                        >
+                          <b>
+                            Дата изменения: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="source"
+                        >
+                          <b>
+                            Источник: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="contact"
+                        >
+                          <b>
+                            Контакты: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="comment"
+                        >
+                          <b>
+                            Комментарий: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="completed"
+                        >
+                          <b>
+                            Отработана: 
+                          </b>
+                          Нет
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    class="modal-footer"
+                  >
+                    <button
+                      class="col-2 text-center btn btn-primary"
+                      id="ok"
+                      type="button"
+                    >
+                      Да
+                    </button>
+                    <button
+                      class="col-2 text-center btn btn-secondary"
+                      id="cancel"
+                      type="button"
+                    >
+                      Нет
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="fade modal-backdrop show"
+            />
+            <div
+              aria-hidden="true"
+              aria-modal="true"
+              class="fade rounded-0 modal show"
+              role="dialog"
+              style="display: block;"
+              tabindex="-1"
+            >
+              <div
+                class="modal-dialog"
+              >
+                <div
+                  class="modal-content"
+                >
+                  <div
+                    class="modal-header"
+                  >
+                    <div
+                      class="modal-title h4"
+                      id="header"
+                    >
+                      Удалить?
+                    </div>
+                    <button
+                      class="close"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        Close
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="modal-body"
+                    id="body"
+                  >
+                    <form>
+                      <div>
+                        <label
+                          id="id"
+                        >
+                          <b>
+                            id: 
+                          </b>
+                          100
+                        </label>
+                        <br />
+                        <label
+                          id="title"
+                        >
+                          <b>
+                            Должность: 
+                          </b>
+                          Vacancy 1
+                        </label>
+                        <br />
+                        <label
+                          id="company"
+                        >
+                          <b>
+                            Компания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_created"
+                        >
+                          <b>
+                            Дата создания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_changed"
+                        >
+                          <b>
+                            Дата изменения: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="source"
+                        >
+                          <b>
+                            Источник: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="contact"
+                        >
+                          <b>
+                            Контакты: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="comment"
+                        >
+                          <b>
+                            Комментарий: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="completed"
+                        >
+                          <b>
+                            Отработана: 
+                          </b>
+                          Нет
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    class="modal-footer"
+                  >
+                    <button
+                      class="col-2 text-center btn btn-primary"
+                      id="ok"
+                      type="button"
+                    >
+                      Да
+                    </button>
+                    <button
+                      class="col-2 text-center btn btn-secondary"
+                      id="cancel"
+                      type="button"
+                    >
+                      Нет
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="fade modal-backdrop show"
+            />
+            <div
+              aria-hidden="true"
+              aria-modal="true"
+              class="fade rounded-0 modal show"
+              role="dialog"
+              style="display: block;"
+              tabindex="-1"
+            >
+              <div
+                class="modal-dialog"
+              >
+                <div
+                  class="modal-content"
+                >
+                  <div
+                    class="modal-header"
+                  >
+                    <div
+                      class="modal-title h4"
+                      id="header"
+                    >
+                      Удалить?
+                    </div>
+                    <button
+                      class="close"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        Close
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="modal-body"
+                    id="body"
+                  >
+                    <form>
+                      <div>
+                        <label
+                          id="id"
+                        >
+                          <b>
+                            id: 
+                          </b>
+                          100
+                        </label>
+                        <br />
+                        <label
+                          id="title"
+                        >
+                          <b>
+                            Должность: 
+                          </b>
+                          Vacancy 1
+                        </label>
+                        <br />
+                        <label
+                          id="company"
+                        >
+                          <b>
+                            Компания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_created"
+                        >
+                          <b>
+                            Дата создания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_changed"
+                        >
+                          <b>
+                            Дата изменения: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="source"
+                        >
+                          <b>
+                            Источник: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="contact"
+                        >
+                          <b>
+                            Контакты: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="comment"
+                        >
+                          <b>
+                            Комментарий: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="completed"
+                        >
+                          <b>
+                            Отработана: 
+                          </b>
+                          Нет
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    class="modal-footer"
+                  >
+                    <button
+                      class="col-2 text-center btn btn-primary"
+                      id="ok"
+                      type="button"
+                    >
+                      Да
+                    </button>
+                    <button
+                      class="col-2 text-center btn btn-secondary"
+                      id="cancel"
+                      type="button"
+                    >
+                      Нет
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="fade modal-backdrop show"
+            />
+            <div
+              aria-modal="true"
+              class="fade rounded-0 modal show"
+              role="dialog"
+              style="display: block;"
+              tabindex="-1"
+            >
+              <div
+                class="modal-dialog"
+              >
+                <div
+                  class="modal-content"
+                >
+                  <div
+                    class="modal-header"
+                  >
+                    <div
+                      class="modal-title h4"
+                      id="header"
+                    >
+                      Удалить?
+                    </div>
+                    <button
+                      class="close"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        Close
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="modal-body"
+                    id="body"
+                  >
+                    <form>
+                      <div>
+                        <label
+                          id="id"
+                        >
+                          <b>
+                            id: 
+                          </b>
+                          100
+                        </label>
+                        <br />
+                        <label
+                          id="title"
+                        >
+                          <b>
+                            Должность: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="company"
+                        >
+                          <b>
+                            Компания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_created"
+                        >
+                          <b>
+                            Дата создания: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="date_changed"
+                        >
+                          <b>
+                            Дата изменения: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="source"
+                        >
+                          <b>
+                            Источник: 
+                          </b>
+                        </label>
+                        <br />
+                        <label
+                          id="contact"
+                        >
+                          <b>
+                            Контакты: 
+                          </b>
+                          Contact 1
+                        </label>
+                        <br />
+                        <label
+                          id="comment"
+                        >
+                          <b>
+                            Комментарий: 
+                          </b>
+                          Comment 1
+                        </label>
+                        <br />
+                        <label
+                          id="completed"
+                        >
+                          <b>
+                            Отработана: 
+                          </b>
+                          Нет
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    class="modal-footer"
+                  >
+                    <button
+                      class="col-2 text-center btn btn-primary"
+                      id="ok"
+                      type="button"
+                    >
+                      Да
+                    </button>
+                    <button
+                      class="col-2 text-center btn btn-secondary"
+                      id="cancel"
+                      type="button"
+                    >
+                      Нет
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+        }
+      >
+        <BackdropTransition
+          appear={true}
+          in={true}
+        >
+          <Fade
+            appear={true}
+            in={true}
+            mountOnEnter={false}
+            timeout={null}
+            unmountOnExit={false}
+          >
+            <Transition
+              addEndListener={[Function]}
+              appear={true}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={null}
+              unmountOnExit={false}
+            >
+              <div
+                className="fade modal-backdrop show"
+                onClick={[Function]}
+              />
+            </Transition>
+          </Fade>
+        </BackdropTransition>
+        <DialogTransition
+          appear={true}
+          in={true}
+          onEnter={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          unmountOnExit={true}
+        >
+          <Fade
+            appear={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            timeout={null}
+            unmountOnExit={true}
+          >
+            <Transition
+              addEndListener={[Function]}
+              appear={true}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={null}
+              unmountOnExit={true}
+            >
+              <div
+                aria-modal={true}
+                className="fade rounded-0 modal show"
+                onClick={[Function]}
+                onMouseUp={[Function]}
+                role="dialog"
+                style={
+                  Object {
+                    "paddingLeft": undefined,
+                    "paddingRight": undefined,
+                  }
+                }
+                tabIndex={-1}
+              >
+                <ModalDialog
+                  onMouseDown={[Function]}
+                >
+                  <div
+                    className="modal-dialog"
+                    onMouseDown={[Function]}
+                  >
+                    <div
+                      className="modal-content"
+                    >
+                      <ModalHeader
+                        closeButton={true}
+                        closeLabel="Close"
+                      >
+                        <div
+                          className="modal-header"
+                        >
+                          <ModalTitle
+                            id="header"
+                          >
+                            <ForwardRef
+                              className="modal-title"
+                              id="header"
+                            >
+                              <div
+                                className="modal-title h4"
+                                id="header"
+                              >
+                                Удалить?
+                              </div>
+                            </ForwardRef>
+                          </ModalTitle>
+                          <CloseButton
+                            label="Close"
+                            onClick={[Function]}
+                          >
+                            <button
+                              className="close"
+                              onClick={[Function]}
+                              type="button"
+                            >
+                              <span
+                                aria-hidden="true"
+                              >
+                                ×
+                              </span>
+                              <span
+                                className="sr-only"
+                              >
+                                Close
+                              </span>
+                            </button>
+                          </CloseButton>
+                        </div>
+                      </ModalHeader>
+                      <ModalBody
+                        id="body"
+                      >
+                        <div
+                          className="modal-body"
+                          id="body"
+                        >
+                          <form>
+                            <div>
+                              <label
+                                id="id"
+                              >
+                                <b>
+                                  id: 
+                                </b>
+                                100
+                              </label>
+                              <br />
+                              <label
+                                id="title"
+                              >
+                                <b>
+                                  Должность: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="company"
+                              >
+                                <b>
+                                  Компания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_created"
+                              >
+                                <b>
+                                  Дата создания: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="date_changed"
+                              >
+                                <b>
+                                  Дата изменения: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="source"
+                              >
+                                <b>
+                                  Источник: 
+                                </b>
+                              </label>
+                              <br />
+                              <label
+                                id="contact"
+                              >
+                                <b>
+                                  Контакты: 
+                                </b>
+                                Contact 1
+                              </label>
+                              <br />
+                              <label
+                                id="comment"
+                              >
+                                <b>
+                                  Комментарий: 
+                                </b>
+                                Comment 1
+                              </label>
+                              <br />
+                              <label
+                                id="completed"
+                              >
+                                <b>
+                                  Отработана: 
+                                </b>
+                                Нет
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                      </ModalBody>
+                      <ModalFooter>
+                        <div
+                          className="modal-footer"
+                        >
+                          <Button
+                            active={false}
+                            className="col-2 text-center"
+                            disabled={false}
+                            id="ok"
+                            onClick={[Function]}
+                            variant="primary"
+                          >
+                            <button
+                              className="col-2 text-center btn btn-primary"
+                              disabled={false}
+                              id="ok"
+                              onClick={[Function]}
+                              type="button"
+                            >
+                              Да
+                            </button>
+                          </Button>
+                          <Button
+                            active={false}
+                            className="col-2 text-center"
+                            disabled={false}
+                            id="cancel"
+                            onClick={[Function]}
+                            variant="secondary"
+                          >
+                            <button
+                              className="col-2 text-center btn btn-secondary"
+                              disabled={false}
+                              id="cancel"
+                              onClick={[Function]}
+                              type="button"
+                            >
+                              Нет
+                            </button>
+                          </Button>
+                        </div>
+                      </ModalFooter>
+                    </div>
+                  </div>
+                </ModalDialog>
+              </div>
+            </Transition>
+          </Fade>
+        </DialogTransition>
+      </Portal>
+    </Modal>
+  </Modal>
+</DeleteConfirmDlg>
+`;

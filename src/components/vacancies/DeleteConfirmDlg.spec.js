@@ -257,6 +257,38 @@ describe("DeleteConfirmDlg test", () => {
       expect(label).toEqual("Комментарий: Comment 1");
   });
 
+  it("DeleteConfirmDlg check id=completed text in Modal.Body for completed=TRUE", () => {
+    const vacancy = {
+      id: 100,
+      completed: true,
+    };
+
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+      const label = wrapper.find({ id: "completed" }).text();
+      expect(label).toEqual("Отработана: Да");
+  });
+
+  it("DeleteConfirmDlg check id=completed text in Modal.Body for completed=FALSE", () => {
+    const vacancy = {
+      id: 100,
+      completed: false,
+    };
+
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+      const label = wrapper.find({ id: "completed" }).text();
+      expect(label).toEqual("Отработана: Нет");
+  });
+
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
 //  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {
 //    const vacancy = {

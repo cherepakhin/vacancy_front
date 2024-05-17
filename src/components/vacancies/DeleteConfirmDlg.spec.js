@@ -83,6 +83,23 @@ describe("DeleteConfirmDlg test", () => {
     expect(wrapper.find(Modal.Title).text()).toBe("Удалить?");
   });
 
+  it("DeleteConfirmDlg text Ok Button ", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      visible: true,
+    };
+
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+      const label = wrapper.find({ id: "ok" }).text();
+      expect(label).toEqual("Да");
+  });
+
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
   it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {
     const vacancy = {

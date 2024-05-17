@@ -26,16 +26,11 @@ describe("DeleteConfirmDlg test", () => {
         fnVacancyDeleteCancel={jest.fn()} />);
 
     const dlg = toJson(wrapper);
-    console.log(dlg);
-//    //    console.log(dlg.node.props);
     expect(dlg.type).toBe("DeleteConfirmDlg");
     expect(dlg.node.props.visible).toBe(true);
     console.log(dlg.props);
 
     expect(dlg.children[0].type).toBe("Modal");
-//    expect(dlg.children[0].props.show).toBe(true);
-//
-//    expect(dlg.node.props).toEqual(vacancy);
   });
 
   it("DeleteConfirmDlg is visible", () => {
@@ -51,8 +46,7 @@ describe("DeleteConfirmDlg test", () => {
         fnVacancyDeleteCancel={jest.fn()} />);
 
     const dlg = toJson(wrapper);
-    console.log(dlg);
-//    //    console.log(dlg.node.props);
+
     expect(dlg.type).toBe("DeleteConfirmDlg");
     expect(dlg.node.props.visible).toBe(true);
   });
@@ -70,8 +64,23 @@ describe("DeleteConfirmDlg test", () => {
         fnVacancyDeleteCancel={jest.fn()} />);
 
     const dlg = toJson(wrapper);
-    console.log(dlg);
     expect(dlg.node.props.className).toBe("rounded-0");
+  });
+
+  it("DeleteConfirmDlg check Modal.Header caption", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      visible: true,
+    };
+    const wrapper = mount(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+    const dlg = toJson(wrapper);
+    expect(wrapper.find(Modal.Title).text()).toBe("Удалить?");
   });
 
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.

@@ -34,9 +34,27 @@ describe("DeleteConfirmDlg test", () => {
 
     expect(dlg.children[0].type).toBe("Modal");
 //    expect(dlg.children[0].props.show).toBe(true);
-//    expect(dlg.children[0].props.className).toBe("rounded-0");
 //
 //    expect(dlg.node.props).toEqual(vacancy);
+  });
+
+  it("DeleteConfirmDlg is visible", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      visible: true,
+    };
+    const wrapper = mount(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+    const dlg = toJson(wrapper);
+    console.log(dlg);
+//    //    console.log(dlg.node.props);
+    expect(dlg.type).toBe("DeleteConfirmDlg");
+    expect(dlg.node.props.visible).toBe(true);
   });
 
   it("showDeleteConfirmDlg check rounded0", () => {

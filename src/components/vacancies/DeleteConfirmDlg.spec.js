@@ -344,6 +344,27 @@ describe("DeleteConfirmDlg test", () => {
     expect(fnVacancyDeleteConfirmMock).toHaveBeenCalledTimes(2);
   });
 
+  it("DeleteConfirmDlg click button CANCEL", () => {
+    const vacancy = {
+      id: 100,
+      completed: false,
+    };
+
+    const fnVacancyDeleteCancelMock = jest.fn();
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={fnVacancyDeleteCancelMock} />);
+
+    const btnCancel = wrapper.find({ id: "cancel" });
+//    console.log(btnOk.debug());
+    btnCancel.simulate("click");
+    btnCancel.simulate("click"); // control click
+
+    expect(fnVacancyDeleteCancelMock).toHaveBeenCalledTimes(2);
+  });
+
 // TODO: Комментарии удалить после ПОЛНОГО понятия тестирования
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
 //  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {

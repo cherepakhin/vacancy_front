@@ -73,6 +73,7 @@ describe("DeleteConfirmDlg test", () => {
       title: "Vacancy 1",
       visible: true,
     };
+
     const wrapper = mount(<DeleteConfirmDlg
         vacancy={vacancy}
         visible={true}

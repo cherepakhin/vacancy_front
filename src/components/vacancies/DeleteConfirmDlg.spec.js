@@ -169,6 +169,25 @@ describe("DeleteConfirmDlg test", () => {
       expect(label).toEqual("Компания: Company 1");
   });
 
+  it("DeleteConfirmDlg check id=date_created text in Modal.Body", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "2020-01-01",
+      visible: true,
+    };
+
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={jest.fn()}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+      const label = wrapper.find({ id: "date_created" }).text();
+      expect(label).toEqual("Дата создания: 2020-01-01");
+  });
+
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
 //  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {
 //    const vacancy = {

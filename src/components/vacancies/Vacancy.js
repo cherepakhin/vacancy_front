@@ -108,12 +108,12 @@ const Vacancy = ({ vacancy }) => {
         title={"title Form.Check id="+id + " " + ((completed ? "Отработана":"Не отработана"))}
       />
 
-      <div id="idAboutBtn" className="col-1 list-group-item-action" title="Подробнее о вакансии">
+      <div id="idAboutBtn" className="col-1 list-group-item-action list-group-item-action-about" title="Описание вакансии">
         <span onClick={() => openAboutDlg()} tabIndex={1} role="button">Описание</span>
       </div>
 
-      <div id="idOpenBtn" className="col-1 list-group-item-action list-group-item-action-open" title="Открыть вакансию">
-        <span onClick={() => openAboutDlg()} tabIndex={2} role="button">Открыть</span>
+      <div id="idOpenBtn" className="col-1 list-group-item-action list-group-item-action-open" title="Подробнее о вакансию">
+        <span onClick={() => openAboutDlg()} tabIndex={2} role="button">Подробно</span>
       </div>
 
       <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-delete" title="Удалить вакансию">

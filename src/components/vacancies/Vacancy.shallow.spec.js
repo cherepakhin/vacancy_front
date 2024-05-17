@@ -198,7 +198,7 @@ describe("<Vacancy />", () => {
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
     const showMoreBtn = wrapper.props().children[5];
 
-    expect(showMoreBtn.props["className"]).toEqual("col-1 list-group-item-action");
+    expect(showMoreBtn.props["className"]).toEqual("col-1 list-group-item-action list-group-item-action-about");
     expect(showMoreBtn.props["children"].props.children).toBe("Описание");
   });
 

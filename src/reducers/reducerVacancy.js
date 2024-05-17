@@ -6,6 +6,7 @@ import vacancyTest from '../components/vacancies/vacancyTest';
 
 let state0 = { vacancies: [vacancy0, vacancyTest],
                visibleNewVacancyDlg: false,
+               visibleVacancies: false,
              };
 
 let lastId = 1; //TODO: get from backend
@@ -41,6 +42,7 @@ export default function reducerVacancy(state = state0, action) {
                                 completed: false,
                               });
       newState.visibleNewVacancyDlg = false;
+      newState.visibleVacancies = true;
       console.log("reduserVacancy.js: newState-->"+ JSON.stringify(newState));
       return newState;
 
@@ -63,7 +65,16 @@ export default function reducerVacancy(state = state0, action) {
     case actionTypes.SHOW_NEW_VACANCY_DLG:
       console.log("actionTypes.SHOW_NEW_VACANCY_DLG="+JSON.stringify(action));
       console.log("before newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
-      newState.visibleNewVacancyDlg = !newState.visibleNewVacancyDlg;
+      newState.visibleNewVacancyDlg = true
+      newState.visibleVacancies = false;
+      console.log("after newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
+      return newState;
+
+    case actionTypes.HIDE_NEW_VACANCY_DLG:
+      console.log("actionTypes.SHOW_NEW_VACANCY_DLG="+JSON.stringify(action));
+      console.log("before newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
+      newState.visibleNewVacancyDlg = false;
+      newState.visibleVacancies = true;
       console.log("after newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
       return newState;
 

@@ -59,8 +59,19 @@
   height: 1px;
   float:center;
 
-  min-width: 7ch;
-  max-width: 7ch !important;
+  min-width: 8ch;
+  max-width: 8ch !important;
+}
+
+.list-group-item-action-about {
+  text-align: center;
+  margin-right: 1ch;
+
+  height: 1px;
+  float:center;
+
+  min-width: 8ch;
+  max-width: 8ch !important;
 }
 
 .list-group-item-action-delete {

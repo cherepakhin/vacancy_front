@@ -324,6 +324,27 @@ return (
     expect(wrapper.props().children[1].type.name).toEqual("DeleteConfirmDlg");
 ````
 
+Тестирование с snapshot:
+
+````java
+  it("DeleteConfirmDlg toMatchSnapshot()", () => {
+        const vacancy = {
+            id: 100,
+            contact: "Contact 1",
+            comment: "Comment 1",
+            visible: true,
+        };
+
+        const wrapper = mount(<DeleteConfirmDlg vacancy={vacancy} visible={true}
+                                    fnVacancyDeleteConfirm={jest.fn()}
+                                    fnVacancyDeleteCancel={jest.fn()} />);
+
+        expect(EnzymeToJson(wrapper)).toMatchSnapshot();
+  });
+````
+
+Получаемый snapshot сравнивается с [src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap)
+
 Примеры представления с [mount](src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap) и [shallow]((src/components/vacancies/__snapshots__/DeleteConfirmDlg.spec.js.snap))
 
 #### Проблемы

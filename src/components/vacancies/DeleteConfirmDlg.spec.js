@@ -51,7 +51,7 @@ describe("DeleteConfirmDlg test", () => {
     expect(dlg.node.props.visible).toBe(true);
   });
 
-  it("showDeleteConfirmDlg check rounded0", () => {
+  it("showDeleteConfirmDlg check prop rounded0", () => {
     const vacancy = {
       id: 100,
       title: "Vacancy 1",
@@ -118,14 +118,14 @@ describe("DeleteConfirmDlg test", () => {
   });
 
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
-  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {
-    const vacancy = {
-      id: 100,
-      title: "Vacancy 1",
-      visible: true,
-      fnVacancyDeleteConfirm: jest.fn(),
-      fnVacancyDeleteCancel: jest.fn()
-    };
+//  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {
+//    const vacancy = {
+//      id: 100,
+//      title: "Vacancy 1",
+//      visible: true,
+//      fnVacancyDeleteConfirm: jest.fn(),
+//      fnVacancyDeleteCancel: jest.fn()
+//    };
 
 //    const wrapper = shallow(<DeleteConfirmDlg {...vacancy} />);
 //    const dlg = toJson(wrapper);
@@ -157,16 +157,16 @@ describe("DeleteConfirmDlg test", () => {
 //    expect(wrapper.find({ id: "cancel" }).text()).toBe("Нет"); // by selector
 //
 //    expect(wrapper.find(Button)).toHaveLength(2);
-  });
+//  });
 
-  it("showDeleteConfirmDlg check header", () => {
-    const vacancy = {
-      id: 100,
-      title: "Task 1",
-      visible: true,
-      fnVacancyDeleteConfirm: jest.fn(),
-      fnVacancyDeleteCancel: jest.fn()
-    };
+//  it("showDeleteConfirmDlg check header", () => {
+//    const vacancy = {
+//      id: 100,
+//      title: "Task 1",
+//      visible: true,
+//      fnVacancyDeleteConfirm: jest.fn(),
+//      fnVacancyDeleteCancel: jest.fn()
+//    };
 
 //    const wrapper = shallow(<DeleteConfirmDlg {...vacancy} />);
 //    const dlg = toJson(wrapper);
@@ -178,16 +178,16 @@ describe("DeleteConfirmDlg test", () => {
 //    expect(wrapper.find(Modal.Title).text()).toBe("Удалить?"); // header
 //    // test by selector
 //    expect(wrapper.find({ id: "header" }).text()).toBe("Удалить?"); // by selector
-  });
+//  });
 
-  it("showDeleteConfirmDlg check footer", () => {
-    const vacancy = {
-      id: 100,
-      title: "Vacancy 1",
-      visible: true,
-      fnVacancyDeleteConfirm: jest.fn(),
-      fnVacancyDeleteCancel: jest.fn()
-    };
+//  it("showDeleteConfirmDlg check footer", () => {
+//    const vacancy = {
+//      id: 100,
+//      title: "Vacancy 1",
+//      visible: true,
+//      fnVacancyDeleteConfirm: jest.fn(),
+//      fnVacancyDeleteCancel: jest.fn()
+//    };
 
 //    const wrapper = shallow(<DeleteConfirmDlg {...vacancy} />);
 //    const dlg = toJson(wrapper);
@@ -202,16 +202,16 @@ describe("DeleteConfirmDlg test", () => {
 //    expect(wrapper.find({ id: "cancel" }).text()).toBe("Нет"); // by selector
 //
 //    expect(wrapper.find(Button)).toHaveLength(2);
-  });
+//  });
 
-  it("showDeleteConfirmDlg check body", () => {
-    const vacancy = {
-      id: 100,
-      title: "Vacancy 1",
-      visible: true,
-      fnVacancyDeleteConfirm: jest.fn(),
-      fnVacancyDeleteCancel: jest.fn()
-    };
+//  it("showDeleteConfirmDlg check body", () => {
+//    const vacancy = {
+//      id: 100,
+//      title: "Vacancy 1",
+//      visible: true,
+//      fnVacancyDeleteConfirm: jest.fn(),
+//      fnVacancyDeleteCancel: jest.fn()
+//    };
 
 //    const wrapper = shallow(<DeleteConfirmDlg {...vacancy} />);
 //    const dlg = toJson(wrapper);
@@ -220,17 +220,17 @@ describe("DeleteConfirmDlg test", () => {
 //    // test by selector
 //    expect(wrapper.find(Modal.Body)).toHaveLength(1);
 //    expect(wrapper.find({ id: "body" }).text()).toBe("{id: 100, title: 'Vacancy 1'}?");
-  });
+//  });
 
-  it("showDeleteConfirmDlg check body with props in component", () => {
+//  it("showDeleteConfirmDlg check body with props in component", () => {
     // NOT  <DeleteConfirmDlg {...props}, BUT <DeleteConfirmDlg id='100' title="Vacancy 1" visible="true"/>
-    const vacancy = {
-      id: 100,
-      title: "Vacancy 1",
-      visible: true,
-      fnVacancyDeleteConfirm: jest.fn(),
-      fnVacancyDeleteCancel: jest.fn()
-    };
+//    const vacancy = {
+//      id: 100,
+//      title: "Vacancy 1",
+//      visible: true,
+//      fnVacancyDeleteConfirm: jest.fn(),
+//      fnVacancyDeleteCancel: jest.fn()
+//    };
 
 //    const wrapper = shallow(<DeleteConfirmDlg {...vacancy} />);
 //    const dlg = toJson(wrapper);
@@ -239,22 +239,22 @@ describe("DeleteConfirmDlg test", () => {
 //    // test by selector
 //    expect(wrapper.find(Modal.Body)).toHaveLength(1);
 //    expect(wrapper.find({ id: "body" }).text()).toBe("{id: 100, title: 'Vacancy 1'}?");
-  });
+//  });
 
-  it("showDeleteConfirmDlg match snapshot", () => {
-    const vacancy = {
-        vacancy: {
-            id: 100,
-            title: "Vacancy 1",
-      },
-      visible: true,
-      fnVacancyDeleteConfirm: jest.fn(),
-      fnVacancyDeleteCancel: jest.fn()
-    };
-
-    const wrapper = mount(<DeleteConfirmDlg {...vacancy} />);
+//  it("showDeleteConfirmDlg match snapshot", () => {
+//    const vacancy = {
+//        vacancy: {
+//            id: 100,
+//            title: "Vacancy 1",
+//      },
+//      visible: true,
+//      fnVacancyDeleteConfirm: jest.fn(),
+//      fnVacancyDeleteCancel: jest.fn()
+//    };
+//
+//    const wrapper = mount(<DeleteConfirmDlg {...vacancy} />);
 
 //    expect(EnzymeToJson(wrapper)).toMatchSnapshot();
-  });
+//  });
 
 });

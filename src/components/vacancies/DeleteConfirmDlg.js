@@ -4,14 +4,14 @@ import { Modal, Button } from "react-bootstrap";
 
 // Этот диалог никак не связан с Redux.
 // Присвоение параметров, управление видимостью и реакция на нажатие кнопок сделано снаружи в компоненте Task.js
-const DeleteConfirmDlg = ({id, title, visible, fnVacancyDeleteConfirm, fnVacancyDeleteCancel}) => {
+const DeleteConfirmDlg = ({vacancy, visible, fnVacancyDeleteConfirm, fnVacancyDeleteCancel}) => {
 
   const handleCancel = () => {
-    fnVacancyDeleteCancel(id);
+    fnVacancyDeleteCancel(vacancy.id);
   }
 
   const handleConfirm = () => {
-    fnVacancyDeleteConfirm(id);
+    fnVacancyDeleteConfirm(vacancy.id);
   }
 
   return (
@@ -19,7 +19,22 @@ const DeleteConfirmDlg = ({id, title, visible, fnVacancyDeleteConfirm, fnVacancy
         <Modal.Header closeButton>
           <Modal.Title id="header">Удалить?</Modal.Title>
         </Modal.Header>
-        <Modal.Body id="body">{"{id: "+id+", title: '"+title+"'}?"}</Modal.Body>
+        <Modal.Body id="body">
+            <form>
+              <div>
+                <label><b>id: </b>{vacancy.id}</label><br/>
+                <label><b>Должность: </b>{vacancy.title}</label><br/>
+                <label><b>Компания: </b>{vacancy.company}</label><br/>
+                <label><b>Дата создания: </b>{vacancy.date_created}</label><br/>
+                <label><b>Дата изменения: </b>{vacancy.date_changed}</label><br/>
+                <label><b>Компания: </b>{vacancy.company}</label><br/>
+                <label><b>Источник: </b>{vacancy.source}</label><br/>
+                <label><b>Контакты: </b>{vacancy.contact}</label><br/>
+                <label><b>Комментарий: </b>{vacancy.comment}</label><br/>
+                <label><b>Отработана: </b>{vacancy.completed? "Да": "Нет"}</label>
+              </div>
+            </form>
+        </Modal.Body>
         <Modal.Footer>
             <Button id="ok" className="col-2 text-center" variant="primary" onClick={handleConfirm}>Да</Button>
             <Button id="cancel" className="col-2 text-center" variant="secondary" onClick={handleCancel}>Нет</Button>
@@ -30,8 +45,7 @@ const DeleteConfirmDlg = ({id, title, visible, fnVacancyDeleteConfirm, fnVacancy
 }
 
 DeleteConfirmDlg.propTypes = {
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
+  vacancy: PropTypes.object.isRequired,
   visible: PropTypes.bool.isRequired,
   fnVacancyDeleteConfirm: PropTypes.func.isRequired,
   fnVacancyDeleteCancel: PropTypes.func.isRequired

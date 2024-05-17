@@ -86,7 +86,7 @@ const Vacancy = ({ vacancy }) => {
         fnClose={closeAboutDlg}
       />
 
-      <DeleteConfirmDlg id={id} title={title} visible={visibleDeleteConfirmDlg}
+      <DeleteConfirmDlg vacancy={vacancy} visible={visibleDeleteConfirmDlg}
         fnVacancyDeleteConfirm={(id) => confirmDeleteConfirmDlg(id)}
         fnVacancyDeleteCancel={cancelDeleteConfirmDlg}
       />
@@ -131,7 +131,6 @@ Vacancy.propTypes = {
             company: PropTypes.string.isRequired,
             date_created: PropTypes.string.isRequired,
             date_changed: PropTypes.string.isRequired,
-            salary: PropTypes.string.isRequired,
             source: PropTypes.string.isRequired,
             contact: PropTypes.string.isRequired,
             comment: PropTypes.string.isRequired,

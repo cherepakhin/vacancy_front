@@ -24,7 +24,6 @@ VacancyList.propTypes = {
             company: PropTypes.string.isRequired,
             date_created: PropTypes.string.isRequired,
             date_changed: PropTypes.string.isRequired,
-            salary: PropTypes.string.isRequired,
             source: PropTypes.string.isRequired,
             contact: PropTypes.string.isRequired,
             comment: PropTypes.string.isRequired,

@@ -1,4 +1,6 @@
 import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+
 import toJson from "enzyme-to-json";
 import { shallow, mount } from "enzyme";
 import renderer from 'react-test-renderer';
@@ -28,7 +30,7 @@ describe("DeleteConfirmDlg test", () => {
     const dlg = toJson(wrapper);
     expect(dlg.type).toBe("DeleteConfirmDlg");
     expect(dlg.node.props.visible).toBe(true);
-    console.log(dlg.props);
+//    console.log(dlg.props);
 
     expect(dlg.children[0].type).toBe("Modal");
   });
@@ -321,6 +323,28 @@ describe("DeleteConfirmDlg test", () => {
     expect(className).toEqual("col-2 text-center");
   });
 
+  it("DeleteConfirmDlg click button OK", () => {
+    const vacancy = {
+      id: 100,
+      completed: false,
+    };
+
+    const fnVacancyDeleteConfirmMock = jest.fn();
+    const wrapper = shallow(<DeleteConfirmDlg
+        vacancy={vacancy}
+        visible={true}
+        fnVacancyDeleteConfirm={fnVacancyDeleteConfirmMock}
+        fnVacancyDeleteCancel={jest.fn()} />);
+
+    const btnOk = wrapper.find({ id: "ok" });
+//    console.log(btnOk.debug());
+    btnOk.simulate("click");
+    btnOk.simulate("click");
+
+    expect(fnVacancyDeleteConfirmMock).toHaveBeenCalledTimes(2);
+  });
+
+// TODO: Комментарии удалить после ПОЛНОГО понятия тестирования
 //В этом тесте ОЧЕНЬ МНОГО проверок. Ниже разделено на отдельные тесты. Оставил так.
 //  it("showDeleteConfirmDlg check ALL structure with SHALLOW", () => {
 //    const vacancy = {

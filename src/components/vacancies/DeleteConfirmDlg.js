@@ -22,16 +22,16 @@ const DeleteConfirmDlg = ({vacancy, visible, fnVacancyDeleteConfirm, fnVacancyDe
         <Modal.Body id="body">
             <form>
               <div>
-                <label><b>id: </b>{vacancy.id}</label><br/>
-                <label><b>Должность: </b>{vacancy.title}</label><br/>
-                <label><b>Компания: </b>{vacancy.company}</label><br/>
-                <label><b>Дата создания: </b>{vacancy.date_created}</label><br/>
-                <label><b>Дата изменения: </b>{vacancy.date_changed}</label><br/>
-                <label><b>Компания: </b>{vacancy.company}</label><br/>
-                <label><b>Источник: </b>{vacancy.source}</label><br/>
-                <label><b>Контакты: </b>{vacancy.contact}</label><br/>
-                <label><b>Комментарий: </b>{vacancy.comment}</label><br/>
-                <label><b>Отработана: </b>{vacancy.completed? "Да": "Нет"}</label>
+                <label id="id"><b>id: </b>{vacancy.id}</label><br/>
+                <label id="title"><b>Должность: </b>{vacancy.title}</label><br/>
+                <label id="company"><b>Компания: </b>{vacancy.company}</label><br/>
+                <label id="date_created"><b>Дата создания: </b>{vacancy.date_created}</label><br/>
+                <label id="date_changed"><b>Дата изменения: </b>{vacancy.date_changed}</label><br/>
+                <label id="company"><b>Компания: </b>{vacancy.company}</label><br/>
+                <label id="source"><b>Источник: </b>{vacancy.source}</label><br/>
+                <label id="contact"><b>Контакты: </b>{vacancy.contact}</label><br/>
+                <label id="comment"><b>Комментарий: </b>{vacancy.comment}</label><br/>
+                <label id="completed"><b>Отработана: </b>{vacancy.completed? "Да": "Нет"}</label>
               </div>
             </form>
         </Modal.Body>

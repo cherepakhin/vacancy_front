@@ -63,6 +63,11 @@
   max-width: 8ch !important;
 }
 
+.w-12ch {
+  min-width: 12ch;
+  max-width: 12ch !important;
+}
+
 .list-group-item-action-about {
   text-align: center;
   margin-right: 1ch;

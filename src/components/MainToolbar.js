@@ -59,11 +59,11 @@ const MainToolbar = (props) => {
         {/* col-md-1 width on middle device = 1 column,*/}
         {/* col-sm-2 width on small device = 2 columns*/}
         {/* mr-1 отступ справа внутри колонки margin right = 1 (1 char 'x') */}
-        <Button className="mr-1 col-md-1 col-sm-2">Все</Button>
-        <Button className="mr-1 col-md-1 col-sm-2">Текущие</Button>
-        <Button className="mr-1 col-md-1 col-sm-2" onClick={handleShowDialogNewVacancy}>Новая</Button>
-        <Button className="mr-1 col-md-1 col-sm-2">Найти</Button>
-        <Button className="mr-1 col-md-1 col-sm-2">{getTitle()}</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Все</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Текущие</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch" onClick={handleShowDialogNewVacancy}>Новая</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Найти</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">{getTitle()}</Button>
       </Col>
     </Row>
   )

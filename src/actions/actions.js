@@ -23,10 +23,10 @@ export const createShowDeleteConfirmDlgAction = vacancy => ({
   payload: { vacancy }
 })
 
-export const createVisibleNewVacancyDlgAction = visible => ({
-  type: actionTypes.SHOW_NEW_VACANCY_DLG,
+export const createVisibleEditVacancyDlgAction = visible => ({
+  type: actionTypes.SHOW_EDIT_VACANCY_DLG,
 })
 
-export const createHideNewVacancyDlgAction = () => ({
-  type: actionTypes.HIDE_NEW_VACANCY_DLG,
+export const createHideEditVacancyDlgAction = () => ({
+  type: actionTypes.HIDE_EDIT_VACANCY_DLG,
 })

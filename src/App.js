@@ -32,7 +32,7 @@ class App extends React.Component { // receives props from index.js
 
         <Container fluid className="md-0 pt-0 main-app-container bg-light">
           <MainToolbar />
-          <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
+          <NewVacancyPanel visible={this.props.visibleEditVacancyDlg}/>
           <Vacancies vacancies={this.props.vacancies} visible={this.props.visibleVacancies}/>
           {/* place for current opened vacancy */}
         </Container>
@@ -53,7 +53,7 @@ const mapStateToProps = (state) => {
         // так будет доступно через <Vacancies vacancies={this.props.vacancies} />
         vacancies: state.vacancies,
         visibleVacancies: state.visibleVacancies,
-        visibleNewVacancyDlg: state.visibleNewVacancyDlg
+        visibleEditVacancyDlg: state.visibleEditVacancyDlg
     }
 }
 

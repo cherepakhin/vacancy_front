@@ -21,7 +21,6 @@ const AboutVacancyDlg = ({vacancy, visible, fnClose}) => {
                 <label><b>Компания: </b>{vacancy.company}</label><br/>
                 <label><b>Дата создания: </b>{vacancy.date_created}</label><br/>
                 <label><b>Дата изменения: </b>{vacancy.date_changed}</label><br/>
-                <label><b>Компания: </b>{vacancy.company}</label><br/>
                 <label><b>Источник: </b>{vacancy.source}</label><br/>
                 <label><b>Контакты: </b>{vacancy.contact}</label><br/>
                 <label><b>Комментарий: </b>{vacancy.comment}</label><br/>

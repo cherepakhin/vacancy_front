@@ -7,12 +7,12 @@ import { connect } from "react-redux";
 const MainToolbar = (props) => {
   console.log("props");
   console.log(props);
-  const [visibleNewVacancyDlg, setVisibleNewVacancyDlg] = useState(false);
+  const [visibleEditVacancyDlg, setVisibleEditVacancyDlg] = useState(false);
   const dispatch = useDispatch();
   let captionVisible = false;
 
-  const handleShowDialogNewVacancy = (e) => {
-      console.log("visibleNewVacancyDlg: " + visibleNewVacancyDlg);
+  const handleShowDialogEditVacancy = (e) => {
+      console.log("visibleEditVacancyDlg: " + visibleEditVacancyDlg);
 //      setVisibleNewVacancyDlg(!visibleNewVacancyDlg); // work local, other component don't see state
 
 //    console.log("MainToolbar.js. showDialogNewVacancy:");
@@ -20,9 +20,9 @@ const MainToolbar = (props) => {
 //    setShowDialogNewVacancy(true); // setting state variable will after exit from function
 
 //    console.log(visibleNewVacancyDlg);
-    let visibleNewVacancyDlgAction = actions.createVisibleNewVacancyDlgAction(visibleNewVacancyDlg);
-//    console.log(visibleNewVacancyDlgAction); // work! {"type": "SHOW_NEW_VACANCY_DLG","payload": {"visible": false}}
-    dispatch(visibleNewVacancyDlgAction);
+    let visibleEditVacancyDlgAction = actions.createVisibleEditVacancyDlgAction(visibleEditVacancyDlg);
+    console.log(visibleEditVacancyDlgAction); // work! {"type": "SHOW_NEW_VACANCY_DLG","payload": {"visible": false}}
+    dispatch(visibleEditVacancyDlgAction);
   }
 
   const testMethod = () => {
@@ -41,7 +41,7 @@ const MainToolbar = (props) => {
 //    console.log(visibleNewVacancyDlg); // Don't delete console.log. OK. log: false
 //    console.log(props); //Don't delete console.log. OK in connect. log: {"vacancies": [{"completed": false,"id": -1,"title": "не показывать -1"}],"visibleNewVacancyDlg": false}
 //    console.log(props.visibleNewVacancyDlg); // Don't delete console.log. OK in connect, in prod. log: false
-    let caption = props.visibleNewVacancyDlg ? "Dlg open" : "Dlg close";
+    let caption = props.visibleEditVacancyDlg ? "Dlg open" : "Dlg close";
 //    return captionVisible? "Hide" : "Show";
     return caption;
 
@@ -61,7 +61,7 @@ const MainToolbar = (props) => {
         {/* mr-1 отступ справа внутри колонки margin right = 1 (1 char 'x') */}
         <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Все</Button>
         <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Текущие</Button>
-        <Button className="mr-1 col-md-1 col-sm-2 w-12ch" onClick={handleShowDialogNewVacancy}>Новая</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch" onClick={handleShowDialogEditVacancy}>Новая</Button>
         <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Найти</Button>
         <Button className="mr-1 col-md-1 col-sm-2 w-12ch">{getTitle()}</Button>
       </Col>

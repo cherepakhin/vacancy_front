@@ -138,7 +138,7 @@ describe("<MainToolbar />", () => {
   });
 
   it("check title btn status VacancyDlg in MainToolbar for OPENED VacancyDlg", () => {
-    const wrapper = shallow(<MainToolbar visibleNewVacancyDlg={true} />);
+    const wrapper = shallow(<MainToolbar visibleEditVacancyDlg={true} />);
     expect(wrapper.props().children.props.children[4].props.children).toEqual('Dlg open');
   });
 });

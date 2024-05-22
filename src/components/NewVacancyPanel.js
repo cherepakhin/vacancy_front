@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from "react-bootstrap";
-import AddNewVacancyDlg from "./vacancies/AddNewVacancyDlg";
+import EditVacancyDlg from "./vacancies/EditVacancyDlg";
 
 // TODO: для ввода вакансий нужна не просто строка, а отдельный НЕ МОДАЛЬНЫЙ диалог (в модальный не влезет).
 const NewVacancyPanel = (props) => {
@@ -12,7 +12,7 @@ const NewVacancyPanel = (props) => {
         (https://getbootstrap.com/docs/5.1/utilities/display/) */}
         <Col id="colNewVacancyPanel" xs={12} className={props.visible? "" : "d-none"}>           {/* className={props.show.visible? "" : "d-none"} add className="d-none" for hide, xs={6} 10 cells (https://react-bootstrap.github.io/docs/layout/grid)*/}
           <h4 id="headerNewVacancyPanel">Новая вакансия</h4>
-          <AddNewVacancyDlg />
+          <EditVacancyDlg />
         </Col>
       </Row>
     )

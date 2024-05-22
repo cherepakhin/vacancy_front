@@ -3,7 +3,7 @@ import { Button, FormControl } from "react-bootstrap";
 import * as actions from "../../actions/actions";
 import { useDispatch } from "react-redux";
 
-const AddNewVacancyDlg = () => {
+const EditVacancyDlg = () => {
 // Вызовите useState на верхнем уровне вашего компонента, чтобы объявить переменную состояния.
   const [vacancyTitle, setVacancyTitle] = useState(''); // '' - значение по умолчанию, описание вакансии
   const [vacancyCompany, setVacancyCompany] = useState(''); // компания
@@ -60,7 +60,7 @@ const AddNewVacancyDlg = () => {
   }
 
   const handleVacancyCancel = () => {
-    let hideVacancyDlgAction = actions.createHideNewVacancyDlgAction();
+    let hideVacancyDlgAction = actions.createHideEditVacancyDlgAction();
     dispatch(hideVacancyDlgAction);
   }
 
@@ -84,4 +84,4 @@ const AddNewVacancyDlg = () => {
   )
 }
 
-export default AddNewVacancyDlg;
+export default EditVacancyDlg;

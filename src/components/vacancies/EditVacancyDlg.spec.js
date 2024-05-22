@@ -4,10 +4,10 @@ import { shallow, mount } from "enzyme";
 import renderer from 'react-test-renderer';
 import EnzymeToJson from 'enzyme-to-json';
 
-import AddNewVacancyDlg from "./AddNewVacancyDlg";
+import EditVacancyDlg from "./EditVacancyDlg";
 
-describe("AddNewVacancyDlg test", () => {
-  it("AddNewVacancyDlg check structure with MOUNT", () => {
+describe("EditVacancyDlg test", () => {
+  it("EditVacancyDlg check structure with MOUNT", () => {
 //    const vacancy = {
 //      id: 100,
 //      title: "Vacancy 1",

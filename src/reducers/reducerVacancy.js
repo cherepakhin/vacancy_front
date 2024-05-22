@@ -10,6 +10,7 @@ let state0 = { vacancies: [vacancy0, vacancyTest],
              };
 
 let lastId = 1; //TODO: get from backend
+let companyId = 1; //TODO: get from backend
 
 export default function reducerVacancy(state = state0, action) {
   console.log("reduserVacancy.js: BEFORE state:");
@@ -41,7 +42,7 @@ export default function reducerVacancy(state = state0, action) {
                                 comment: action.payload.comment,
                                 completed: false,
                               });
-      newState.visibleNewVacancyDlg = false;
+      newState.visibleEditVacancyDlg = false;
       newState.visibleVacancies = true;
       console.log("reduserVacancy.js: newState-->"+ JSON.stringify(newState));
       return newState;
@@ -62,20 +63,20 @@ export default function reducerVacancy(state = state0, action) {
       newState.vacancies = filtered;
       return newState;
 
-    case actionTypes.SHOW_NEW_VACANCY_DLG:
-      console.log("actionTypes.SHOW_NEW_VACANCY_DLG="+JSON.stringify(action));
-      console.log("before newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
-      newState.visibleNewVacancyDlg = true
+    case actionTypes.SHOW_EDIT_VACANCY_DLG:
+      console.log("actionTypes.SHOW_EDIT_VACANCY_DLG="+JSON.stringify(action));
+      console.log("before newState.visibleEditVacancyDlg="+JSON.stringify(newState.visibleEditVacancyDlg));
+      newState.visibleEditVacancyDlg = true
       newState.visibleVacancies = false;
-      console.log("after newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
+      console.log("after newState.visibleEditVacancyDlg="+JSON.stringify(newState.visibleEditVacancyDlg));
       return newState;
 
-    case actionTypes.HIDE_NEW_VACANCY_DLG:
-      console.log("actionTypes.SHOW_NEW_VACANCY_DLG="+JSON.stringify(action));
-      console.log("before newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
-      newState.visibleNewVacancyDlg = false;
+    case actionTypes.HIDE_EDIT_VACANCY_DLG:
+      console.log("actionTypes.SHOW_EDIT_VACANCY_DLG="+JSON.stringify(action));
+      console.log("before newState.visibleEditVacancyDlg="+JSON.stringify(newState.visibleEditVacancyDlg));
+      newState.visibleEditVacancyDlg = false;
       newState.visibleVacancies = true;
-      console.log("after newState.visibleNewVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
+      console.log("after newState.visibleEditVacancyDlg="+JSON.stringify(newState.visibleNewVacancyDlg));
       return newState;
 
     default:

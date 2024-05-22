@@ -8,7 +8,7 @@ const VacancyList = ({ vacancies }) => {
 
   if (vacancies.length)
     return (
-      <ListGroup id="vacancyList">
+      <ListGroup id="vacancyList" xs={12}>
         {
           vacancies.map(vacancy => <Vacancy id={"vacancyId" + vacancy.id} key={vacancy.id} vacancy={vacancy} />)
         }

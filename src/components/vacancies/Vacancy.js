@@ -81,7 +81,7 @@ const Vacancy = ({ vacancy }) => {
   // MoreDlg - пример диалога, встроенного в компоненту Task.js
   // DeleteConfirmDlg.js - пример диалога в отдельной компоненте
   return (
-    <ListGroup.Item className={completed && 'vacancy-completed'}>
+    <ListGroup.Item className={completed && 'vacancy-completed'} xs={12}>
       <AboutVacancyDlg vacancy={vacancy} visible={visibleAboutDlg}
         fnClose={closeAboutDlg}
       />

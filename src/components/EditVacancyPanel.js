@@ -6,6 +6,7 @@ import EditVacancyDlg from "./vacancies/EditVacancyDlg";
 // props.visible - true/false to show/hide panel
 // props.vacancy - vacancy for editing
 const EditVacancyPanel = (props) => {
+    console.log(props.vacancy);
     return (
       <Row id="idEditVacancyPanel" className="mt-2 md-0 pt-5 pl-0 pd-0">    {/* "mt-4"  top margin (https://react-bootstrap.github.io/docs/layout/grid)*/}
         {/* <Col xs={6} className="d-none">

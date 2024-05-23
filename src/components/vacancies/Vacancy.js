@@ -33,8 +33,10 @@ const Vacancy = ({ vacancy }) => {
     setVisibleAboutDlg(false);
   }
 
-  const openEditDlg = (vacancyId) => {
-    console.log("openEditDlg vacancyId=", vacancyId);
+  const openEditDlg = (vacancy) => {
+    console.log("openEditDlg vacancy=", vacancy);
+    // dispatch to REST API!!!
+    dispatch(actions.createVisibleEditVacancyDlgAction(vacancy));
 //TODO: action for open edit dlg
 //    setVisibleAboutDlg(true);
   }
@@ -120,7 +122,7 @@ const Vacancy = ({ vacancy }) => {
       </div>
 
       <div id="idOpenBtn" className="col-1 list-group-item-action list-group-item-action-open" title="Подробнее о вакансии">
-        <span onClick={() => openAboutDlg()} tabIndex={2} role="button">Изменить</span>
+        <span onClick={() => openEditDlg(vacancy)} tabIndex={2} role="button">Изменить</span>
       </div>
 
       <div id="idDeleteBtn" className="col-1 list-group-item-action list-group-item-action-delete" title="Удалить вакансию">

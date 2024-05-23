@@ -7,6 +7,7 @@ import vacancyTest from '../components/vacancies/vacancyTest';
 let state0 = { vacancies: [vacancy0, vacancyTest],
                visibleNewVacancyDlg: false,
                visibleVacancies: false,
+               selectedVacancy: {...vacancy0},
              };
 
 let lastId = 1; //TODO: get from backend
@@ -64,11 +65,15 @@ export default function reducerVacancy(state = state0, action) {
       return newState;
 
     case actionTypes.SHOW_EDIT_VACANCY_DLG:
+      // action.payload is vacancy. action.payload = {id:100, title: ..., company: ..., ... }
       console.log("actionTypes.SHOW_EDIT_VACANCY_DLG="+JSON.stringify(action));
       console.log("before newState.visibleEditVacancyDlg="+JSON.stringify(newState.visibleEditVacancyDlg));
       newState.visibleEditVacancyDlg = true
       newState.visibleVacancies = false;
-      console.log("after newState.visibleEditVacancyDlg="+JSON.stringify(newState.visibleEditVacancyDlg));
+      newState.selectedVacancy = {...action.payload};
+      console.log("after newState.visibleEditVacancyDlg:"+JSON.stringify(newState));
+      console.log(JSON.stringify(newState));
+      console.log(JSON.stringify(newState.selectedVacancy));
       return newState;
 
     case actionTypes.HIDE_EDIT_VACANCY_DLG:

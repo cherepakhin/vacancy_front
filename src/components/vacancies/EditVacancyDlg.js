@@ -7,7 +7,7 @@ const EditVacancyDlg = (props) => {
     console.log(props);
     console.log(props.vacancy);
 // Вызовите useState на верхнем уровне вашего компонента, чтобы объявить переменную состояния.
-//  const [vacancyTitle, setVacancyTitle] = useState(''); // '' - значение по умолчанию, описание вакансии
+  const [vacancyTitle, setVacancyTitle] = useState(''); // '' - значение по умолчанию, описание вакансии
 //  const [vacancyCompany, setVacancyCompany] = useState(''); // компания
 //  const [vacancySource, setVacancySource] = useState(''); // источник вакансии (сайт)
 //  const [vacancyContact, setVacancyContact] = useState(''); // контакт(tel, email, telegram,...)
@@ -16,7 +16,9 @@ const EditVacancyDlg = (props) => {
 
   const handleVacancyTitleChange = (e) => {
     console.log(props.vacancy);
-//    setVacancyTitle(e.target.value);
+    props.vacancy.title = e.target.value;
+    console.log(props.vacancy);
+    setVacancyTitle(e.target.value);
   }
 
   const handleVacancyCompanyChange = (e) => {

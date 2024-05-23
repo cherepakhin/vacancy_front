@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from "react-bootstrap";
 import { MainToolbarConnect as MainToolbar } from "./components/MainToolbar";
 import NewVacancyPanel from "./components/NewVacancyPanel";
+import EditVacancyPanel from "./components/EditVacancyPanel";
 import Vacancies from "./components/vacancies/Vacancies";
 //import { useSelector } from "react-redux";
 import './App.css';
@@ -32,7 +33,8 @@ class App extends React.Component { // receives props from index.js
 
         <Container fluid className="md-0 pt-0 main-app-container bg-light">
           <MainToolbar />
-          <NewVacancyPanel visible={this.props.visibleEditVacancyDlg}/>
+          <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
+          <EditVacancyPanel visible={this.props.visibleEditVacancyDlg} vacancy={this.props.vacancy}/>
           <Vacancies vacancies={this.props.vacancies} visible={this.props.visibleVacancies}/>
           {/* place for current opened vacancy */}
         </Container>

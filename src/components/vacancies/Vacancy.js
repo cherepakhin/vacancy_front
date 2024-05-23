@@ -33,6 +33,13 @@ const Vacancy = ({ vacancy }) => {
     setVisibleAboutDlg(false);
   }
 
+  const openEditDlg = (vacancyId) => {
+    console.log("openEditDlg vacancyId=", vacancyId);
+//TODO: action for open edit dlg
+//    setVisibleAboutDlg(true);
+  }
+
+
   const openDeleteConfirmDlg = (vacancyId) => {
     console.log("openDeleteConfirmDlg vacancyId=", vacancyId);
     if(vacancyId === -1) {

@@ -9,12 +9,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -126,7 +120,7 @@
 
 .list-group-item.vacancy-completed {
   background-color: #f2f2f2;
-  border-width: 0px;
+  border-width: 1px;
 }
 
 .list-group-item.vacancy-completed .form-check-label {

@@ -8,10 +8,10 @@ const EditVacancyDlg = (props) => {
     console.log(props.vacancy);
 // Вызовите useState на верхнем уровне вашего компонента, чтобы объявить переменную состояния.
   const [vacancyTitle, setVacancyTitle] = useState(''); // '' - значение по умолчанию, описание вакансии
-//  const [vacancyCompany, setVacancyCompany] = useState(''); // компания
-//  const [vacancySource, setVacancySource] = useState(''); // источник вакансии (сайт)
-//  const [vacancyContact, setVacancyContact] = useState(''); // контакт(tel, email, telegram,...)
-//  const [vacancyComment, setVacancyComment] = useState(''); // комментарий
+  const [vacancyCompany, setVacancyCompany] = useState(''); // компания
+  const [vacancySource, setVacancySource] = useState(''); // источник вакансии (сайт)
+  const [vacancyContact, setVacancyContact] = useState(''); // контакт(tel, email, telegram,...)
+  const [vacancyComment, setVacancyComment] = useState(''); // комментарий
   const dispatch = useDispatch();
 
   const handleVacancyTitleChange = (e) => {
@@ -22,19 +22,24 @@ const EditVacancyDlg = (props) => {
   }
 
   const handleVacancyCompanyChange = (e) => {
-//    setVacancyCompany(e.target.value);
+    props.vacancy.company = e.target.value;
+    setVacancyCompany(e.target.value);
   }
 
   const handleVacancySourceChange = (e) => {
-//    setVacancySource(e.target.value);
+    props.vacancy.source = e.target.value;
+    setVacancySource(e.target.value);
   }
 
   const handleVacancyContactChange = (e) => {
+    props.vacancy.contact = e.target.value;
+    setVacancyContact(e.target.value);
 //    setVacancyContact(e.target.value);
   }
 
   const handleVacancyCommentChange = (e) => {
-//    setVacancyComment(e.target.value);
+    props.vacancy.comment = e.target.value;
+    setVacancyComment(e.target.value);
   }
 
   const handleVacancySubmit = () => {
@@ -46,21 +51,23 @@ const EditVacancyDlg = (props) => {
 // Variant 2. WORKED! копируются значения из формы в объект vacancy
 // значения полей в переменных с префиксом vacancy.
 // Переменные с префиксом vacancy.. нужны для того, чтобы заполнить значения в форме
-//    let newVacancy = {
-//        title: vacancyTitle,
-//        company: vacancyCompany,
-//        source: vacancySource,
-//        contact: vacancyContact,
-//        comment: vacancyComment,
-//        completed: false
-//        };
-//    let addVacancyAction = actions.createAddVacancyAction(newVacancy);
+    let changedVacancy = {
+        title: props.vacancy.title,
+        company: props.vacancy.company,
+        source: props.vacancy.source,
+        contact: props.vacancy.contact,
+        comment: props.vacancy.comment,
+        completed: props.vacancy.completed
+        };
+    console.log("Save changedVacancy:");
+    console.log(changedVacancy);
+    let changedVacancyAction = actions.createSaveVacancyAction(changedVacancy);
 //NOTE: don't delete comment
 // actionAddTask:
 //   type: actions.TASK_ADD,
 //   payload: taskTitle
 
-//    dispatch(addVacancyAction);
+    dispatch(changedVacancyAction);
 //    setVacancyTitle('');
   }
 

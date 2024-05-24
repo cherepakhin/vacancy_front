@@ -51,7 +51,7 @@ describe("<App />", () => {
       expect(appView.children[0].type).toBe('Connect(MainToolbar)');
     });
 
-    it("NewVacancyPanel in <App />", () => {
+    it("EditVacancyPanel in <App />", () => {
       let testState = {
         app: {},
         vacancies: {}
@@ -60,7 +60,7 @@ describe("<App />", () => {
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       const appView = toJson(wrapper);
 
-      expect(appView.children[1].type).toBe('NewVacancyPanel');
+      expect(appView.children[1].type).toBe('EditVacancyPanel');
     });
 
     it("place Vacancies in <App />", () => {

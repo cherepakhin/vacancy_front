@@ -32,3 +32,7 @@ export const createHideEditVacancyDlgAction = () => ({
   type: actionTypes.HIDE_EDIT_VACANCY_DLG,
 })
 
+export const createSaveVacancyAction = vacancy => ({
+  type: actionTypes.VACANCY_SAVE,
+  payload: vacancy
+});

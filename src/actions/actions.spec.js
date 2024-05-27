@@ -9,15 +9,15 @@ describe("Vacancy actions tests", () => {
       expect(action).toEqual({
                                type: actionTypes.VACANCY_ADD,
                                payload: {"id": -1,
-                                                        "title": "-",
-                                                        "company": "-",
-                                                        "date_created": moment().format('DD.MM.YYYY'),
-                                                        "date_changed": moment().format('DD.MM.YYYY'),
-                                                        "salary": "0",
-                                                        "source": "-",
-                                                        "contact": "-",
-                                                        "comment": "-",
-                                                        "completed": false}
+                                         "title": "-",
+                                         "company": "-",
+                                         "date_created": moment().format('DD.MM.YYYY'),
+                                         "date_changed": moment().format('DD.MM.YYYY'),
+                                         "salary": "0",
+                                         "source": "-",
+                                         "contact": "-",
+                                         "comment": "-",
+                                         "completed": false}
                              });
     });
 

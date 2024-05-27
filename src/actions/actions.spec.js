@@ -1,12 +1,23 @@
+import moment from 'moment';
+
 import * as actionTypes from './actionTypes';
 import {createAddVacancyAction, createToggleVacancyAction, createRemoveVacancyAction} from "./actions";
 
 describe("Vacancy actions tests", () => {
   it("createAddVacancyAction.", () => {
-      const action = createAddVacancyAction("Example vacancy");
+      const action = createAddVacancyAction();
       expect(action).toEqual({
                                type: actionTypes.VACANCY_ADD,
-                               payload: "Example vacancy"
+                               payload: {"id": -1,
+                                                        "title": "-",
+                                                        "company": "-",
+                                                        "date_created": moment().format('DD.MM.YYYY'),
+                                                        "date_changed": moment().format('DD.MM.YYYY'),
+                                                        "salary": "0",
+                                                        "source": "-",
+                                                        "contact": "-",
+                                                        "comment": "-",
+                                                        "completed": false}
                              });
     });
 

@@ -65,4 +65,34 @@ describe("reducerVacancy tests", () => {
     expect(newState.vacancies[1]).toEqual(vacancyMustAdded);
   });
 
+  it("get vacancy by id", () => {
+    let ID = 3;
+    let vacancies = [
+      {"id": 2, "completed": false, "title": "vacancy 2"},
+      {"id": 3, "completed": false, "title": "vacancy 3"},
+      {"id": 1, "completed": false, "title": "vacancy 1"}
+     ];
+
+    let foundElement = vacancies.find(item => item.id == ID);
+
+//    console.log(foundElement);
+    expect(foundElement.id).toEqual(ID);
+  });
+
+  it("get vacancy by id not found", () => {
+    let ID = 30;
+    let vacancies = [
+      {"id": 2, "completed": false, "title": "vacancy 2"},
+      {"id": 3, "completed": false, "title": "vacancy 3"},
+      {"id": 1, "completed": false, "title": "vacancy 1"}
+     ];
+
+    let foundElement = vacancies.find(item => item.id == ID);
+    let notFound = false;
+    if (foundElement === undefined) {
+       notFound = true;
+    }
+    expect(notFound).toBeTruthy();
+  });
+
 });

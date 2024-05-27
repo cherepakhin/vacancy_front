@@ -20,7 +20,7 @@ const MainToolbar = (props) => {
 //    setShowDialogNewVacancy(true); // setting state variable will after exit from function
 
 //    console.log(visibleNewVacancyDlg);
-    let visibleEditVacancyDlgAction = actions.createVisibleEditVacancyDlgAction(visibleEditVacancyDlg);
+    let visibleEditVacancyDlgAction = actions.createAddVacancyAction();
     console.log(visibleEditVacancyDlgAction); // work! {"type": "SHOW_NEW_VACANCY_DLG","payload": {"visible": false}}
     dispatch(visibleEditVacancyDlgAction);
   }

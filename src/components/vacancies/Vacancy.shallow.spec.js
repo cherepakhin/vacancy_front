@@ -350,11 +350,11 @@ describe("<Vacancy />", () => {
     };
 
     const wrapper = shallow(<Vacancy vacancy={vacancy} />);
-    const deleteBtn = wrapper.props().children[6];
+    const changeBtn = wrapper.props().children[6];
 
-    expect(deleteBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-action-open");
-    expect(deleteBtn.props["children"].props.children).toBe("Изменить");
-    expect(deleteBtn.props.title).toBe("Подробнее о вакансии");
+    expect(changeBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-action-open");
+    expect(changeBtn.props["children"].props.children).toBe("Изменить");
+    expect(changeBtn.props.title).toBe("Изменить вакансию");
   });
 
 // Example tests:

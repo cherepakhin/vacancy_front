@@ -14,7 +14,7 @@ const EditVacancyPanel = (props) => {
         or .d-{sm,md,lg,xl,xxl}-none for hide on xs, sm, md, lg, xl, xxl screens
         (https://getbootstrap.com/docs/5.1/utilities/display/) */}
         <Col id="colEditVacancyPanel" xs={12} className={props.visible? "" : "d-none"}>           {/* className={props.show.visible? "" : "d-none"} add className="d-none" for hide, xs={6} 10 cells (https://react-bootstrap.github.io/docs/layout/grid)*/}
-          <h4 id="headerEditVacancyPanel">Изменить вакансию</h4>
+          <h4 id="headerEditVacancyPanel">{props.vacancy.id === -1 ? "Добавить вакансию" : "Изменить вакансию"}</h4>
           <EditVacancyDlg vacancy={props.vacancy} />
         </Col>
       </Row>

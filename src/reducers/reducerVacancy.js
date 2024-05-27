@@ -2,6 +2,7 @@ import moment from 'moment';
 
 import * as actionTypes from '../actions/actionTypes';
 import vacancy0 from '../components/vacancies/vacancy0';
+import vacancyNew from '../components/vacancies/vacancyNew';
 import vacancyTest from '../components/vacancies/vacancyTest';
 
 let state0 = { vacancies: [vacancy0, vacancyTest],
@@ -43,6 +44,7 @@ export default function reducerVacancy(state = state0, action) {
 //                                                         comment: action.payload.comment,
 //                                                         completed: false,
 //                                                       };
+      newState.selectedVacancy = {...vacancyNew};
       newState.visibleEditVacancyDlg = true;
       newState.visibleVacancies = false;
       console.log("reduserVacancy.js: newState-->"+ JSON.stringify(newState));

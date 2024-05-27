@@ -121,7 +121,7 @@ const Vacancy = ({ vacancy }) => {
         <span onClick={() => openAboutDlg()} tabIndex={1} role="button">Описание</span>
       </div>
 
-      <div id="idOpenBtn" className="col-1 list-group-item-action list-group-item-action-open" title="Подробнее о вакансии">
+      <div id="idOpenBtn" className="col-1 list-group-item-action list-group-item-action-open" title="Изменить вакансию">
         <span onClick={() => openEditDlg(vacancy)} tabIndex={2} role="button">Изменить</span>
       </div>
 

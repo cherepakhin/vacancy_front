@@ -1,4 +1,4 @@
-let vacancyTest = {"id": -100,
+let vacancyTest = {"id": 1,
                 "title": "Java developer (Middle/Senior)",
                 "company": "Rocket Science",
                 "date_created": "01.01.2021",

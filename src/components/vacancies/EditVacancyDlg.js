@@ -52,6 +52,7 @@ const EditVacancyDlg = (props) => {
 // значения полей в переменных с префиксом vacancy.
 // Переменные с префиксом vacancy.. нужны для того, чтобы заполнить значения в форме
     let changedVacancy = {
+        id: props.vacancy.id,
         title: props.vacancy.title,
         company: props.vacancy.company,
         source: props.vacancy.source,

@@ -21,7 +21,7 @@ const MainToolbar = (props) => {
 
 //    console.log(visibleNewVacancyDlg);
     let visibleEditVacancyDlgAction = actions.createAddVacancyAction();
-    console.log(visibleEditVacancyDlgAction); // work! {"type": "VACANCY_ADD","payload": {"id": -1,"title": "-","company": "-",...
+    console.log(visibleEditVacancyDlgAction); //
     dispatch(visibleEditVacancyDlgAction);
   }
 

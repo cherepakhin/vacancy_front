@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-let vacancy0 = {"id": -1,
+let vacancy0 = {"id": 0,
                 "title": "Не удалять",
                 "company": "-",
                 "date_created": moment().format('DD.MM.YYYY'),

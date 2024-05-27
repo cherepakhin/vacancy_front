@@ -422,6 +422,13 @@ let применяется, когда нужна переменная с бло
 
 #### TODO
 
+- В index.html
+````java
+    <!--TODO: later
+    <link rel="stylesheet" media="screen and (max-width: 991.98px)" href="%PUBLIC_URL%/mobile.css">
+    -->
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="%PUBLIC_URL%/desktop.css">
+````
 - Jest
 - Использовать dozer mapper [https://dozermapper.github.io/](https://dozermapper.github.io/) для конвертации backend DTO в frontend model 
 - soFetch

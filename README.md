@@ -406,6 +406,43 @@ import renderer from 'react-test-renderer';
 
 ````
 
+При тестировании могут появляться такие warning: "Warning: Failed prop type: The prop `vacancy.title` is marked as required in `Vacancy`, but its value is `undefined`.
+in Vacancy (at Vacancy.shallow.spec.js:380)". 
+
+Объяснение: для теста сделал укороченый props:
+
+````java
+const vacancy = {
+  id: 100,
+};
+
+const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+````
+
+Но props в определении класса Vacancy заданы как обязательные:
+
+````java
+Vacancy.propTypes = {
+    vacancy: PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
+            company: PropTypes.string.isRequired,
+    ...
+````
+Поэтому для теста нужно дать полное определение props:
+
+````java
+it("check title idOpenBtn props in Vacancy", () => {
+  const vacancy = {
+    id: 100,
+    title: "Vacancy 1",
+    company: "Company 1",
+    ....
+  };
+
+  const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+````
+
 #### var и let
 
 var и let — это два способа объявить __переменную__ в JavaScript.

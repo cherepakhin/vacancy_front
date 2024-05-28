@@ -20,8 +20,8 @@ const Vacancy = ({ vacancy }) => {
   const [visibleDeleteConfirmDlg, setVisibleDeleteConfirmDlg] = useState(false);
   const [visibleVacancy0NotDeleteDlg, setVisibleVacancy0NotDeleteDlg] = useState(false);
 
-  const showLastEvent = () => {
-    console.log("showLastEvent");
+  const showLastEvent = (id) => {
+    console.log("clicked on DATE vacancy id="+id);
   }
 
 // show about dialog

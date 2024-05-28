@@ -373,7 +373,7 @@ describe("<Vacancy />", () => {
   });
 
   it("check title idOpenBtn props in Vacancy", () => {
-    const vacancy = {
+    let vacancy = {
       id: 100,
       title: "Vacancy 1",
       company: "Company 1",

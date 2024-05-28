@@ -242,11 +242,46 @@ describe("<Vacancy />", () => {
 
     wrapper.find('#idDeleteBtn').simulate('click'); // find button by id
     expect(wrapper.find(DeleteConfirmDlg)).toHaveLength(1); // find component by class
-    expect(wrapper.find("#idDeleteBtn")).toHaveLength(1); // find component by id
 
     const deleteDlg = wrapper.find(DeleteConfirmDlg);
     expect(deleteDlg.props().visible).toBe(false);
     expect(deleteDlg.props().vacancy).toBe(vacancy);
+  });
+
+  it('find DeleteDlg by ID', () =>  {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+
+    const wrapper = mount(<Vacancy vacancy={vacancy} />);
+    expect(wrapper.find("#deleteConfirmDlg")).toHaveLength(1); // find component by id
+  });
+
+  it('find DeleteDlg by name class', () =>  {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+
+    const wrapper = mount(<Vacancy vacancy={vacancy} />);
+    expect(wrapper.find(DeleteConfirmDlg)).toHaveLength(1); // find component by class
   });
 
   it('should open the delete confirmation dialog with mount (https://chat.lmsys.org/)', () => {

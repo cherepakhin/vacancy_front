@@ -95,7 +95,7 @@ const Vacancy = ({ vacancy }) => {
         fnClose={closeAboutDlg}
       />
 
-      <DeleteConfirmDlg vacancy={vacancy} visible={visibleDeleteConfirmDlg}
+      <DeleteConfirmDlg id="deleteConfirmDlg" vacancy={vacancy} visible={visibleDeleteConfirmDlg}
         fnVacancyDeleteConfirm={(id) => confirmDeleteConfirmDlg(id)}
         fnVacancyDeleteCancel={cancelDeleteConfirmDlg}
       />

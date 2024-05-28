@@ -443,19 +443,56 @@ it("check title idOpenBtn props in Vacancy", () => {
   const wrapper = shallow(<Vacancy vacancy={vacancy} />);
 ````
 
-#### var и let
+#### var, let, const
 
 var и let — это два способа объявить __переменную__ в JavaScript.
 
-var используется, когда нужна переменная с функциональной областью видимости или __глобальная__ переменная. Также его можно использовать в устаревшем коде, где уже используется var. При определении var "утекает" из ообласти видимости функции в глобальную область видимости.
+var используется, когда нужна переменная с функциональной областью видимости или __глобальная__ переменная. Также его можно использовать в устаревшем коде, где уже используется var. При определении var "утекает" из области видимости функции в глобальную область видимости.
 
 let применяется, когда нужна переменная с блочной областью видимости, которую не нужно тянуть в другие части программы. Также он позволяет избежать неожиданного поведения, связанного с поднятием. Если вы используете var, эта переменная «утечёт» за пределы цикла и будет доступна во всей функции.
 В современной разработке и новых проектах разработчики предпочитают let и const из-за их предсказуемости и надёжности.
+Примеры:
+
+````java
+var myVar = 1;
+
+function setMyVar() {
+  myVar = 2;
+}
+
+setMyVar();
+
+console.log(myVar); // --> 2
+````
+
+__любая функция, объявленная в той же области видимости, сможет обратиться к myVar__
+
+````java
+function setMyVar() {
+  var myVar = 2;
+}
+
+setMyVar();
+
+console.log(myVar); // undefined
+````
+
+````java
+function varTest() {
+  for (var i = 0; i < 3; i++) {
+    console.log(i);
+  }
+  console.log(i); // 3, так как ключевое слово var действует на уровне функции.
+}
+
+varTest();
+````
 
 #### Ссылки
 
 - [Диаграмма состояний](https://app.diagrams.net/?src=about#G1i8cVXJXj7xbnOIqtzitvihxvn_yiwOuJ#%7B%22pageId%22%3A%226vxvHjby1d88luMmcxHr%22%7D)<br/>
 - [Ошибка /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.28' not found](http://v.perm.ru/main/index.php/75-oshibka-lib-x86-64-linux-gnu-libc-so-6-version-glibc-2-28-not-found)
+- [Различия var, let, const и области видимости в javascript](https://v.perm.ru/main/index.php/homepage/79-razlichiya-var-let-const-v-js)
 
 #### TODO
 

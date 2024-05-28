@@ -240,11 +240,13 @@ describe("<Vacancy />", () => {
 
     const wrapper = mount(<Vacancy vacancy={vacancy} />);
 
-    wrapper.find('#idDeleteBtn').simulate('click');
-    expect(wrapper.find(DeleteConfirmDlg)).toHaveLength(1);
-    expect(wrapper.find("#idDeleteBtn")).toHaveLength(1);
+    wrapper.find('#idDeleteBtn').simulate('click'); // find button by id
+    expect(wrapper.find(DeleteConfirmDlg)).toHaveLength(1); // find component by class
+    expect(wrapper.find("#idDeleteBtn")).toHaveLength(1); // find component by id
 
     const deleteDlg = wrapper.find(DeleteConfirmDlg);
+    expect(deleteDlg.props().visible).toBe(false);
+    expect(deleteDlg.props().vacancy).toBe(vacancy);
   });
 
   it('should open the delete confirmation dialog with mount (https://chat.lmsys.org/)', () => {
@@ -273,7 +275,7 @@ describe("<Vacancy />", () => {
 //    console.log("=============================");
 
 //    console.log(deleteDlg.props()); // DON`T DELETE COMMENT
-    deleteDlg.props().fnVacancyDeleteCancel(); // console.log("handleVacancyDeleteCancel" );
+    deleteDlg.props().fnVacancyDeleteCancel(); // Close delete dialog. console.log("handleVacancyDeleteCancel" );
     expect(deleteDlg.props().visible).toBe(false); // OK
 
 //    console.log(deleteDlg.props());
@@ -357,7 +359,7 @@ describe("<Vacancy />", () => {
     expect(changeBtn.props.title).toBe("Изменить вакансию");
   });
 
-// Example tests:
+// Don`t delete this comment. Example tests:
 //    const children = toJson(wrapper.children);
 //    console.log(children);
 

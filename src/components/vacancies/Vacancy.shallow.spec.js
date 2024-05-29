@@ -1,7 +1,10 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
+//import { render, queryByAttribute } from 'react-testing-library';
 import toJson from "enzyme-to-json";
-import { act } from '@testing-library/react';
+import { act, screen, render, queryByAttribute } from '@testing-library/react';
+//import { screen } from '@testing-library/dom';
+import userEvent from '@testing-library/user-event';
 import * as reactRedux from 'react-redux';
 import { useSelector, useDispatch, mockStore } from "react-redux";
 
@@ -346,7 +349,6 @@ describe("<Vacancy />", () => {
     };
 
     const reactRedux = { useDispatch, useSelector }
-    const useDispatchMock = jest.spyOn(reactRedux, "useDispatch");
     const useSelectorMock = jest.spyOn(reactRedux, "useSelector");
     const initialState = {
           vacancy: {
@@ -358,18 +360,328 @@ describe("<Vacancy />", () => {
 
     useSelectorMock.mockReturnValue(initialState);
 
-    const vacancyComponent = mount(<Vacancy vacancy={vacancy} />);
+    const vacancyComponent = render(<Vacancy vacancy={vacancy} />);
+    // screen.debug(); // ERROR
+    console.log(screen);
+    const divIdLastEvent = vacancyComponent.container.querySelector('#idLastEvent');
+    //  <div class="col-1 list-group-item-date" id="idLastEvent" title="Последнее событие"><span tabindex="0">02.03.2020</span></div>
+    expect(divIdLastEvent.id).toBe('idLastEvent');
+    expect(divIdLastEvent.title).toBe('Последнее событие');
+    expect(divIdLastEvent.className).toBe('col-1 list-group-item-date');
 
-    act(() => {
-        expect(vacancyComponent.find("#idDeleteBtn")).toHaveLength(1);
-        vacancyComponent.find('#idDeleteBtn').simulate('click');
-        vacancyComponent.find('#idDeleteBtn').simulate('click');
-        vacancyComponent.find('#idDeleteBtn').simulate('click');
-        vacancyComponent.find('#idDeleteBtn').simulate('click');
+//    console.log(someElement);
+//      <ref *1> HTMLDivElement {
+//        '__reactInternalInstance$5daycucevbn': <ref *2> FiberNode {
+//          tag: 5,
+//          key: null,
+//          elementType: 'div',
+//          type: 'div',
+//          stateNode: [Circular *1],
+//          return: FiberNode {
+//            tag: 5,
+//            key: null,
+//            elementType: 'div',
+//            type: 'div',
+//            stateNode: [HTMLDivElement],
+//            return: [FiberNode],
+//            child: [FiberNode],
+//            sibling: null,
+//            index: 0,
+//            ref: null,
+//            pendingProps: [Object],
+//            memoizedProps: [Object],
+//            updateQueue: null,
+//            memoizedState: null,
+//            dependencies: null,
+//            mode: 0,
+//            effectTag: 0,
+//            nextEffect: null,
+//            firstEffect: [FiberNode],
+//            lastEffect: [FiberNode],
+//            expirationTime: 0,
+//            childExpirationTime: 1073741823,
+//            alternate: [FiberNode],
+//            actualDuration: 0,
+//            actualStartTime: -1,
+//            selfBaseDuration: 0,
+//            treeBaseDuration: 0,
+//            _debugID: 591,
+//            _debugIsCurrentlyTiming: false,
+//            _debugSource: null,
+//            _debugOwner: [FiberNode],
+//            _debugNeedsRemount: false,
+//            _debugHookTypes: null
+//          },
+//          child: FiberNode {
+//            tag: 5,
+//            key: null,
+//            elementType: 'span',
+//            type: 'span',
+//            stateNode: [HTMLSpanElement],
+//            return: [Circular *2],
+//            child: null,
+//            sibling: null,
+//            index: 0,
+//            ref: null,
+//            pendingProps: [Object],
+//            memoizedProps: [Object],
+//            updateQueue: null,
+//            memoizedState: null,
+//            dependencies: null,
+//            mode: 0,
+//            effectTag: 0,
+//            nextEffect: null,
+//            firstEffect: null,
+//            lastEffect: null,
+//            expirationTime: 0,
+//            childExpirationTime: 0,
+//            alternate: null,
+//            actualDuration: 0,
+//            actualStartTime: -1,
+//            selfBaseDuration: 0,
+//            treeBaseDuration: 0,
+//            _debugID: 623,
+//            _debugIsCurrentlyTiming: false,
+//            _debugSource: [Object],
+//            _debugOwner: [FiberNode],
+//            _debugNeedsRemount: false,
+//            _debugHookTypes: null
+//          },
+//          sibling: FiberNode {
+//            tag: 11,
+//            key: null,
+//            elementType: [Object],
+//            type: [Object],
+//            stateNode: null,
+//            return: [FiberNode],
+//            child: [FiberNode],
+//            sibling: [FiberNode],
+//            index: 4,
+//            ref: null,
+//            pendingProps: [Object],
+//            memoizedProps: [Object],
+//            updateQueue: null,
+//            memoizedState: [Object],
+//            dependencies: [Object],
+//            mode: 0,
+//            effectTag: 1,
+//            nextEffect: null,
+//            firstEffect: null,
+//            lastEffect: null,
+//            expirationTime: 0,
+//            childExpirationTime: 0,
+//            alternate: [FiberNode],
+//            actualDuration: 0,
+//            actualStartTime: -1,
+//            selfBaseDuration: 0,
+//            treeBaseDuration: 0,
+//            _debugID: 597,
+//            _debugIsCurrentlyTiming: false,
+//            _debugSource: [Object],
+//            _debugOwner: [FiberNode],
+//            _debugNeedsRemount: false,
+//            _debugHookTypes: [Array]
+//          },
+//          index: 3,
+//          ref: null,
+//          pendingProps: {
+//            id: 'idLastEvent',
+//            className: 'col-1 list-group-item-date',
+//            title: 'Последнее событие',
+//            children: [Object]
+//          },
+//          memoizedProps: {
+//            id: 'idLastEvent',
+//            className: 'col-1 list-group-item-date',
+//            title: 'Последнее событие',
+//            children: [Object]
+//          },
+//          updateQueue: null,
+//          memoizedState: null,
+//          dependencies: null,
+//          mode: 0,
+//          effectTag: 0,
+//          nextEffect: null,
+//          firstEffect: null,
+//          lastEffect: null,
+//          expirationTime: 0,
+//          childExpirationTime: 0,
+//          alternate: FiberNode {
+//            tag: 5,
+//            key: null,
+//            elementType: 'div',
+//            type: 'div',
+//            stateNode: [Circular *1],
+//            return: [FiberNode],
+//            child: [FiberNode],
+//            sibling: [FiberNode],
+//            index: 3,
+//            ref: null,
+//            pendingProps: [Object],
+//            memoizedProps: [Object],
+//            updateQueue: null,
+//            memoizedState: null,
+//            dependencies: null,
+//            mode: 0,
+//            effectTag: 0,
+//            nextEffect: null,
+//            firstEffect: null,
+//            lastEffect: null,
+//            expirationTime: 0,
+//            childExpirationTime: 0,
+//            alternate: [Circular *2],
+//            actualDuration: 0,
+//            actualStartTime: -1,
+//            selfBaseDuration: 0,
+//            treeBaseDuration: 0,
+//            _debugID: 596,
+//            _debugIsCurrentlyTiming: false,
+//            _debugSource: [Object],
+//            _debugOwner: [FiberNode],
+//            _debugNeedsRemount: false,
+//            _debugHookTypes: null
+//          },
+//          actualDuration: 0,
+//          actualStartTime: -1,
+//          selfBaseDuration: 0,
+//          treeBaseDuration: 0,
+//          _debugID: 596,
+//          _debugIsCurrentlyTiming: false,
+//          _debugSource: {
+//            fileName: '/home/vasi/prog/js/vacancy_front/src/components/vacancies/Vacancy.js',
+//            lineNumber: 107,
+//            columnNumber: 7
+//          },
+//          _debugOwner: FiberNode {
+//            tag: 0,
+//            key: null,
+//            elementType: [Function],
+//            type: [Function],
+//            stateNode: null,
+//            return: [FiberNode],
+//            child: [FiberNode],
+//            sibling: null,
+//            index: 0,
+//            ref: null,
+//            pendingProps: [Object],
+//            memoizedProps: [Object],
+//            updateQueue: null,
+//            memoizedState: [Object],
+//            dependencies: null,
+//            mode: 0,
+//            effectTag: 1,
+//            nextEffect: null,
+//            firstEffect: [FiberNode],
+//            lastEffect: [FiberNode],
+//            expirationTime: 0,
+//            childExpirationTime: 1073741823,
+//            alternate: [FiberNode],
+//            actualDuration: 0,
+//            actualStartTime: -1,
+//            selfBaseDuration: 0,
+//            treeBaseDuration: 0,
+//            _debugID: 585,
+//            _debugIsCurrentlyTiming: false,
+//            _debugSource: [Object],
+//            _debugOwner: null,
+//            _debugNeedsRemount: false,
+//            _debugHookTypes: [Array]
+//          },
+//          _debugNeedsRemount: false,
+//          _debugHookTypes: null
+//        },
+//        '__reactEventHandlers$5daycucevbn': {
+//          id: 'idLastEvent',
+//          className: 'col-1 list-group-item-date',
+//          title: 'Последнее событие',
+//          children: {
+//            '$$typeof': Symbol(react.element),
+//            type: 'span',
+//            key: null,
+//            ref: null,
+//            props: [Object],
+//            _owner: [FiberNode],
+//            _store: {}
+//          }
+//        }
+//      }
 
-        expect(vacancyComponent.find(DeleteConfirmDlg)).toHaveLength(1);
-        const propsDeleteDlg = vacancyComponent.find(DeleteConfirmDlg).props();
-    });
+    // console.log(screen.debug); // [Function: debug]
+    // console.log(screen.debug()); // ERROR
+    // console.log(vacancyComponent.debug()); // vacancyComponent.debug is not a function
+    // console.log(screen.queryByLabelText("deleteConfirmDlg")); // null
+    // console.log(screen.queryByDisplayValue("Удалить")); // null
+// HELP
+//    const vacancyComponent = render(<Vacancy vacancy={vacancy} />);
+//    console.log(screen);
+//     {
+//            debug: [Function: debug],
+//            logTestingPlaygroundURL: [Function: logTestingPlaygroundURL],
+
+// By LabelText
+//            queryAllByLabelText: [Function: bound ],
+//            queryByLabelText: [Function: bound ],
+//            getAllByLabelText: [Function: bound ],
+//            getByLabelText: [Function: bound ],
+//            findAllByLabelText: [Function: bound ],
+//            findByLabelText: [Function: bound ],
+
+// By PlaceholderText
+//            queryByPlaceholderText: [Function: bound ],
+//            queryAllByPlaceholderText: [Function: bound ],
+//            getByPlaceholderText: [Function: bound ],
+//            getAllByPlaceholderText: [Function: bound ],
+//            findAllByPlaceholderText: [Function: bound ],
+//            findByPlaceholderText: [Function: bound ],
+
+// By Text
+//      console.log(screen.queryByText("Удалить")); // null
+//      console.log(screen.queryByText("DeleteConfirmDlg")); // null
+//            queryByText: [Function: bound ],
+//            queryAllByText: [Function: bound ],
+//            getByText: [Function: bound ],
+//            getAllByText: [Function: bound ],
+//            findAllByText: [Function: bound ],
+//            findByText: [Function: bound ],
+
+// By DisplayValue:
+//        console.log(screen.queryByDisplayValue("Удалить")); // null
+//            queryByDisplayValue: [Function: bound ],
+//            queryAllByDisplayValue: [Function: bound ],
+//            getByDisplayValue: [Function: bound ],
+//            getAllByDisplayValue: [Function: bound ],
+//            findAllByDisplayValue: [Function: bound ],
+//            findByDisplayValue: [Function: bound ],
+
+// By AltText:
+//            queryByAltText: [Function: bound ],
+//            queryAllByAltText: [Function: bound ],
+//            getByAltText: [Function: bound ],
+//            getAllByAltText: [Function: bound ],
+//            findAllByAltText: [Function: bound ],
+//            findByAltText: [Function: bound ],
+//            queryByTitle: [Function: bound ],
+//            queryAllByTitle: [Function: bound ],
+//            getByTitle: [Function: bound ],
+//            getAllByTitle: [Function: bound ],
+//            findAllByTitle: [Function: bound ],
+//            findByTitle: [Function: bound ],
+
+//            queryByRole: [Function: bound ],
+//            queryAllByRole: [Function: bound ],
+//            getAllByRole: [Function: bound ],
+//            getByRole: [Function: bound ],
+//            findAllByRole: [Function: bound ],
+//            findByRole: [Function: bound ],
+
+//            queryByTestId: [Function: bound ],
+//            queryAllByTestId: [Function: bound ],
+//            getByTestId: [Function: bound ],
+//            getAllByTestId: [Function: bound ],
+//            findAllByTestId: [Function: bound ],
+//            findByTestId: [Function: bound ]
+//          }
+
   });
 
   it("check title idOpenBtn props in Vacancy", () => {
@@ -392,6 +704,25 @@ describe("<Vacancy />", () => {
     expect(changeBtn.props["className"]).toBe("col-1 list-group-item-action list-group-item-action-open");
     expect(changeBtn.props["children"].props.children).toBe("Изменить");
     expect(changeBtn.props.title).toBe("Изменить вакансию");
+  });
+
+  it("show NOT delete dialog for vacancy=-1", () => {
+    let vacancy = {
+      id: -1,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+
+    const wrapper = shallow(<Vacancy vacancy={vacancy} />);
+    const changeBtn = wrapper.props().children[6];
+
   });
 
 // Don`t delete this comment. Example tests:

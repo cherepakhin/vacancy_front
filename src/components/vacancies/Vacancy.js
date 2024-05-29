@@ -44,8 +44,8 @@ const Vacancy = ({ vacancy }) => {
 
   const openDeleteConfirmDlg = (vacancyId) => {
     console.log("openDeleteConfirmDlg vacancyId=", vacancyId);
-    if(vacancyId === -1) {
-        console.log("try delete vacancy.id === -1");
+    if(vacancyId <= 0) { // DON't delete tested vacancies
+        console.log("try delete vacancy.id <= 0 "); // tested vacancies
         setVisibleVacancy0NotDeleteDlg(true);
         return
     }

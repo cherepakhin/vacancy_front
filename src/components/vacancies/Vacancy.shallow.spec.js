@@ -7,6 +7,7 @@ import { act, screen, render, queryByAttribute } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import * as reactRedux from 'react-redux';
 import { useSelector, useDispatch, mockStore } from "react-redux";
+import TestRenderer from 'react-test-renderer';
 
 import Vacancy from "./Vacancy";
 import DeleteConfirmDlg from "./DeleteConfirmDlg";
@@ -17,6 +18,86 @@ jest.mock('react-redux', () => ({
 }));
 
 describe("<Vacancy />", () => {
+  it("test with TestRenderer", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1",
+      company: "Company 1",
+      date_created: "01.02.2020",
+      date_changed: "02.03.2020",
+      salary: "0",
+      source: "Source 1",
+      contact: "Contact 1",
+      comment: "Comment 1",
+      completed: false
+    };
+    const testRenderer = TestRenderer.create(<Vacancy vacancy={vacancy} />);
+//    console.log(testRenderer.toJSON());
+//    {
+//      type: 'div',
+//      props: {
+//        xs: 12,
+//        disabled: false,
+//        onClick: [Function (anonymous)],
+//        className: 'list-group-item'
+//      },
+//      children: [
+//        { type: 'div', props: [Object], children: [Array] },
+//        { type: 'div', props: [Object], children: [Array] },
+//        { type: 'div', props: [Object], children: [Array] },
+//        { type: 'div', props: [Object], children: [Array] },
+//        { type: 'div', props: [Object], children: [Array] }
+//      ]
+    const json  =  testRenderer.toJSON();
+    expect(json.type).toEqual("div");
+    expect(json.props.xs).toEqual(12);
+    expect(json.props.disabled).toEqual(false);
+    expect(json.props.className).toEqual("list-group-item");
+    expect(json.children.length).toBe(5);
+
+    expect(json.children[0].type).toEqual("div");
+//    console.log(json.children[0].props);
+//        {
+//          id: 'idLastEvent',
+//          className: 'col-1 list-group-item-date',
+//          title: 'Последнее событие'
+//        }
+    expect(json.children[0].props.id).toEqual("idLastEvent");
+    expect(json.children[0].props.className).toEqual("col-1 list-group-item-date");
+    expect(json.children[0].props.title).toEqual("Последнее событие");
+
+//    console.log(json.children[1]);
+//    {
+//      type: 'div',
+//      props: { style: undefined, className: 'form-check' },
+//      children: [
+//        { type: 'input', props: [Object], children: null },
+//        { type: 'label', props: [Object], children: [Array] }
+//      ]
+//    }
+    expect(json.children[1].type).toEqual("div");
+    expect(json.children[1].props.className).toEqual("form-check");
+    expect(json.children[1].children[0].type).toEqual("input");
+    expect(json.children[1].children[1].type).toEqual("label");
+//    console.log(json.children[1].children[0].props);
+//    {
+//      checked: false,
+//      onChange: [Function: onChange],
+//      disabled: false,
+//      type: 'checkbox',
+//      id: 100,
+//      className: 'form-check-input'
+//    }
+    expect(json.children[1].children[0].props.checked).toEqual(false);
+    expect(json.children[1].children[0].props.type).toEqual("checkbox");
+    expect(json.children[1].children[0].props.id).toEqual(100);
+    expect(json.children[1].children[0].props.className).toEqual("form-check-input");
+
+    expect(json.children[2].type).toEqual("div");
+    expect(json.children[3].type).toEqual("div");
+    expect(json.children[4].type).toEqual("div");
+
+  });
 
   it("filter map by selected keys", () => {
     const myMap = new Map([["id", 100], ["title", "Vacancy 1"], ["checked", false], ["type", "checkbox"]]);
@@ -362,12 +443,19 @@ describe("<Vacancy />", () => {
 
     const vacancyComponent = render(<Vacancy vacancy={vacancy} />);
     // screen.debug(); // ERROR
-    console.log(screen);
+//    console.log(screen);
     const divIdLastEvent = vacancyComponent.container.querySelector('#idLastEvent');
     //  <div class="col-1 list-group-item-date" id="idLastEvent" title="Последнее событие"><span tabindex="0">02.03.2020</span></div>
     expect(divIdLastEvent.id).toBe('idLastEvent');
     expect(divIdLastEvent.title).toBe('Последнее событие');
     expect(divIdLastEvent.className).toBe('col-1 list-group-item-date');
+    expect(divIdLastEvent.tagName).toBe('DIV');
+//    expect(divIdLastEvent.children.type).toBe('span');
+//    expect(divIdLastEvent.elementType).toBe('div'); // undefined
+//    expect(divIdLastEvent.type).toBe('div'); // Received: undefined
+//    console.log(divIdLastEvent.children); // HTMLCollection {}
+//    console.log(divIdLastEvent.children.pendingProps); // undefined
+//    console.log(divIdLastEvent);
 
 //    console.log(someElement);
 //      <ref *1> HTMLDivElement {

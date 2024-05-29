@@ -7,7 +7,7 @@ import vacancyTest from '../components/vacancies/vacancyTest';
 
 let state0 = { vacancies: [vacancy0, vacancyTest],
                visibleNewVacancyDlg: false,
-               visibleVacancies: false,
+               visibleVacancies: true,
                selectedVacancy: {...vacancy0},
              };
 

@@ -18,7 +18,18 @@ describe("<App />", () => {
     it("displayName is Container in <App />", () => {
       let testState = {
         app: {},
-        vacancies: {}
+        vacancies: {},
+        selectedVacancy: {
+          id: 10,
+          title:'',
+          company: '',
+          date_created: '',
+          date_changed: '',
+          source: '',
+          contact: '',
+          comment: '',
+          completed: false,
+          },
       };
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
@@ -30,7 +41,18 @@ describe("<App />", () => {
     it("className <App />", () => {
       let testState = {
         app: {},
-        vacancies: {}
+        vacancies: {},
+        selectedVacancy: {
+          id: 10,
+          title:'',
+          company: '',
+          date_created: '',
+          date_changed: '',
+          source: '',
+          contact: '',
+          comment: '',
+          completed: false,
+          },
       };
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
@@ -42,7 +64,18 @@ describe("<App />", () => {
     it("MainToolbar in <App />", () => {
       let testState = {
         app: {},
-        vacancies: {}
+        vacancies: {},
+        selectedVacancy: {
+          id: 10,
+          title:'',
+          company: '',
+          date_created: '',
+          date_changed: '',
+          source: '',
+          contact: '',
+          comment: '',
+          completed: false,
+          },
       };
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
@@ -54,7 +87,18 @@ describe("<App />", () => {
     it("EditVacancyPanel in <App />", () => {
       let testState = {
         app: {},
-        vacancies: {}
+        vacancies: {},
+        selectedVacancy: {
+          id: 10,
+          title:'',
+          company: '',
+          date_created: '',
+          date_changed: '',
+          source: '',
+          contact: '',
+          comment: '',
+          completed: false,
+          },
       };
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
@@ -66,7 +110,18 @@ describe("<App />", () => {
     it("place Vacancies in <App />", () => {
       let testState = {
         app: {},
-        vacancies: {}
+        vacancies: {},
+        selectedVacancy: {
+          id: 10,
+          title:'',
+          company: '',
+          date_created: '',
+          date_changed: '',
+          source: '',
+          contact: '',
+          comment: '',
+          completed: false,
+          },
       };
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
@@ -78,7 +133,18 @@ describe("<App />", () => {
     it("App Container contains 3 area(Row): MainToolbar, NewVacancyPanel, Vacancies", () => {
       let testState = {
         app: {},
-        vacancies: {}
+        vacancies: {},
+        selectedVacancy: {
+          id: 10,
+          title:'',
+          company: '',
+          date_created: '',
+          date_changed: '',
+          source: '',
+          contact: '',
+          comment: '',
+          completed: false,
+          },
       };
 
       const wrapper = shallow(<AppUnwrapped {...testState} />);
@@ -90,7 +156,18 @@ describe("<App />", () => {
     it("appView.node.props.fluid in <App />", () => {
       let testState = {
         app: {},
-        vacancies: {}
+        vacancies: {},
+        selectedVacancy: {
+          id: 10,
+          title:'',
+          company: '',
+          date_created: '',
+          date_changed: '',
+          source: '',
+          contact: '',
+          comment: '',
+          completed: false,
+          },
       };
       const wrapper = shallow(<AppUnwrapped {...testState} />);
       // console.log(wrapper); // -> {} // DON`T DELETE COMMENT

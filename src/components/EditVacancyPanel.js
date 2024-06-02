@@ -1,5 +1,7 @@
 import React from 'react';
 import { Col, Row } from "react-bootstrap";
+import PropTypes from "prop-types";
+
 import EditVacancyDlg from "./vacancies/EditVacancyDlg";
 
 // Param:
@@ -19,6 +21,20 @@ const EditVacancyPanel = (props) => {
         </Col>
       </Row>
     )
+}
+
+EditVacancyPanel.propTypes = {
+    vacancy: PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
+            company: PropTypes.string.isRequired,
+            date_created: PropTypes.string.isRequired,
+            date_changed: PropTypes.string.isRequired,
+            source: PropTypes.string.isRequired,
+            contact: PropTypes.string.isRequired,
+            comment: PropTypes.string.isRequired,
+            completed: PropTypes.bool.isRequired
+  }).isRequired
 }
 
 export default EditVacancyPanel;

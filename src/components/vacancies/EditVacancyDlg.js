@@ -7,6 +7,10 @@ const EditVacancyDlg = (props) => {
     console.log(props);
     console.log(props.vacancy);
 // Вызовите useState на верхнем уровне вашего компонента, чтобы объявить переменную состояния.
+// в компоненте используются только методы set... (setVacancyTitle, setVacancyCompany... и т.д.).
+// Значения vacancyTitle, vacancyCompany и т.д. диалог получает из props, из redux .
+// vacancyTitle, vacancyCompany и т.д. можно удалить
+// или методы set... получать снаружи и, в таком случае, компонент будет отвязан от redux
   const [vacancyTitle, setVacancyTitle] = useState(''); // '' - значение по умолчанию, описание вакансии
   const [vacancyCompany, setVacancyCompany] = useState(''); // компания
   const [vacancySource, setVacancySource] = useState(''); // источник вакансии (сайт)
@@ -80,10 +84,10 @@ const EditVacancyDlg = (props) => {
   return (
     <div>
       <div className="mb-2 ml-0">
-        <FormControl id="vacancyTitle" placeholder="Название новой вакансии"
-          value={props.vacancy.title} onChange={e => handleVacancyTitleChange(e)} />
-        <FormControl id="vacancyCompany" className="mt-2" placeholder="Компания"
+        <FormControl id="vacancyCompany" placeholder="Компания"
           value={props.vacancy.company} onChange={e => handleVacancyCompanyChange(e)} />
+        <FormControl id="vacancyTitle" className="mt-2" placeholder="Название новой вакансии"
+          value={props.vacancy.title} onChange={e => handleVacancyTitleChange(e)} />
         <FormControl id="vacancySource" className="mt-2" placeholder="Источник вакансии (н.п. ссылка на сайт)"
           value={props.vacancy.source} onChange={e => handleVacancySourceChange(e)} />
         <FormControl id="vacancyContact" className="mt-2" placeholder="Контакты (ФИО, telegram, email, телефон)"

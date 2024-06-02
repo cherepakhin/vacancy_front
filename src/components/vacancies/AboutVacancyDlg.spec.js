@@ -70,4 +70,75 @@ describe("AboutVacancyDlg test", () => {
 
     expect(dlg.children[0].props.show).toBe(false);
   });
+
+  it("AboutVacancyDlg check rounded-0", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1"
+    };
+    const wrapper = mount(<AboutVacancyDlg vacancy={{id: 100, title: "Vacancy 1"}} visible={true} fnClose={() => jest.fn()}/>);
+    const dlg = toJson(wrapper);
+//    console.log(dlg);
+//      {
+//        node: {
+//          nodeType: 'function',
+//          type: [Function: AboutVacancyDlg] { propTypes: [Object] },
+//          props: { vacancy: [Object], visible: true, fnClose: [Function: fnClose] }, !!!
+//          key: undefined,
+//          ref: null,
+//          instance: null,
+//          rendered: {
+//            nodeType: 'function',
+//            type: [Object],
+//            props: [Object],
+//            key: undefined,
+//            ref: null,
+//            instance: null,
+//            rendered: [Object]
+//          }
+//        },
+//        type: 'AboutVacancyDlg',
+//        props: {
+//          vacancy: { id: 100, title: 'Vacancy 1' },
+//          visible: true,
+//          fnClose: [Function: fnClose]
+//        },
+//        children: [
+//          {
+//            node: [Object],
+//            type: 'Modal',
+//            props: [Object],
+//            children: [Array],
+//            '$$typeof': Symbol(react.test.json)
+//          }
+//        ],
+//        '$$typeof': Symbol(react.test.json)
+//      }
+
+//    console.log(dlg.node.props);
+//      {
+//        vacancy: { id: 100, title: 'Vacancy 1' },
+//        visible: true,
+//        fnClose: [Function: fnClose]
+//      }
+
+    console.log(dlg.children.length); // 1
+    const header_props  = dlg.children[0].props;
+    // {
+    //  "animation": true,
+    //  "autoFocus": true,
+    //  "backdrop": true,
+    //  "className": "rounded-0",
+    //  "dialogAs": {
+    //    "$$typeof": Symbol(react.forward_ref),
+    //    "displayName": "ModalDialog",
+    //    "render": [Function anonymous]},
+    //    "enforceFocus": true,
+    //    "keyboard": true,
+    //    "restoreFocus": true,
+    //    "show": true
+    // }
+    expect(header_props.className).toBe("rounded-0");
+  });
+
 });

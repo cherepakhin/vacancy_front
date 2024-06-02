@@ -55,7 +55,7 @@ export default function reducerVacancy(state = state0, action) {
       //TODO: add dozer mapper for convert backend model to frontend
       console.log("reduserVacancy.js: save payload-->"+ JSON.stringify(action.payload));
       //TODO: change newState.vacancies.push to correct vacancy
-      let vacancyFound = newState.vacancies.find(vacancy => vacancy.id == action.payload.id);
+      let vacancyFound = newState.vacancies.find(vacancy => vacancy.id === action.payload.id);
       console.log("reduserVacancy.js: find vacancy-->" + JSON.stringify(vacancyFound));
       if (vacancyFound !== undefined) {
         console.log("reduserVacancy.js:"+vacancyFound);

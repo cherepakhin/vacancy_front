@@ -12,12 +12,28 @@ jest.mock('react-redux', () => ({
 }));
 
 describe("AboutVacancyDlg test", () => {
-  it("AboutVacancyDlg check prop vacancy with MOUNT", () => {
+  it("AboutVacancyDlg check prop vacancy with MOUNT (example 1)", () => {
+    const wrapper = mount(<AboutVacancyDlg vacancy={{id: 100, title: "Vacancy 1"}} visible={true} fnClose={() => jest.fn()}/>);
+    const dlg = toJson(wrapper);
+    // demo log
+    // don't delete comments
+    //    console.log(dlg);
+    //    console.log(dlg.node.props);
+    //    expect(dlg.children[0].props.className).toBe("rounded-0");
+
     const vacancy = {
       id: 100,
       title: "Vacancy 1"
     };
-    const wrapper = mount(<AboutVacancyDlg vacancy={{id: 100, title: "Vacancy 1"}} visible={true} fnClose={() => jest.fn()}/>);
+    expect(dlg.node.props.vacancy).toEqual(vacancy);
+  });
+
+  it("AboutVacancyDlg check prop vacancy with MOUNT (example 2)", () => {
+    const vacancy = {
+      id: 100,
+      title: "Vacancy 1"
+    };
+    const wrapper = mount(<AboutVacancyDlg vacancy={{...vacancy}} visible={true} fnClose={() => jest.fn()}/>);
     const dlg = toJson(wrapper);
     // demo log
     // don't delete comments

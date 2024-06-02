@@ -33,8 +33,16 @@ describe("AboutVacancyDlg test", () => {
       id: 100,
       title: "Vacancy 1"
     };
-    const wrapper = mount(<AboutVacancyDlg vacancy={{id: 100, title: "Vacancy 1"}} visible={true} fnClose={() => jest.fn()}/>);
+// work!
+//    const wrapper = mount(<AboutVacancyDlg vacancy={{id: 100, title: "Vacancy 1"}} visible={true} fnClose={() => jest.fn()}/>);
+    const wrapper = mount(<AboutVacancyDlg vacancy={{...vacancy}} visible={true} fnClose={() => jest.fn()}/>);
     const dlg = toJson(wrapper);
+//    console.log(dlg.node.props);
+//      {
+//        vacancy: { id: 100, title: 'Vacancy 1' },
+//        visible: true,
+//        fnClose: [Function: fnClose]
+//      }
 
     expect(dlg.node.props.visible).toEqual(true);
   });

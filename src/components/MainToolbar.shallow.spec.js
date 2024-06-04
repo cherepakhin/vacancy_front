@@ -85,7 +85,7 @@ describe("<MainToolbar />", () => {
 
 //    console.log(wrapper.props().children); // DON`T DELETE COMMENT
 //    console.log(wrapper.props().children.props.children[0]); // DON`T DELETE COMMENT
-    expect(wrapper.props().children.props.children[0].props.className).toEqual('mr-1 col-md-1 col-sm-2 w-12ch');
+    expect(wrapper.props().children.props.children[0].props.className).toEqual('mr-1 col-md-1 col-sm-1 w-12ch');
     expect(wrapper.props().children.props.children[0].props.children).toEqual('Все');
 //    const btn = wrapper.props().children[0];
 //    console.log(btn);
@@ -99,7 +99,7 @@ describe("<MainToolbar />", () => {
 
   it("check style 'Current' in MainToolbar", () => {
     const wrapper = shallow(<MainToolbar />);
-    expect(wrapper.props().children.props.children[1].props.className).toEqual('mr-1 col-md-1 col-sm-2 w-12ch');
+    expect(wrapper.props().children.props.children[1].props.className).toEqual('mr-1 col-md-1 col-sm-1 w-12ch');
   });
 
   it("check title 'Current' in MainToolbar", () => {
@@ -109,7 +109,7 @@ describe("<MainToolbar />", () => {
 
   it("check style 'NewVacancy' in MainToolbar", () => {
     const wrapper = shallow(<MainToolbar />);
-    expect(wrapper.props().children.props.children[2].props.className).toEqual('mr-1 col-md-1 col-sm-2 w-12ch');
+    expect(wrapper.props().children.props.children[2].props.className).toEqual('mr-1 col-md-1 col-sm-1 w-12ch');
   });
 
   it("check title 'NewVacancy' in MainToolbar", () => {
@@ -119,7 +119,7 @@ describe("<MainToolbar />", () => {
 
   it("check style 'Filter' in MainToolbar", () => {
     const wrapper = shallow(<MainToolbar />);
-    expect(wrapper.props().children.props.children[3].props.className).toEqual('mr-1 col-md-1 col-sm-2 w-12ch');
+    expect(wrapper.props().children.props.children[3].props.className).toEqual('mr-1 col-md-1 col-sm-1 w-12ch');
   });
 
   it("check title 'Filter' in MainToolbar", () => {
@@ -129,7 +129,7 @@ describe("<MainToolbar />", () => {
 
   it("check style btn Status VacancyDlg in MainToolbar", () => {
     const wrapper = shallow(<MainToolbar />);
-    expect(wrapper.props().children.props.children[4].props.className).toEqual('mr-1 col-md-1 col-sm-2 w-12ch');
+    expect(wrapper.props().children.props.children[4].props.className).toEqual('mr-1 col-md-1 col-sm-1 w-12ch');
   });
 
   it("check title btn status VacancyDlg in MainToolbar for CLOSED VacancyDlg", () => {

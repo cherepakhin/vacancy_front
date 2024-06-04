@@ -166,23 +166,13 @@ css:
       </Col>
     </Row>
 ````    
-mr - margin right
+mr - margin right. "mr-1" - margin right = 4 pix  
 ml - margin left
 pl - padding left
 pr - padding right
-col1 - ширина 1 одна колонка
-
-В примере выше:
-
-````shell
-<Button className="mr-1 col-md-1 col-sm-2 w-12ch">Все</Button>
-````
-col-md-1 col-sm-2 все кнопки имеют одинаковую ширину, но разных экранах выделено разное количство колонок:
+col-md-1 col-sm-2 w-12ch - все кнопки имеют одинаковую ширину w-12ch (12 character, 1 char = 'x') , но разных экранах выделено разное количество колонок:
 col-md-1 width on middle device = 1 column
 col-sm-2 width on small device = 2 columns
-
-col-md-1 col-sm-2 все кнопки имеют одинаковую ширину 12 символов (w-12ch)  
-mr-1 отступ справа внутри колонки margin right = 1 (1 char 'x')
 
 #### Hover
 

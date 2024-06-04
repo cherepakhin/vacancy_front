@@ -144,15 +144,45 @@ css:
 <Button className="... col-1">...</Button>
 ````
 
-Пример в App.js (col-1): 
+Пример в Maintoolbar.js: 
 
 ````    
-<Col xs={12} className="mt-2 mb-2">
-  <Button className="ml-0 pl-1 pr-1 col-1">Все</Button>
-  <Button className="ml-1 pl-1 pr-1 col-1">Текущие</Button>
-  <Button className="ml-1 pl-1 pr-1 col-1">Новая</Button>
-</Col>
+    <Row className="fixed-top mt-0 md-1 pd-1 pl-0 ml-0 bg-light table-bordered">
+    {/* className="fixed-top" - row fixed on TOP PAGE  */}
+    {/* "mt-0 md-1 ml-0" - margin top, margin bottom, margin left */}
+    {/* "pd-1 pl-0" - padding down, padding left */}
+      {/* xs={12} одна колонка во всю ширину экрана(12). */}
+      {/* Отступ элементов внутри колонки сверху(mt-2) и снизу (mb-2) = 8px */}
+      <Col xs={12} className="mt-2 mb-2">
+        {/* col-md-1 col-sm-2 все кнопки имеют одинаковую ширину, но разных экранах выделено разное количство колонок: */}
+        {/* col-md-1 width on middle device = 1 column,*/}
+        {/* col-sm-2 width on small device = 2 columns*/}
+        {/* mr-1 отступ справа внутри колонки margin right = 1 (1 char 'x') */}
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Все</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Текущие</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch" onClick={handleShowDialogEditVacancy}>Новая</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">Найти</Button>
+        <Button className="mr-1 col-md-1 col-sm-2 w-12ch">{getTitle()}</Button>
+      </Col>
+    </Row>
 ````    
+mr - margin right
+ml - margin left
+pl - padding left
+pr - padding right
+col1 - ширина 1 одна колонка
+
+В примере выше:
+
+````shell
+<Button className="mr-1 col-md-1 col-sm-2 w-12ch">Все</Button>
+````
+col-md-1 col-sm-2 все кнопки имеют одинаковую ширину, но разных экранах выделено разное количство колонок:
+col-md-1 width on middle device = 1 column
+col-sm-2 width on small device = 2 columns
+
+col-md-1 col-sm-2 все кнопки имеют одинаковую ширину 12 символов (w-12ch)  
+mr-1 отступ справа внутри колонки margin right = 1 (1 char 'x')
 
 #### Hover
 

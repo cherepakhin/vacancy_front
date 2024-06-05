@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from "react-bootstrap";
 import { MainToolbarConnect as MainToolbar } from "./components/MainToolbar";
 import NewVacancyPanel from "./components/NewVacancyPanel";
 import EditVacancyPanel from "./components/EditVacancyPanel";
@@ -30,14 +29,10 @@ class App extends React.Component { // receives props from index.js
         // path for test appView.node.props.className
         // Attention:  access to props with __THIS.props.*__
         // <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
-
-        <Container fluid className="md-0 pt-0 main-app-container bg-light">
-          <MainToolbar />
-          {/* <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/> */}
-          <EditVacancyPanel visible={this.props.visibleEditVacancyDlg} vacancy={this.props.selectedVacancy}/>
-          <Vacancies vacancies={this.props.vacancies} visible={this.props.visibleVacancies}/>
-          {/* place for current opened vacancy */}
-        </Container>
+        <div>
+          <div className="button-div mr-1 col-md-1 col-sm-1 w-12ch">Button11</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1 w-12ch">Button12</div>
+        </div>
       );
   }
 }

@@ -280,6 +280,43 @@ em - относительно текущего заданного шрифта. 
 1. В index.html указан root <div id="root"/>
 2. index.js крепится к document.getElementById('root')
 3. В index.js определен App.js 
+4. App.js импортирует App.css (import './App.css';)
+
+App.js:
+
+````java
+....
+import './App.css';
+class App extends React.Component {
+    render() {
+      return (
+        <div className="main-app-container">
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button1</div>
+          ...
+        </div>
+      );
+    }
+}
+....
+````
+
+App.css:
+
+````java
+....
+.button-div {
+  background-color: #18186A;
+  color: white;
+  display: inline-block;
+  min-width: 10ch;
+  max-width: 10ch;
+  text-align: center;
+  line-height: 4ch;
+  font-size: 2ch;
+  margin-bottom: 0.5ch;
+}
+....
+````
 
 #### Hover
 

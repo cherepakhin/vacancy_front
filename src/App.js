@@ -30,7 +30,7 @@ class App extends React.Component { // receives props from index.js
         // Attention:  access to props with __THIS.props.*__
         // <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
         <div>
-          <div className="button-div mr-1 col-md-1 col-sm-1">Button11</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button1</div>
           <div className="button-div mr-1 col-md-1 col-sm-1">12456</div>
           <div className="button-div mr-1 col-md-1 col-sm-1">123</div>
         </div>

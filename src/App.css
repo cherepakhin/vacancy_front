@@ -16,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -168,7 +167,9 @@ html body {
   background-color: #18186A;
   color: white;
   display: inline-block;
-  width: 12ch;
+  min-width: 12ch;
+  max-width: 12ch;
   text-align: center;
   line-height: 4ch;
+  font-size: 2ch;
 }

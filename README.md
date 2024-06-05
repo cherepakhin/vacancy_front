@@ -174,6 +174,18 @@ col-md-1 col-sm-2 w-12ch - все кнопки имеют одинаковую �
 col-md-1 width on middle device = 1 column
 col-sm-2 width on small device = 2 columns
 
+Выравнивание блоков
+
+Для задания ширины блока нужно указать inline-block:
+
+.button-div {
+  ...
+  display: inline-block; 
+  width: 12ch;
+}
+
+inline-block - обязателен!
+
 #### Hover
 
 В обычном состоянии скрыть (__display: none;__):

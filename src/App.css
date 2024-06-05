@@ -57,11 +57,6 @@
   max-width: 8ch !important;
 }
 
-.w-12ch {
-  min-width: 12ch;
-  max-width: 12ch !important;
-}
-
 .list-group-item-action-about {
   text-align: center;
   margin-right: 1ch;
@@ -170,10 +165,8 @@ html body {
 }
 
 .button-div {
-    background-color: #fce803;
-    display: inline;
-}
-
-.index-background {
-    background-color: #fce803;
+  background-color: #18186A;
+  color: white;
+  display: inline-block;
+  width: 12ch;
 }

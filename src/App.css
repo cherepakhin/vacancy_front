@@ -160,7 +160,8 @@ html body {
 }
 
 .main-app-container {
-  padding-left: 0ch;
+  padding-left: 1ch;
+  padding-top: 1ch;
 }
 
 .button-div {

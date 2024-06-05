@@ -174,9 +174,17 @@ col-md-1 col-sm-2 w-12ch - все кнопки имеют одинаковую �
 col-md-1 width on middle device = 1 column
 col-sm-2 width on small device = 2 columns
 
-Выравнивание блоков
+Без Bootstrap:
 
-Для задания ширины блока нужно указать inline-block:
+[https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window](https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window)
+
+These units are vh (__VIEWPORT__ height), vw (__VIEWPORT__ width), vmin (__VIEWPORT__ minimum length) and vmax (viewport maximum length).
+
+div {
+  height: 100vh;
+}
+
+__Для задания ширины блока нужно указать inline-block:__
 
 .button-div {
   ...
@@ -185,6 +193,46 @@ col-sm-2 width on small device = 2 columns
 }
 
 inline-block - обязателен!
+
+__Для центрирования текста по горизонтали в div:__
+
+.button-div {
+  ...
+  text-align: center;
+  ...
+}
+
+__Задание высоты div:__
+
+.button-div {
+  ...
+  height: 4vh; // viewport height
+}
+
+в css:
+
+.button-div {
+  ...
+  height: 25px;
+}
+
+или в коде
+
+<div style="height: 30px;">...
+
+__Выравнивание по вертикали:__ 
+
+.button-div {
+  ....
+  line-height: 30px;
+}
+
+или от шрифта:
+
+.button-div {
+  ....
+  line-height: 4ch;
+}
 
 #### Hover
 

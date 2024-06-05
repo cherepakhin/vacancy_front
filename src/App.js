@@ -31,7 +31,7 @@ class App extends React.Component { // receives props from index.js
         // <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
         <div>
           <div className="button-div mr-1 col-md-1 col-sm-1">Button11</div>
-          <div className="button-div mr-1 col-md-1 col-sm-1">12456789012</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">12456</div>
           <div className="button-div mr-1 col-md-1 col-sm-1">123</div>
         </div>
       );

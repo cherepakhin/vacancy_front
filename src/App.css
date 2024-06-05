@@ -160,17 +160,18 @@ html body {
 }
 
 .main-app-container {
-  padding-left: 1ch;
-  padding-top: 1ch;
+  padding-left: 0.5ch;
+  padding-top: 0.5ch;
 }
 
 .button-div {
   background-color: #18186A;
   color: white;
   display: inline-block;
-  min-width: 12ch;
-  max-width: 12ch;
+  min-width: 10ch;
+  max-width: 10ch;
   text-align: center;
   line-height: 4ch;
   font-size: 2ch;
+  margin-bottom: 0.5ch;
 }

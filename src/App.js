@@ -31,8 +31,17 @@ class App extends React.Component { // receives props from index.js
         // <NewVacancyPanel visible={this.props.visibleNewVacancyDlg}/>
         <div className="main-app-container">
           <div className="button-div mr-1 col-md-1 col-sm-1">Button1</div>
-          <div className="button-div mr-1 col-md-1 col-sm-1">12456</div>
-          <div className="button-div mr-1 col-md-1 col-sm-1">123</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button2</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button3</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button4</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button5</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button6</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button7</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button8</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button9</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button10</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button11</div>
+          <div className="button-div mr-1 col-md-1 col-sm-1">Button12</div>
         </div>
       );
   }

@@ -264,13 +264,12 @@ em - относительно текущего заданного шрифта. 
   background-color: #18186A;
   color: white;
   display: inline-block; // блоки с .button-div в строке, не в столбик 
-  width: 12ch;           // ширина 12 символов, но при изменении экрана ширина меняется
-  max-width: 12ch;       // с max-width, min-width ширина остается неизменной   
-  min-width: 12ch;       // при изменении размера окна
-//  min-width: 10ch;     // с max-width, min-width ширина меняется 
+  max-width: 10ch;       // ширина не меняется    
+  min-width: 10ch;       // кнопки переносятся нв следующий ряд
+//  min-width: 10ch;     // при разных max-width, min-width ширина меняется 
 //  max-width: 12ch;     // при изменении размера окна   
   text-align: center;    // текст по центру
-  line-height: 3ch;      // ВЫСОТА ( 3-2 = 1 по половине размера шрифта сверху и снизу) 
+  line-height: 3ch;      // ВЫСОТА ( 3-2(font-size см.ниже) = 1 по половине размера шрифта сверху и снизу) 
   font-size: 2ch;        // размер шрифта
 }
 

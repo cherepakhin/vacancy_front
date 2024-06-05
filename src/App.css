@@ -159,8 +159,8 @@ html body {
     background-color: #f8f9fa;
 }
 
-.main-app-container-div {
-    background-color: #18186A;
+.main-app-container {
+  padding-left: 0ch;
 }
 
 .button-div {

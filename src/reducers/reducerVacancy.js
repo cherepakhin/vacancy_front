@@ -11,6 +11,8 @@ let state0 = { vacancies: [vacancy0, vacancyTest],
                selectedVacancy: {...vacancy0},
              };
 
+//TODO: LINK TO BACKEND
+
 let lastId = 1; //TODO: get from backend
 let companyId = 1; //TODO: get from backend
 

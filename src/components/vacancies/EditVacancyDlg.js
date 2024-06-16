@@ -95,7 +95,7 @@ const EditVacancyDlg = (props) => {
         <FormControl id="vacancyComment" className="mt-2" placeholder="Дополнительная информация"
           value={props.vacancy.comment} onChange={e => handleVacancyCommentChange(e)} />
       </div>
-      <Button className="mr-0 col-md-1 col-sm-2 float-end w-12ch" onClick={handleVacancySubmit}>Сохранить</Button>
+      <Button className="mr-1 col-md-1 col-sm-2 float-end w-12ch" onClick={handleVacancySubmit}>Сохранить</Button>
       <Button className="mr-1 col-md-1 col-sm-2 float-end w-12ch" onClick={handleVacancyCancel}>Отмена</Button>
     </div>
   )
